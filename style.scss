@@ -732,6 +732,7 @@ template {
     --brown-bg: linear-gradient(to right, #956e41, #000);
     --dark-green: #163e23;
     --yellow: #f7d538;
+    --green: #8cc04b;
 }
 .button-box {
     .btn.btn {
@@ -1020,5 +1021,9 @@ section.slider {
 }
 
 section.text-section {
-    background-color: var(--color);
+    &[style="--color: var(--green)"] {
+        * {
+            color: var(--white);
+        }
+    }
 }

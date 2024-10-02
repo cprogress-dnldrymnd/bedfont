@@ -622,7 +622,8 @@ template {
   --dark-blue: #002b53;
   --brown-bg: linear-gradient(to right, #956e41, #000);
   --dark-green: #163e23;
-  --yellow: #f7d538; }
+  --yellow: #f7d538;
+  --green: #8cc04b; }
 
 .button-box .btn.btn {
   border-radius: 30px;
@@ -809,7 +810,7 @@ section.slider .inner.brown .timeline-date {
     background-color: transparent;
     background-image: var(--brown-bg); }
 
-section.text-section {
-  background-color: var(--color); }
+section.text-section[style="--color: var(--green)"] * {
+  color: var(--white); }
 
 /*# sourceMappingURL=style.css.map */
