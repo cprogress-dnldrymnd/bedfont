@@ -98,6 +98,7 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('row_animation', array(
+                Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
                     ->add_fields(array(
                         Field::make('select', 'style', __('Style'))
@@ -174,5 +175,5 @@ Container::make('post_meta', 'Modules')
                     ))
 
             ))
-            ->set_header_template('Text: <%- heading %>')
+            ->set_header_template('Row Animation: <%- title %>')
     ));
