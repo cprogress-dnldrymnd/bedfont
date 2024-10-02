@@ -285,7 +285,7 @@ function ___button($data)
 function __glide_slider($items)
 {
 
-    $html = "<div class='glide awards-slider'>
+    $html = "<div class='white-space'></div><div class='glide awards-slider mt-5'>
 	<div class='glide__track' data-glide-el='track'>
 		<ul class='glide__slides'>";
 
