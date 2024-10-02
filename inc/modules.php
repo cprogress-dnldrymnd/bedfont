@@ -131,6 +131,10 @@ function _row_animation($module, $html = "<section class='row-animation'>")
     foreach ($items as $item) {
         $heading = $item['heading'];
         $subheading = $item['subheading'];
+        $color = $item['color'];
+        $style = $item['style'];
+        $description = isset($module['description']) ? wpautop($module['description']) : '';
+        
 
         $button = ___button(array(
             'button_type'       => $item['button_type'],
@@ -141,7 +145,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
             'button_target'     => $item['button_target'],
         ));
 
-        $html .= "<div class='slideanim row'>
+        $html .= "<div class='slideanim row $color $style'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' id='nobreath-bubble'>
 			<h2>$heading</h2>
