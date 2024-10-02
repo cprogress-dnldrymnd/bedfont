@@ -105,11 +105,11 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
-                                    'style-purple'      => 'Style Purple',
-                                    'style-blue'      => 'Style Blue',
-                                    'style-pink'      => 'Style Pink',
-                                    'style-red'      => 'Style Red',
-                                    'style-brown-gradient'      => 'Style Brown Gradient',
+                                    'purple'      => 'Style Purple',
+                                    'blue'      => 'Style Blue',
+                                    'pink'      => 'Style Pink',
+                                    'red'      => 'Style Red',
+                                    'brown'      => 'Style Brown Gradient',
                                 )
                             ),
                         Field::make('select', 'style', __('Style'))
