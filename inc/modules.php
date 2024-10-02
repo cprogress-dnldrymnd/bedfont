@@ -47,6 +47,9 @@ function modules()
             case 'blogs':
                 $html .= _blogs($module);
                 break;
+            case 'slider':
+                $html .= _slider($module);
+                break;
         }
     }
     return $html;
@@ -220,6 +223,18 @@ function _blogs($module)
     $html  .= "</section>";
 
     return $html;
+}
+
+function _slider($module)
+{
+    $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    return "<section class='slider'>
+	<div class='container'>
+	<h2>$heading</span></h2>
+				$description
+	</div>
+</section>";
 }
 
 function ___button($data)
