@@ -133,7 +133,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $subheading = $item['subheading'];
         $color = $item['color'];
         $style = $item['style'];
-        $description = isset($module['description']) ? wpautop($module['description']) : '';
+        $description = isset($item['description']) ? wpautop($item['description']) : '';
 
 
         $button = ___button(array(
