@@ -413,16 +413,16 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Image Grid: <%- title %>')
             ->add_fields('icon_box', array(
+                Field::make('select', 'style', __('Style'))
+                    ->set_options(array(
+                        'style-1' => 'Style 1',
+                        'style-2' => 'Style 2'
+                    )),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'bottom_text', __('Bottom Text')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
-                        Field::make('select', 'style', __('Style'))
-                            ->set_options(array(
-                                'style-1' => 'Style 1',
-                                'style-2' => 'Style 2'
-                            )),
                         Field::make('image', 'image', __('Image Icon')),
                         Field::make('text', 'heading', __('Heading')),
                         Field::make('textarea', 'text', __('Text')),

@@ -60,6 +60,9 @@ function modules()
             case 'image_grid':
                 $html .= _image_grid($module);
                 break;
+            case 'icon_box':
+                $html .= _icon_box($module);
+                break;
         }
     }
     return $html;
@@ -98,7 +101,7 @@ function _hero_style_2($module)
     $youtube_url = $module['youtube_url'];
     $heading = $module['heading'];
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
-    
+
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
@@ -335,6 +338,23 @@ function _image_grid($module)
 </section>";
 
     return $html;
+}
+
+function _icon_box($module)
+{
+    $heading = $module['heading'];
+    $items = $module['items'];
+    $bottom_text = isset($module['bottom_text']) ? wpautop($module['descrbottom_textption']) : '';
+
+    $html = "<section class='icon-boxes'>
+	<div class='container'>
+    <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>
+		<div class='row my-lg-5 values d-none d-md-flex'>";
+
+
+    $html .= "</div>
+	</div>
+</section>";
 }
 
 function ___button($data)
