@@ -700,4 +700,9 @@ section.row-animation .brown .product-bubble-home h2 {
 section.slider {
   padding-bottom: 100px; }
 
+section.image-grid .image-grid .bg_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 /*# sourceMappingURL=style.css.map */

@@ -277,12 +277,12 @@ function _image_grid($module)
     foreach ($items as $item) {
         $image = wp_get_attachment_image($item['image'], 'large');
         $button = ___button(array(
-            'button_type'       => $module['button_type'],
-            'button_text'       => $module['button_text'],
-            'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
-            'button_custom_url' => $module['button_custom_url'],
+            'button_type'       => $item['button_type'],
+            'button_text'       => $item['button_text'],
+            'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
+            'button_custom_url' => $item['button_custom_url'],
             'button_style'      => 'button-large',
-            'button_target'     => $module['button_target'],
+            'button_target'     => $item['button_target'],
         ));
 
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
