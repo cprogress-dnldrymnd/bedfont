@@ -797,7 +797,10 @@ section.row-animation {
             background-color: var(--color);
         }
         &.brown {
-            background-image: linear-gradient(to right, #956E41, #000);
+            &:before {
+                background-image: linear-gradient(to right, #956e41, #000);
+                opacity: 1;
+            }
         }
     }
 }

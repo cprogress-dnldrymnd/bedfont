@@ -658,7 +658,8 @@ section.row-animation .product-bubble-home {
     bottom: 0;
     right: 0;
     background-color: var(--color); }
-  section.row-animation .product-bubble-home.brown {
-    background-image: linear-gradient(to right, #956E41, #000); }
+  section.row-animation .product-bubble-home.brown:before {
+    background-image: linear-gradient(to right, #956e41, #000);
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
