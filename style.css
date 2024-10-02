@@ -729,7 +729,8 @@ section.two-column-image-text.style-2 .inner {
   border-radius: 20px;
   padding: 30px;
   text-align: center;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   @media (min-width: 992px) {
     section.two-column-image-text.style-2 .inner img {
       width: 75%;
