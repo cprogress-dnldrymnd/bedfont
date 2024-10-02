@@ -949,4 +949,17 @@ section.two-column-image-text {
             }
         }
     }
+    &.style-3 {
+        background-color: var(--dark-blue);
+        color: var(--white);
+        padding: 0;
+        .container {
+            max-width: 100%;
+            --bs-gutter-x: 0;
+            .row {
+                --bs-gutter-x: 0;
+                flex-direction: row-reverse;
+            }
+        }
+    }
 }

@@ -758,5 +758,15 @@ section.two-column-image-text.style-2 .inner {
     bottom: 0;
     right: 0;
     background-color: var(--color); }
+section.two-column-image-text.style-3 {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 0; }
+  section.two-column-image-text.style-3 .container {
+    max-width: 100%;
+    --bs-gutter-x: 0; }
+    section.two-column-image-text.style-3 .container .row {
+      --bs-gutter-x: 0;
+      flex-direction: row-reverse; }
 
 /*# sourceMappingURL=style.css.map */
