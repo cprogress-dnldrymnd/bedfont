@@ -374,5 +374,6 @@ function get__theme_option($value)
 /*-----------------------------------------------------------------------------------*/
 /* Require Files
 /*-----------------------------------------------------------------------------------*/
+require_once('inc/post-types.php');
 require_once('inc/modules.php');
 require_once('inc/shortcodes.php');

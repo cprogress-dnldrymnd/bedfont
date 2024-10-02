@@ -178,8 +178,76 @@ Container::make('post_meta', 'Modules')
             ->add_fields('blogs', array(
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
-              
+
             ))
-            ->set_header_template('Blogs: <%- heading %>')
+            ->set_header_template('Slider: <%- heading %>')
+            ->add_fields('blogs', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('text', 'description', __('Description')),
+                Field::make('complex', 'items', 'Items')
+                    ->set_layout('tabbed-vertical')
+                    ->add_fields(array(
+                    
+                        Field::make('select', 'style', __('Style'))
+                            ->set_options(
+                                array(
+                                    ''      => 'Image on Right',
+                                    'flex-row-reverse'      => 'Image on Left',
+                                )
+                            ),
+                        Field::make('text', 'heading', __('Heading')),
+                        Field::make('text', 'subheading', __('Subheading')),
+                        Field::make('textarea', 'description', __('Description')),
+                        Field::make('image', 'image', __('Image')),
+                        Field::make('select', 'button_type', __('Button Type'))
+                            ->set_options(
+                                array(
+                                    'internal-url'        => 'Internal',
+                                    'custom'      => 'Custom',
+                                )
+                            ),
+                        Field::make('text', 'button_text', __('Button Text')),
+                        Field::make('association', 'button_url', __('Button URL'))
+                            ->set_max(1)
+                            ->set_types(array(
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'post',
+                                ),
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'page',
+                                )
+                            ))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '!='
+                                    )
+                                )
+                            ),
+                        Field::make('text', 'button_custom_url', __('Button Custom URL'))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '='
+                                    )
+                                )
+                            ),
+                        Field::make('select', 'button_target', __('Button Target'))
+                            ->set_options(
+                                array(
+                                    'target="_self"'  => 'Default',
+                                    'target="_blank"' => 'New Tab',
+                                )
+                            ),
+                    ))
+
+            ))
+            ->set_header_template('Slider: <%- heading %>')
 
     ));
