@@ -331,3 +331,43 @@ function __image($atts)
 }
 
 add_shortcode('__image', '__image');
+
+/*-----------------------------------------------------------------------------------*/
+/* Register Carbofields
+/*-----------------------------------------------------------------------------------*/
+add_action('carbon_fields_register_fields', 'tissue_paper_register_custom_fields');
+function tissue_paper_register_custom_fields()
+{
+	require_once('includes/post-meta.php');
+}
+function get__post_meta($value)
+{
+	if (function_exists('carbon_get_the_post_meta')) {
+		return carbon_get_the_post_meta($value);
+	}
+}
+
+function get__term_meta($term_id, $value)
+{
+	if (function_exists('get_term_meta')) {
+		return get_term_meta($term_id, '_' . $value, true);
+	}
+}
+
+function get___term_meta($term_id, $value)
+{
+	if (function_exists('carbon_get_term_meta')) {
+		return carbon_get_term_meta($term_id, $value);
+	}
+}
+
+function get__post_meta_by_id($id, $value)
+{
+	if (function_exists('carbon_get_post_meta')) {
+		return carbon_get_post_meta($id, $value);
+	}
+}
+function get__theme_option($value)
+{
+	return carbon_get_theme_option($value);
+}
