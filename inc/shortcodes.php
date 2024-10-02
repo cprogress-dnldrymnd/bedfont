@@ -59,7 +59,7 @@ function _post_grid($post)
 {
     $post_id = $post->ID;
     $post_title = $post->post_title;
-    $post_date = $post->post_date;
+    $post_date = get_the_date('', $post_id);
     $permalink = "[permalink id='$post_id']";
     $image = get_the_post_thumbnail($post_id, 'large');
 
