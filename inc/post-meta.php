@@ -28,6 +28,32 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Hero: <%- heading %>')
-
-
+            ->add_fields('two_column_image_text', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'description', __('Description')),
+                Field::make('image', 'image', __('Image')),
+                Field::make('text', 'button_text', __('Button Text')),
+                Field::make('association', 'button_url', __('Button Text'))
+                    ->set_types(array(
+                        array(
+                            'type'      => 'post',
+                            'post_type' => 'post',
+                        ),
+                        array(
+                            'type'      => 'post',
+                            'post_type' => 'page',
+                        )
+                    ))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'button_type',
+                                'value'   => 'custom',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
+                Field::make('text', 'button_custom_url', __('Button Custom URL')),
+            ))
+            ->set_header_template('Two Column Image and Text: <%- heading %>')
     ));

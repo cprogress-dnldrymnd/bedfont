@@ -35,6 +35,10 @@ function modules()
                 $style = $module['style'];
                 $html .= _hero($module);
                 break;
+            case 'two_column_image_text':
+                $style = $module['style'];
+                $html .= _two_column_image_text($module);
+                break;
         }
     }
     return $html;
@@ -64,5 +68,29 @@ function _hero($module)
             </div>
         </div>
     </div>
+</section>";
+}
+
+
+function _two_column_image_text($module)
+{
+    $heading = $module['heading'];
+    $description = wpautop($module['description']);
+
+    return "<section class='two-column-image-text'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto'>
+				<h2 class='text-left'>$heading</span></h2>
+				$description
+				<a href='about-us' class='btn btn-who-we-are' title='Click here for more about Bedfont'>About Us <i
+						class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
+			</div>
+			<div class='col-12 col-lg-6'>
+				<img src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/who-we-are.png'
+					class='mx-auto d-block img-fluid' alt='Who we are image'>
+			</div>
+		</div>
+	</div>
 </section>";
 }
