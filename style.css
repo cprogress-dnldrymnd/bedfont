@@ -644,6 +644,7 @@ template {
 section.row-animation .slideanim {
   text-align: center; }
 section.row-animation .product-bubble-home {
+  overflow: hidden;
   position: relative; }
   section.row-animation .product-bubble-home * {
     position: relative;
