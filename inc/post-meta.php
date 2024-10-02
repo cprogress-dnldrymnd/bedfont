@@ -145,6 +145,30 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Hero: <%- heading %>')
             ->add_fields('two_column_image_text', array(
+                Field::make('select', 'style', __('Style'))
+                    ->set_options(array(
+                        'style-1' => 'Style 1',
+                        'style-2' => 'Style 2'
+                    )),
+                Field::make('select', 'color', __('Color'))
+                    ->set_options(
+                        array(
+                            'purple'      => 'Style Purple',
+                            'blue'      => 'Style Blue',
+                            'pink'      => 'Style Pink',
+                            'red'      => 'Style Red',
+                            'orange'      => 'Style Orange',
+                            'brown'      => 'Style Brown Gradient',
+                        )
+                    )
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    ),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image')),
@@ -290,12 +314,6 @@ Container::make('post_meta', 'Modules')
                     ->set_header_template('Row: <%- heading %>')
 
             ))
-            ->setup_labels(
-                array(
-                    'plural_name'   => 'Modulesss',
-                    'singular_name' => 'Modules',
-                )
-            )
             ->set_header_template('Row Animation: <%- title %>')
             ->add_fields('blogs', array(
                 Field::make('text', 'heading', __('Heading')),
@@ -425,7 +443,7 @@ Container::make('post_meta', 'Modules')
                         'style-2' => 'Style 2'
                     )),
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('textarea', 'description', __('Description')),
+                Field::make('textarea', 'bottom_text', __('Bottom Text')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
