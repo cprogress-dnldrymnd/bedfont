@@ -697,4 +697,7 @@ section.row-animation .brown .product-bubble-home h2 {
       .awards-slider .hightlights span:not(:last-child) {
         margin-right: 20px; }
 
+section.slider {
+  padding-bottom: 100px; }
+
 /*# sourceMappingURL=style.css.map */
