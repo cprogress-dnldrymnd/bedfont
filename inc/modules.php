@@ -49,12 +49,11 @@ function _hero($module)
     $bg_image = $module['bg_image'];
 
     if ($bg_image) {
-        $bg = '<div class="bg-image">';
-        $bg .= wp_get_attachment_image($bg_image, 'full');
-        $bg .= '</div>';
+        $bg = wp_get_attachment_image_url($bg_image, 'full');
+        $style = "style='background-image: $bg'";
     }
 
-    return "<section id='home_bg' class='hero-style-1 position-relative'>
+    return "<section id='home_bg' class='hero-style-1' $style>
     $bg
     <div class='container position-relative'>
         <div class='row'>
