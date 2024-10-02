@@ -206,8 +206,8 @@ function _blogs($module)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
     $html  = "<section class='blogs grey_bg'>";
-    $html  = "<div class='container'>";
-    $html  = "<div class='text-center'>";
+    $html  .= "<div class='container'>";
+    $html  .= "<div class='text-center'>";
     $html .= "<h2>$heading</h2>
 				";
     $html .= $description;
