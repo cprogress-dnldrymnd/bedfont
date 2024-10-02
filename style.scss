@@ -986,6 +986,9 @@ section.two-column-image-text {
 
 section.slider {
     .inner {
+        img {
+            border-radius: 0 !important;
+        }
         .timeline-date {
             position: relative;
             &:before {
