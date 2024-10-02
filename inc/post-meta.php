@@ -100,6 +100,7 @@ Container::make('post_meta', 'Modules')
             ->add_fields('row_animation', array(
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
+                    ->set_layout('tabbed-vertical')
                     ->add_fields(array(
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
@@ -180,6 +181,7 @@ Container::make('post_meta', 'Modules')
                                 )
                             ),
                     ))
+                    ->set_header_template('Row: <%- heading %>')
 
             ))
             ->set_header_template('Row Animation: <%- title %>')
