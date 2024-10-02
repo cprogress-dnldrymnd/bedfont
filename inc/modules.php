@@ -136,7 +136,7 @@ function _two_column_image_text($module)
         $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
 
         if ($color) {
-            $style_inline = "style='--color: $color'";
+            $style_inline = "style='--color: var(--$color)'";
         }
     }
 
