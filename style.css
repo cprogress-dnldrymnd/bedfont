@@ -629,7 +629,7 @@ template {
 .button-box.button-blue .btn {
   background-color: var(--blue); }
 .button-box.button-red .btn {
-  background-color: var(--white); }
+  background-color: var(--red); }
 .button-box.button-purple .btn {
   background-color: var(--purple); }
 .button-box.button-orange .btn {
