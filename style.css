@@ -638,5 +638,7 @@ template {
 .button-box.button-orange .btn {
   background-color: var(--orange);
   color: var(--orange); }
+.button-box.button-box-shadow .btn {
+  box-shadow: 0px 2px 3px #555; }
 
 /*# sourceMappingURL=style.css.map */
