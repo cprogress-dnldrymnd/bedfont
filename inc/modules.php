@@ -75,7 +75,8 @@ function _hero($module)
 function _two_column_image_text($module)
 {
     $heading = $module['heading'];
-    $description = wpautop($module['description']);
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $image = isset($module['image']) ? wp_get_attachment_image($module['image']) : '';
 
     return "<section class='two-column-image-text'>
 	<div class='container'>
@@ -87,8 +88,7 @@ function _two_column_image_text($module)
 						class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
 			</div>
 			<div class='col-12 col-lg-6'>
-				<img src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/who-we-are.png'
-					class='mx-auto d-block img-fluid' alt='Who we are image'>
+				$image
 			</div>
 		</div>
 	</div>
