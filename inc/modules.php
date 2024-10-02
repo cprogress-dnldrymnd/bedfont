@@ -97,7 +97,8 @@ function _hero_style_2($module)
 
     $heading = $module['heading'];
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
-
+    $youtube_url = isset($module['subheading']) ? wpautop($module['youtube_url']) : '';
+    
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
@@ -108,7 +109,7 @@ function _hero_style_2($module)
 				<a target='_self' href='https://bedfont.theprogressteam.com/contact/' class='btn btn-smokerlyzer float-none' title='' rel='noopener'><span> Contact Us</span><i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
 			</div>
 			<div class='col-12 col-md-6 mt-5 mt-lg-0'>
-				<iframe width='560' height='315' src='' frameborder='0' allowfullscreen='' illow-src='https://www.youtube.com/embed/P-h7KpMn5Ds' class='w-100 br-30'></iframe>
+				<iframe width='560' height='315' src='$youtube_url' frameborder='0' allowfullscreen='' illow-src='$youtube_url' class='w-100 br-30'></iframe>
 			</div>
 		</div>
 	</div>
