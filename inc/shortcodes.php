@@ -46,7 +46,7 @@ function blogs($atts)
     foreach ($posts as $post) {
         $html .= _post_grid($post);
     }
-    $html  .= "<ul>";
+    $html  .= "</ul>";
     $html  .= "<div>";
     $html  .= "<div>";
 
