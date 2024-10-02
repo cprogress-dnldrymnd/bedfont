@@ -428,7 +428,7 @@ Container::make('post_meta', 'Modules')
                         Field::make('textarea', 'text', __('Text')),
 
                     ))
-                    ->set_header_template('Grid: <%- button_text %>')
+                    ->set_header_template('Grid: <%- heading %>')
 
             ))
             ->set_header_template('Icon Box: <%- heading %>')
