@@ -233,12 +233,14 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Slider: <%- heading %>')
             ->add_fields('text_over_curve_shape', array(
+                Field::make('text', 'title', __('Title')),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
 
             ))
-            ->set_header_template('Text Over Curved Shape: <%- heading %>')
+            ->set_header_template('Text Over Curved Shape: <%- title %>')
             ->add_fields('image_grid', array(
+                Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
@@ -290,9 +292,9 @@ Container::make('post_meta', 'Modules')
                                 )
                             ),
                     ))
-                    ->set_header_template('Slide: <%- heading %>')
+                    ->set_header_template('Slide: <%- button_text %>')
 
             ))
-            ->set_header_template('Text Over Curved Shape: <%- heading %>')
+            ->set_header_template('Image Grid: <%- title %>')
 
     ));
