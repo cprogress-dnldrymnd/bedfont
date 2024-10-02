@@ -109,6 +109,7 @@ Container::make('post_meta', 'Modules')
                                     'blue'      => 'Style Blue',
                                     'pink'      => 'Style Pink',
                                     'red'      => 'Style Red',
+                                    'orange'      => 'Style Orange',
                                     'brown'      => 'Style Brown Gradient',
                                 )
                             ),
