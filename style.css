@@ -790,6 +790,7 @@ section.slider .inner img {
 section.slider .inner .timeline-date {
   position: relative; }
   section.slider .inner .timeline-date:before {
+    z-index: -1;
     content: "";
     position: absolute;
     left: 0;

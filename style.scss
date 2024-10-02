@@ -992,6 +992,7 @@ section.slider {
         .timeline-date {
             position: relative;
             &:before {
+                z-index: -1;
                 content: "";
                 position: absolute;
                 left: 0;
