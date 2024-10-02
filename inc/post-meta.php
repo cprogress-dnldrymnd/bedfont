@@ -331,7 +331,7 @@ Container::make('post_meta', 'Modules')
             ->set_header_template('Blogs: <%- heading %>')
             ->add_fields('slider', array(
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('text', 'description', __('Description')),
+                Field::make('textarea', 'description', __('Description')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
