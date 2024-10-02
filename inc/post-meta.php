@@ -18,14 +18,23 @@ Container::make('post_meta', 'Modules')
                 )
             )
             ->add_fields('hero', array(
-                Field::make('text', 'heading', __('Heading')),
-                Field::make('text', 'subheading', __('Subheading')),
-                Field::make('image', 'bg_image', __('Background Image')),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
                         'style-2' => 'Style 2'
                     )),
+
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('text', 'subheading', __('Subheading')),
+                Field::make('image', 'bg_image', __('Background Image'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style1',
+                            )
+                        )
+                    ),
 
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
