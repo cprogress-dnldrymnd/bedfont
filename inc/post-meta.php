@@ -270,6 +270,7 @@ Container::make('post_meta', 'Modules')
                             'red'      => 'Style Red',
                             'orange'      => 'Style Orange',
                             'brown'      => 'Style Brown Gradient',
+                            'green'      => 'Style Green',
                         )
                     ),
                 Field::make('text', 'heading', __('Heading')),
