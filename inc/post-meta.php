@@ -78,6 +78,13 @@ Container::make('post_meta', 'Modules')
                             )
                         )
                     ),
+                Field::make('select', 'button_target', __('Button Target'))
+                    ->set_options(
+                        array(
+                            'target="_self"'  => 'Default',
+                            'target="_blank"' => 'New Tab',
+                        )
+                    ),
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
     ));

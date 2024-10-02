@@ -78,12 +78,29 @@ function _two_column_image_text($module)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
+    $button_type = $module['button_type'];
+    $button_style = $module['button_style'];
+    $button_text = $module['button_text'];
+    $button_url = $module['button_url'];
+    $button_url_custom = $module['button_url_custom'];
+    $button_target = $module['button_target'];
+
+    $button = __button(array(
+        'button_type'       => $button_type,
+        'button_text'       => $button_text,
+        'button_url'        => isset($button_url) ? $button_url : false,
+        'button_url_custom' => $button_url_custom,
+        'button_style'      => $button_style,
+        'button_target'     => $button_target,
+    ));
+
     return "<section class='two-column-image-text'>
 	<div class='container'>
 		<div class='row'>
 			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto'>
 				<h2 class='text-left'>$heading</span></h2>
 				$description
+                $button
 				<a href='about-us' class='btn btn-who-we-are' title='Click here for more about Bedfont'>About Us <i
 						class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
 			</div>
@@ -93,4 +110,51 @@ function _two_column_image_text($module)
 		</div>
 	</div>
 </section>";
+}
+
+
+
+
+function __button($data)
+{
+    $button_type = isset($data['button_type']) ? $data['button_type'] : false;
+    $button_text = isset($data['button_text']) ? $data['button_text'] : false;
+    $button_url = isset($data['button_url']) ? $data['button_url'] : false;
+    $button_url_custom = isset($data['button_url_custom']) ? $data['button_url_custom'] : false;
+    $button_style = isset($data['button_style']) ? $data['button_style'] : false;
+    $button_text = isset($data['button_text']) ? $data['button_text'] : false;
+    $button_target = isset($data['button_target']) ? $data['button_target'] : false;
+    $link = '';
+    $class = '';
+    $display = true;
+
+
+    if ($button_type != 'popups' && $button_type != 'custom') {
+        $tag = 'a';
+        $post_status = get_post_status($button_url['id']);
+        $button_url = '[permalink id=' . $button_url['id'] . ']';
+        $link = "href='$button_url'";
+        if ($post_status != 'publish') {
+            $display = false;
+        }
+    } else if ($button_type == 'custom') {
+        $button_url = $button_url_custom;
+        $tag = 'a';
+        $link = "href='$button_url_custom'";
+    }
+
+    if ($button_text && $link && $display == true) {
+        $classes[] = $button_style;
+        $classes[] = 'button-box';
+        $classes_val = _array_to_string($classes);
+        $html = "<div class='$classes_val'>";
+        $html .= "<$tag class='$class' $link $button_target>";
+        $html .= $button_text;
+        $html .= "<i
+						class='fa fa-arrow-right ms-1' aria-hidden='true'></i>";
+        $html .= "</$tag>";
+        $html .= "</div>";
+
+        return $html;
+    }
 }
