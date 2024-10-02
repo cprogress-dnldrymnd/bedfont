@@ -60,7 +60,7 @@ function _post_grid($post)
     $post_id = $post->ID;
     $post_title = $post->post_title;
     $post_date = get_the_date('', $post_id);
-    $permalink = "[permalink id='$post_id']";
+    $permalink = "[permalink id=$post_id]";
     $image = get_the_post_thumbnail($post_id, 'large');
 
     return "<li class='wp-block-post post-$post_id post type-post status-publish format-standard has-post-thumbnail '>
