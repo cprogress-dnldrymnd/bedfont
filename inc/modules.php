@@ -117,7 +117,7 @@ function _two_column_image_text($module)
 function _text($module) {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    return "<section class='text-section'>
+    return "<section class='text-section text-center'>
 	<div class='container'>
 	<h2 class='text-center'>$heading</span></h2>
 				$description
