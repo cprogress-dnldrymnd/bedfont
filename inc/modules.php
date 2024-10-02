@@ -52,7 +52,7 @@ function _hero($module)
         $bg = wp_get_attachment_image($bg_image, 'full');
     }
 
-    return "<section id='home_bg'>
+    return "<section id='home_bg' class='hero-style-1'>
     $bg
     <div class='container'>
         <div class='row'>
