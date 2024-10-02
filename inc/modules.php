@@ -285,7 +285,7 @@ function ___button($data)
 function __glide_slider($items)
 {
 
-    $html = "<div class='white-space'></div><div class='glide awards-slider mt-5'>
+    $html = "<div class='awards-slider mt-5'><div class='white-space'></div><div class='glide'>
 	<div class='glide__track' data-glide-el='track'>
 		<ul class='glide__slides'>";
 
@@ -326,7 +326,7 @@ function __glide_slider($items)
 
     $html .= "</ul>
 	</div>[__glide_arrows]
-</div>";
+</div></div>";
 
     return $html;
 }
