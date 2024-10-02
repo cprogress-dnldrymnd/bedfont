@@ -290,6 +290,12 @@ Container::make('post_meta', 'Modules')
                     ->set_header_template('Row: <%- heading %>')
 
             ))
+            ->setup_labels(
+                array(
+                    'plural_name'   => 'Modulesss',
+                    'singular_name' => 'Modules',
+                )
+            )
             ->set_header_template('Row Animation: <%- title %>')
             ->add_fields('blogs', array(
                 Field::make('text', 'heading', __('Heading')),
