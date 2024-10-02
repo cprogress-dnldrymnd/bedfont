@@ -63,6 +63,9 @@ function modules()
             case 'icon_box':
                 $html .= _icon_box($module);
                 break;
+            case 'icon_box':
+                $html .= _instagram_feed($module);
+                break;
         }
     }
     return $html;
@@ -415,6 +418,27 @@ function _icon_box($module)
 </section>";
 
     return $html;
+}
+
+function _instagram_feed($module)
+{
+    $heading = $module['heading'];
+    $shortcode = $module['shortcode'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+
+    return "<section class='instagram-feed pb-0'>
+    <div class='container-fluid px-0'>
+        <div class='row mx-0'>
+            <div class='col-12'>
+                <h2 class='mb-4'>$heading</span></h2>
+                <h3 class='mb-5 pink'>$description</h3>
+                <div class='feed'>
+    $shortcode
+                </div>
+            </div>
+        </div>
+    </div>
+</section>";
 }
 
 function ___button($data)
