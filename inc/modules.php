@@ -158,7 +158,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
             'button_target'     => $item['button_target'],
         ));
 
-        if ($item['button_type'] == 'internal') {
+        if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
         } else {
             $url = $item['button_custom_url'];
@@ -276,7 +276,7 @@ function _image_grid($module)
 
     foreach ($items as $item) {
         $image = wp_get_attachment_image($item['image'], 'large');
-        if ($item['button_type'] == 'internal') {
+        if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
         } else {
             $url = $item['button_custom_url'];
