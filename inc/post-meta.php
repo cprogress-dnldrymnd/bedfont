@@ -44,6 +44,10 @@ Container::make('post_meta', 'Modules')
                         array(
                             'button-pink'        => 'Button Pink',
                             'button-purple'      => 'Button Purple',
+                            'button-brown'      => 'Button Purple',
+                            'button-orange'      => 'Button Orange',
+                            'button-blue'      => 'Button BLue',
+                            'button-red'      => 'Button Red',
                         )
                     ),
                 Field::make('text', 'button_text', __('Button Text')),
@@ -90,6 +94,84 @@ Container::make('post_meta', 'Modules')
             ->add_fields('text', array(
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
+
+            ))
+            ->set_header_template('Text: <%- heading %>')
+            ->add_fields('row_animation', array(
+                Field::make('complex', 'items', 'Items')
+                    ->add_fields(array(
+                        Field::make('select', 'style', __('Style'))
+                            ->set_options(
+                                array(
+                                    'style-purple'      => 'Style Purple',
+                                    'style-blue'      => 'Style Blue',
+                                    'style-pink'      => 'Style Pink',
+                                    'style-red'      => 'Style Red',
+                                    'style-brown-gradient'      => 'Style Brown Gradient',
+                                )
+                            ),
+                        Field::make('text', 'heading', __('Heading')),
+                        Field::make('text', 'subheading', __('Subheading')),
+                        Field::make('textarea', 'description', __('Description')),
+                        Field::make('image', 'image', __('Image')),
+                        Field::make('select', 'button_type', __('Button Type'))
+                            ->set_options(
+                                array(
+                                    'internal-url'        => 'Internal',
+                                    'custom'      => 'Custom',
+                                )
+                            ),
+                        Field::make('select', 'button_style', __('Button Style'))
+                            ->set_options(
+                                array(
+                                    'button-pink'        => 'Button Pink',
+                                    'button-purple'      => 'Button Purple',
+                                    'button-brown'      => 'Button Purple',
+                                    'button-orange'      => 'Button Orange',
+                                    'button-blue'      => 'Button BLue',
+                                    'button-red'      => 'Button Red',
+                                )
+                            ),
+                        Field::make('text', 'button_text', __('Button Text')),
+                        Field::make('association', 'button_url', __('Button URL'))
+                            ->set_max(1)
+                            ->set_types(array(
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'post',
+                                ),
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'page',
+                                )
+                            ))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '!='
+                                    )
+                                )
+                            ),
+                        Field::make('text', 'button_custom_url', __('Button Custom URL'))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '='
+                                    )
+                                )
+                            ),
+                        Field::make('select', 'button_target', __('Button Target'))
+                            ->set_options(
+                                array(
+                                    'target="_self"'  => 'Default',
+                                    'target="_blank"' => 'New Tab',
+                                )
+                            ),
+                    ))
 
             ))
             ->set_header_template('Text: <%- heading %>')
