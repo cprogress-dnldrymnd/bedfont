@@ -187,7 +187,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
-                    
+
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
@@ -249,5 +249,26 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Slider: <%- heading %>')
+
+    ));
+
+
+Container::make('post_meta', 'Product Settings')
+    ->where('post_type', '=', 'products')
+    ->add_fields(array(
+        Field::make('text', 'product_website', __('Product Website')),
+        Field::make('select', 'product_style', __('Style'))
+            ->set_options(
+                array(
+                    'purple'      => 'Style Purple',
+                    'blue'      => 'Style Blue',
+                    'pink'      => 'Style Pink',
+                    'red'      => 'Style Red',
+                    'orange'      => 'Style Orange',
+                    'brown'      => 'Style Brown Gradient',
+                )
+            ),
+        Field::make('image', 'alt_image', __('Alt Image')),
+        Field::make('image', 'logo', __('Logo'))
 
     ));
