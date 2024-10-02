@@ -44,15 +44,7 @@ Container::make('post_meta', 'Modules')
                             'post_type' => 'page',
                         )
                     ))
-                    ->set_conditional_logic(
-                        array(
-                            array(
-                                'field'   => 'button_type',
-                                'value'   => 'custom',
-                                'compare' => '!='
-                            )
-                        )
-                    ),
+                 ,
                 Field::make('text', 'button_custom_url', __('Button Custom URL')),
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
