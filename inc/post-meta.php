@@ -412,5 +412,19 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Image Grid: <%- title %>')
+            ->add_fields('icon_box', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'bottom_text', __('Bottom Text')),
+                Field::make('complex', 'items', 'Items')
+                    ->set_layout('tabbed-vertical')
+                    ->add_fields(array(
+                        Field::make('image', 'image', __('Image Icon')),
+                        Field::make('textarea', 'text', __('Text')),
+                  
+                    ))
+                    ->set_header_template('Grid: <%- button_text %>')
+
+            ))
+            ->set_header_template('Icon Box: <%- title %>')
 
     ));
