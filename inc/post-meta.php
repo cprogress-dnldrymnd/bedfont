@@ -32,6 +32,13 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image')),
+                Field::make('select', 'button_type', __('Button Type'))
+                    ->set_options(
+                        array(
+                            'internal-url'        => 'Internal',
+                            'custom'      => 'Custom',
+                        )
+                    ),
                 Field::make('text', 'button_text', __('Button Text')),
                 Field::make('association', 'button_url', __('Button Text'))
                     ->set_types(array(
@@ -44,8 +51,25 @@ Container::make('post_meta', 'Modules')
                             'post_type' => 'page',
                         )
                     ))
-                 ,
-                Field::make('text', 'button_custom_url', __('Button Custom URL')),
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'button_type',
+                                'value'   => 'custom',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
+                Field::make('text', 'button_custom_url', __('Button Custom URL'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'button_type',
+                                'value'   => 'custom',
+                                'compare' => '='
+                            )
+                        )
+                    ),
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
     ));
