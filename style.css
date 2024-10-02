@@ -634,6 +634,8 @@ template {
   background-color: var(--purple); }
 .button-box.button-orange .btn {
   background-color: var(--orange); }
+.button-box.button-brown .btn {
+  background-color: var(--brown); }
 .button-box.button-box-shadow .btn {
   box-shadow: 0px 2px 3px #555; }
 

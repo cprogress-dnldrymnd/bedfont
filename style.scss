@@ -760,6 +760,11 @@ template {
             background-color: var(--orange);
         }
     }
+    &.button-brown {
+        .btn {
+            background-color: var(--brown);
+        }
+    }
     &.button-box-shadow {
         .btn {
             box-shadow: 0px 2px 3px #555;

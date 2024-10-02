@@ -142,7 +142,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
             'button_text'       => $item['button_text'],
             'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
             'button_custom_url' => $item['button_custom_url'],
-            'button_style'      => $button_style,
+            'button_style'      => $button_style . ' button-box-shadow',
             'button_target'     => $item['button_target'],
         ));
 
