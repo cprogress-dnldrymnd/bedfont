@@ -747,6 +747,7 @@ section.two-column-image-text.style-2 .inner {
     font-style: italic;
     font-size: 110%; }
   section.two-column-image-text.style-2 .inner:before {
+    content: '';
     opacity: 0.2;
     position: absolute;
     left: 0;

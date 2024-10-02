@@ -928,6 +928,7 @@ section.two-column-image-text {
                 font-size: 110%;
             }
             &:before {
+                content: '';
                 opacity: 0.2;
                 position: absolute;
                 left: 0;
