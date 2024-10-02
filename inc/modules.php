@@ -351,14 +351,9 @@ function _icon_box($module)
     $html = "<section class='icon-boxes $style'>
 	<div class='container'>
     <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
-
     if ($style == 'style-1') {
-        $html .= "<div class='desc'>";
-        $html .= $description;
-        $html .= "</div>";
         $class = 'col-6 col-lg-2';
     }
-
     $html .= "<div class='row my-lg-5 values d-none d-md-flex'>";
 
     foreach ($items as $item) {
@@ -367,7 +362,10 @@ function _icon_box($module)
 
 
         $html .= "<div class='$class'>";
+        $html .= "<div class='icon-box'>";
         $html .= wp_get_attachment_image($item['image'], 'medium');
+        $html .= "</div>";
+
         if ($heading) {
             $html .= "<h3>$heading</h3>";
         }
@@ -380,11 +378,19 @@ function _icon_box($module)
         $html .= "</div>";
     }
 
-    $html .= "</div>
+    $html .= "</div>";
+    if ($style == 'style-1') {
+        $html .= "<div class='desc'>";
+        $html .= $description;
+        $html .= "</div>";
+    }
+
+
+    $html .= "
 	</div>
 </section>";
 
-return $html;
+    return $html;
 }
 
 function ___button($data)
