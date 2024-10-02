@@ -661,5 +661,7 @@ section.row-animation .product-bubble-home {
   section.row-animation .product-bubble-home.brown:before {
     background-image: linear-gradient(to right, #956e41, #000);
     opacity: 1; }
+  section.row-animation .product-bubble-home.brown p {
+    color: var(--white); }
 
 /*# sourceMappingURL=style.css.map */
