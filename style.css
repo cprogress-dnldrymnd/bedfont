@@ -645,6 +645,8 @@ section.row-animation .product-bubble-home {
   section.row-animation .product-bubble-home * {
     position: relative;
     z-index: 1; }
+  section.row-animation .product-bubble-home p {
+    color: var(--color); }
   section.row-animation .product-bubble-home:before {
     content: "";
     opacity: 0.2;
