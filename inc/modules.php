@@ -22,7 +22,7 @@ function action_module_content()
         }
     }
 }
-//add_action('shutdown', 'action_module_content');
+add_action('shutdown', 'action_module_content');
 
 function modules()
 {
