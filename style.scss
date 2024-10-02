@@ -743,25 +743,25 @@ template {
     &.button-blue {
         .btn {
             background-color: var(--blue);
-            color: var(--blue);
+            color: var(--white);
         }
     }
     &.button-red {
         .btn {
-            background-color: var(--red);
-            color: var(--red);
+            background-color: var(--white);
+            color: var(--white);
         }
     }
     &.button-purple {
         .btn {
             background-color: var(--purple);
-            color: var(--purple);
+            color: var(--white);
         }
     }
     &.button-orange {
         .btn {
             background-color: var(--orange);
-            color: var(--orange);
+            color: var(--white);
         }
     }
     &.button-box-shadow {

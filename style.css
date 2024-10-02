@@ -628,16 +628,16 @@ template {
   color: var(--white); }
 .button-box.button-blue .btn {
   background-color: var(--blue);
-  color: var(--blue); }
+  color: var(--white); }
 .button-box.button-red .btn {
-  background-color: var(--red);
-  color: var(--red); }
+  background-color: var(--white);
+  color: var(--white); }
 .button-box.button-purple .btn {
   background-color: var(--purple);
-  color: var(--purple); }
+  color: var(--white); }
 .button-box.button-orange .btn {
   background-color: var(--orange);
-  color: var(--orange); }
+  color: var(--white); }
 .button-box.button-box-shadow .btn {
   box-shadow: 0px 2px 3px #555; }
 
