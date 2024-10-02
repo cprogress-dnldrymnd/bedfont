@@ -116,8 +116,8 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
-                                    ''      => 'Image on Left',
-                                    'flex-row-reverse'      => 'Image on Right',
+                                    'flex-row-reverse'      => 'Image on Left',
+                                    ''      => 'Image on Right',
                                 )
                             ),
                         Field::make('text', 'heading', __('Heading')),
