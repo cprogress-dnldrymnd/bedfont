@@ -898,6 +898,19 @@ section.icon-boxes {
 section.two-column-image-text {
     &.style-2 {
         .inner {
+            border-radius: 20px;
+            padding: 30px;
+            background-color: var(--color);
+            text-align: center;
+            opacity: 0.2;
+            p {
+                color: var(--color);
+                font-family: Calibri, 'Open Sans', sans-serif;
+                font-weight: bold;
+                text-align: center;
+                font-style: italic;
+                font-size: 110%;
+            }
         }
     }
 }

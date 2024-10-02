@@ -723,4 +723,18 @@ section.icon-boxes.style-1 .icon-box {
     left: 0;
     top: 0; }
 
+section.two-column-image-text.style-2 .inner {
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--color);
+  text-align: center;
+  opacity: 0.2; }
+  section.two-column-image-text.style-2 .inner p {
+    color: var(--color);
+    font-family: Calibri, 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    font-size: 110%; }
+
 /*# sourceMappingURL=style.css.map */
