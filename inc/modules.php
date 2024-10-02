@@ -96,7 +96,7 @@ function _hero_style_2($module)
 {
 
     $heading = $module['heading'];
-    $subheading = $module['subheading'];
+    $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
 
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
@@ -104,7 +104,7 @@ function _hero_style_2($module)
 		<div class='row'>
 			<div class='col-12 col-md-6 pe-5 my-auto'>
 				<h1 class='text-left mt-lg-0'>$heading</h1>
-				<p>$subheading</p>
+				<p>$description</p>
 				<a target='_self' href='https://bedfont.theprogressteam.com/contact/' class='btn btn-smokerlyzer float-none' title='' rel='noopener'><span> Contact Us</span><i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
 			</div>
 			<div class='col-12 col-md-6 mt-5 mt-lg-0'>
