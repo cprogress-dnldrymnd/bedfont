@@ -821,4 +821,22 @@ section.row-animation {
         width: 100%;
         height: auto;
     }
+    .hightlights {
+        display: flex;
+        span {
+            font-family: insignia;
+            text-align: center;
+            background: #0090d0;
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-size: 115%;
+            margin-bottom: 15px;
+            display: inline-block;
+            min-width: 75px;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
 }
