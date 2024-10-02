@@ -223,7 +223,7 @@ function _blogs($module)
     $html .= "</div>";
 
     $html .= "[blogs source='most-recent' posts_per_page='3']";
-    $html .= "<div class='button-box text-center button-blue'><a class='btn ' href='/news' target='_blank' rel='noopener'>All Blogs<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a></div>";
+    $html .= "<div class='button-box mt-5 text-center button-blue'><a class='btn ' href='/news' target='_blank' rel='noopener'>All Blogs<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a></div>";
 
     $html .= "</div>";
 
