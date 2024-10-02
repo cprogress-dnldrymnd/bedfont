@@ -383,12 +383,16 @@ add_shortcode('rts', 'rts');
 /*-----------------------------------------------------------------------------------*/
 require_once('inc/modules.php');
 
-extract(
-	shortcode_atts(
-		array(
-			'id' => '',
-		),
-		$atts
-	)
-);
-return get_the_permalink($id);
+function permalink($atts)
+{
+	extract(
+		shortcode_atts(
+			array(
+				'id' => '',
+			),
+			$atts
+		)
+	);
+	return get_the_permalink($id);
+}
+add_shortcode('permalink', 'permalink');
