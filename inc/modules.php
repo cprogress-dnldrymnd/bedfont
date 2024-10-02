@@ -344,13 +344,41 @@ function _icon_box($module)
 {
     $heading = $module['heading'];
     $items = $module['items'];
-    $bottom_text = isset($module['bottom_text']) ? wpautop($module['descrbottom_textption']) : '';
+    $style = $module['itemstyles'];
 
-    $html = "<section class='icon-boxes'>
+    $description = isset($module['bottom_text']) ? wpautop($module['description']) : '';
+
+    $html = "<section class='icon-boxes $style'>
 	<div class='container'>
-    <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>
-		<div class='row my-lg-5 values d-none d-md-flex'>";
+    <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
 
+    if ($style == 'style-1') {
+        $html .= "<div class='desc'>";
+        $html .= $description;
+        $html .= "</div>";
+        $class = 'col-6 col-lg-2';
+    }
+
+    $html .= "<div class='row my-lg-5 values d-none d-md-flex'>";
+
+    foreach ($items as $item) {
+        $heading = $item['heading'];
+        $text = isset($module['text']) ? wpautop($module['text']) : '';
+
+
+        $html .= "<div class='$class'>";
+        $html .= wp_get_attachment_image($item['image'], 'medium');
+        if ($heading) {
+            $html .= "<h3>$heading</h3>";
+        }
+
+        if ($text) {
+            $html .= "<div class='icon-desc'>";
+            $html .= $text;
+            $html .= "</div>";
+        }
+        $html .= "</div>";
+    }
 
     $html .= "</div>
 	</div>
