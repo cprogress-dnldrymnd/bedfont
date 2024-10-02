@@ -467,5 +467,13 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Icon Box: <%- heading %>')
+            ->add_fields('instagram_feed', array(
+         
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'description', __('Description')),
+                Field::make('text', 'shortcode', __('Shortcode')),
+
+            ))
+            ->set_header_template('Instagram Feed: <%- heading %>')
 
     ));
