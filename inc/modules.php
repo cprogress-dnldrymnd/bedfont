@@ -134,14 +134,14 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $color = $item['color'];
         $style = $item['style'];
         $description = isset($item['description']) ? wpautop($item['description']) : '';
-
+        $button_style = 'button-' . $style;
 
         $button = ___button(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
             'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
             'button_custom_url' => $item['button_custom_url'],
-            'button_style'      => 'button-' . $style,
+            'button_style'      => $button_style,
             'button_target'     => $item['button_target'],
         ));
 
