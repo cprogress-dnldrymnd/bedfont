@@ -41,6 +41,9 @@ function modules()
             case 'text':
                 $html .= _text($module);
                 break;
+            case 'row_animation':
+                $html .= _row_animation($module);
+                break;
         }
     }
     return $html;
@@ -114,7 +117,8 @@ function _two_column_image_text($module)
 }
 
 
-function _text($module) {
+function _text($module)
+{
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     return "<section class='text-section text-center'>
@@ -125,6 +129,48 @@ function _text($module) {
 </section>";
 }
 
+function _row_animation($module, $html = "<section class='row-animation'>")
+{
+    $items = $module['items'];
+    foreach ($items as $item) {
+        $html .= "<div class='slideanim row'>
+	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
+		<div class='product-bubble-home' id='nobreath-bubble'>
+			<h2></h2>
+			<h3></h3>
+			<p></p>
+			<a href='https://www.nobreathfeno.com/' class='btn btn-nobreath mx-auto d-table float-none' target='_blank'
+				title='Click here for the NObreath website' rel='noopener'>More info <i class='fa fa-arrow-right ms-1'
+					aria-hidden='true'></i></a>
+		</div>
+	</div>
+	<div class='col-12 col-lg-6 order-1 order-lg-2'>
+		<a href='https://www.nobreathfeno.com/' target='_blank' title='Click for the NObreath website'
+			rel='noopener'><img
+				src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/NObreath-monitor-face-on-with-mouthpiece-home.png'
+				class='img-fluid mx-auto d-block mt-2 mb-5 my-lg-0' alt='Imnage of NObreath device'></a>
+	</div>
+</div>
+<div class='slideanim row product-break'>
+	<div class='col'></div>
+	<div class='col'></div>
+	<div class='col my-auto p-0'>
+		<hr class='ms-auto'>
+	</div>
+	<div class='col p-0'>
+		<img src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/logo-bubbles.png'
+			class='img-fluid' alt='Bedfont Logo'>
+	</div>
+	<div class='col my-auto p-0'>
+		<hr>
+	</div>
+	<div class='col'></div>
+	<div class='col'></div>
+</div>";
+    }
+    $html .= "</section>";
+    return $html;
+}
 
 function ___button($data)
 {

@@ -130,17 +130,6 @@ Container::make('post_meta', 'Modules')
                                     'custom'      => 'Custom',
                                 )
                             ),
-                        Field::make('select', 'button_style', __('Button Style'))
-                            ->set_options(
-                                array(
-                                    'button-pink'        => 'Button Pink',
-                                    'button-purple'      => 'Button Purple',
-                                    'button-brown'      => 'Button Purple',
-                                    'button-orange'      => 'Button Orange',
-                                    'button-blue'      => 'Button BLue',
-                                    'button-red'      => 'Button Red',
-                                )
-                            ),
                         Field::make('text', 'button_text', __('Button Text')),
                         Field::make('association', 'button_url', __('Button URL'))
                             ->set_max(1)
