@@ -383,6 +383,8 @@ function _icon_box($module)
     $html .= "</div>
 	</div>
 </section>";
+
+return $html;
 }
 
 function ___button($data)
