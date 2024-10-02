@@ -33,9 +33,14 @@ function modules()
         switch ($type) {
             case 'hero':
                 $style = $module['style'];
-                $html .= get_template_part('template-parts/modules/hero', $style, $module);
+                $html .=_hero();
                 break;
         }
     }
     return $html;
+}
+
+
+function _hero() {
+    return 'test';
 }
