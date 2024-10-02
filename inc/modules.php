@@ -236,6 +236,7 @@ function _slider($module)
 	<div class='container'>
 	<h2 class='text-left'>$heading</span></h2>
 				$description
+                $glide_slider
 	</div>
 </section>";
 }
