@@ -135,7 +135,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $style = $item['style'];
         $image = isset($item['image']) ? wp_get_attachment_image($item['image'], 'large') : false;
         $description = isset($item['description']) ? wpautop($item['description']) : '';
-        $button_style = 'button-' . $style;
+        $button_style = 'button-' . $color;
 
         $button = ___button(array(
             'button_type'       => $item['button_type'],
@@ -155,7 +155,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 
         $html .= "<div class='slideanim row $style' style='--color: var(--$color)'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
-		<div class='product-bubble-home' id='nobreath-bubble'>
+		<div class='product-bubble-home' >
 			<h2>$heading</h2>
 			<h3>$subheading</h3>
 			$description
