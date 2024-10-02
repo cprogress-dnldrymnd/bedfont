@@ -97,7 +97,6 @@ function _hero_style_2($module)
 
     $heading = $module['heading'];
     $subheading = $module['subheading'];
-    $bg_image = $module['bg_image'];
 
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
