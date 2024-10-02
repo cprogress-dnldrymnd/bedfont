@@ -867,5 +867,11 @@ section.image-grid {
                 object-fit: cover;
             }
         }
+        h3 {
+            padding: 0;
+            a {
+                position: static;
+            }
+        }
     }
 }

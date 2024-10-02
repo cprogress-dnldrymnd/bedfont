@@ -284,9 +284,15 @@ function _image_grid($module)
             'button_style'      => 'button-large',
             'button_target'     => $item['button_target'],
         ));
-
+        if ($item['button_type'] == 'internal') {
+            $url = $item['button_url'][0];
+        } else {
+            $url = $item['button_custom_url'];
+        }
+        $permalink = "[permalink id='$url']";
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
 				<div class='overflow-hidden h-100 grid-box'>
+                <a href='$url'>
 					<div class='bg_image h-100'>$image</div>
 					<h3>$button</h3>
 				</div>
