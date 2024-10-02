@@ -54,7 +54,6 @@ function _hero($module)
     }
 
     return "<section id='home_bg' class='hero-style-1' $style>
-    $bg
     <div class='container '>
         <div class='row'>
             <div class='col-12 col-lg-6 my-auto d-block order-2 order-lg-1'>
