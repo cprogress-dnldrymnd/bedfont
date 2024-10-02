@@ -36,8 +36,10 @@ function modules()
                 $html .= _hero($module);
                 break;
             case 'two_column_image_text':
-                $style = $module['style'];
                 $html .= _two_column_image_text($module);
+                break;
+            case 'text':
+                $html .= _text($module);
                 break;
         }
     }
@@ -112,6 +114,16 @@ function _two_column_image_text($module)
 }
 
 
+function _text($module) {
+    $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    return "<section class='text-section'>
+	<div class='container'>
+	<h2 class='text-center'>$heading</span></h2>
+				$description
+	</div>
+</section>";
+}
 
 
 function ___button($data)
