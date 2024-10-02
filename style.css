@@ -770,11 +770,10 @@ section.two-column-image-text.style-3 {
     section.two-column-image-text.style-3 .container .row {
       --bs-gutter-x: 0;
       flex-direction: row-reverse; }
-  section.two-column-image-text.style-3 .image-col {
+  section.two-column-image-text.style-3 .image-box {
     position: relative;
     padding: 40%; }
-    section.two-column-image-text.style-3 .image-col img {
-      width: 100%;
+    section.two-column-image-text.style-3 .image-box img {
       position: absolute;
       left: 0;
       top: 0;

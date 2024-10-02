@@ -963,11 +963,10 @@ section.two-column-image-text {
                 flex-direction: row-reverse;
             }
         }
-        .image-col {
+        .image-box {
             position: relative;
             padding: 40%;
             img {
-                width: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;

@@ -162,8 +162,10 @@ function _two_column_image_text($module)
                 $button
 			</div>
 			</div>
-			<div class='image-col $col_2_class'>
+			<div class='$col_2_class'>
+			<div class='image-box'>
 				$image
+			</div>
 			</div>
 		</div>
 	</div>
