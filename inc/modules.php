@@ -101,8 +101,7 @@ function _two_column_image_text($module)
 				<h2 class='text-left'>$heading</span></h2>
 				$description
                 $button
-				<a href='about-us' class='btn btn-who-we-are' title='Click here for more about Bedfont'>About Us <i
-						class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
+		
 			</div>
 			<div class='col-12 col-lg-6'>
 				$image
@@ -145,7 +144,7 @@ function ___button($data)
 
     if ($button_text && $link && $display == true) {
         $html = "<div class='button-box $button_style'>";
-        $html .= "<$tag class='$class' $link $button_target>";
+        $html .= "<$tag class='btn $class' $link $button_target>";
         $html .= $button_text;
         $html .= "<i
 						class='fa fa-arrow-right ms-1' aria-hidden='true'></i>";
