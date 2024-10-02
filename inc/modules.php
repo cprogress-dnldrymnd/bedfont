@@ -157,7 +157,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' >
 			<h2>$heading</h2>
-			<h3>$subheading</h3>
+            " . $subheading ? "<h3>$subheading</h3>" : '' . "
 			$description
 			$button
 		</div>
