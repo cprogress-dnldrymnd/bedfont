@@ -144,10 +144,7 @@ function __button($data)
     }
 
     if ($button_text && $link && $display == true) {
-        $classes[] = $button_style;
-        $classes[] = 'button-box';
-        $classes_val = _array_to_string($classes);
-        $html = "<div class='$classes_val'>";
+        $html = "<div class='button-box $button_style'>";
         $html .= "<$tag class='$class' $link $button_target>";
         $html .= $button_text;
         $html .= "<i
