@@ -665,4 +665,11 @@ section.row-animation .brown .product-bubble-home:before {
 section.row-animation .brown .product-bubble-home p, section.row-animation .brown .product-bubble-home h2 {
   color: var(--white); }
 
+.awards-slider .glide__slide {
+  overflow: hidden; }
+.awards-slider img {
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: auto; }
+
 /*# sourceMappingURL=style.css.map */
