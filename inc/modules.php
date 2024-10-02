@@ -33,7 +33,7 @@ function modules()
         switch ($type) {
             case 'hero':
                 $style = $module['style'];
-                $html .=_hero();
+                $html .= _hero($module);
                 break;
         }
     }
@@ -41,6 +41,28 @@ function modules()
 }
 
 
-function _hero() {
-    return 'test';
+function _hero($module)
+{
+
+    $heading = $module['heading'];
+    $subheading = $module['subheading'];
+    $bg_image = $module['bg_image'];
+
+    if ($bg_image) {
+        $bg = wp_get_attachment_image($bg_image, 'full');
+    }
+
+    return "<section id='home_bg'>
+    $bg
+    <div class='container'>
+        <div class='row'>
+            <div class='col-12 col-lg-6 my-auto d-block order-2 order-lg-1'>
+                <h1>$heading</h1>
+                <h2>$subheading</h2>
+                <div id='line_top'></div>
+                <div id='line_bottom'></div>
+            </div>
+        </div>
+    </div>
+</section>";
 }
