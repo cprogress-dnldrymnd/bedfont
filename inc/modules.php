@@ -232,7 +232,7 @@ function _slider($module)
     $items = $module['items'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $glide_slider = __glide_slider($items);
-    return "<section class='slider'>
+    return "<section class='slider overflow-hidden'>
 	<div class='container'>
 	<h2 class='text-left'>$heading</span></h2>
 				$description
@@ -290,7 +290,7 @@ function __glide_slider($items)
 		<ul class='glide__slides'>";
 
     foreach ($items as $item) {
-        $heading = $item['item'];
+        $heading = $item['heading'];
         $description = $item['description'];
         $image = $item['image'];
         $highlights = $item['highlight'];
