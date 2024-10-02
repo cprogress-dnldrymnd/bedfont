@@ -153,7 +153,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         }
         $permalink = "[permalink id='$url']";
 
-        $html .= "<div class='slideanim row $color $style'>
+        $html .= "<div class='slideanim row $style' style='--color: var(--$color)'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' id='nobreath-bubble'>
 			<h2>$heading</h2>

@@ -641,4 +641,19 @@ template {
 .button-box.button-box-shadow .btn {
   box-shadow: 0px 2px 3px #555; }
 
+section.row-animation .slideanim {
+  text-align: center; }
+section.row-animation .product-bubble-home * {
+  position: relative;
+  z-index: 1; }
+section.row-animation .product-bubble-home:before {
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color); }
+
 /*# sourceMappingURL=style.css.map */
