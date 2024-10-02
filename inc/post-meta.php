@@ -145,6 +145,13 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Hero: <%- heading %>')
             ->add_fields('two_column_image_text', array(
+                Field::make('select', 'image_position', __('Image Position'))
+                    ->set_options(
+                        array(
+                            ''      => 'Image on Right',
+                            'flex-row-reverse'      => 'Image on Left',
+                        )
+                    ),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
