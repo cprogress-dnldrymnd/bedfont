@@ -160,10 +160,10 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
+            $permalink = "[permalink id='$url']";
         } else {
-            $url = $item['button_custom_url'];
+            $permalink = $item['button_custom_url'];
         }
-        $permalink = "[permalink id='$url']";
 
         $html .= "<div class='slideanim row $color $style' style='--color: var(--$color)'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
@@ -278,11 +278,10 @@ function _image_grid($module)
         $image = wp_get_attachment_image($item['image'], 'large');
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
+            $permalink = "[permalink id='$url']";
         } else {
-            $url = $item['button_custom_url'];
+            $permalink = $item['button_custom_url'];
         }
-        $permalink = "[permalink id='$url']";
-        $html .= $permalink;
         $button = ___button(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
