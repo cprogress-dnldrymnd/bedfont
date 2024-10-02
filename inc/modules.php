@@ -209,17 +209,18 @@ function _blogs($module)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
     $html  = "<section class='blogs grey_bg'>";
-    $html  .= "<div class='container'>";
-    $html  .= "<div class='text-center'>";
+    $html .= "<div class='container'>";
+    $html .= "<div class='text-center'>";
     $html .= "<h2>$heading</h2>
 				";
     $html .= $description;
     $html .= "</div>";
 
     $html .= "[blogs source='most-recent' posts_per_page='3']";
+    $html .= "<div class='button-box text-center button-blue'><a class='btn ' href='/news' target='_blank' rel='noopener'>All Blogs<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a></div>";
+
     $html .= "</div>";
 
-    $html .= "<div class='button-box text-center button-blue'><a class='btn ' href='/news' target='_blank' rel='noopener'>All Blogs<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a></div>";
     $html  .= "</section>";
 
     return $html;
