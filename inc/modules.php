@@ -126,20 +126,25 @@ function _two_column_image_text($module)
     $color = $module['color'];
     $image_position = $module['image_position'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
-    if ($style == 'style-1' || $style == 'style-3') {
+    if ($style == 'style-1') {
         $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col';
         $col_2_class = 'col-12 col-lg-6';
-    } else {
+        $size = 'large';
+    } else if ($style == 'style-2') {
         $col_1_class = 'col-12 col-lg-7 my-auto order-2 order-lg-1';
         $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
-
+        $size = 'large';
         if ($color) {
             $style_inline = "style='--color: var(--$color)'";
         }
+    } else if ($style == 'style-3') {
+        $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col';
+        $col_2_class = 'col-12 col-lg-6';
+        $size = 'full';
     }
 
+    $image = isset($module['image']) ? wp_get_attachment_image($module['image'], $size) : '';
 
 
     $button = ___button(array(

@@ -772,7 +772,7 @@ section.two-column-image-text.style-3 {
       flex-direction: row-reverse; }
   section.two-column-image-text.style-3 .image-box {
     position: relative;
-    padding: 40%; }
+    padding: 30%; }
     section.two-column-image-text.style-3 .image-box img {
       position: absolute;
       left: 0;
