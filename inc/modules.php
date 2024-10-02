@@ -44,6 +44,9 @@ function modules()
             case 'row_animation':
                 $html .= _row_animation($module);
                 break;
+            case 'blogs':
+                $html .= _blogs($module);
+                break;
         }
     }
     return $html;
@@ -194,6 +197,23 @@ $button
     }
     $html .= "</div>";
     $html .= "</section>";
+    return $html;
+}
+
+function __blogs($module)
+{
+    $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+
+    $html  = "<section class='blogs grey_bg'>";
+    $html  = "<div class='container'>";
+    $html .= "<h2>$heading</h2>
+				";
+    $html .= $description;
+    $html .= "[blogs source='most-recent' posts_per_page='3']";
+    $html .= "</div>";
+    $html  .= "</section>";
+
     return $html;
 }
 

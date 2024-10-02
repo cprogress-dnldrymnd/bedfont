@@ -175,4 +175,11 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Row Animation: <%- title %>')
+            ->add_fields('blogs', array(
+                Field::make('text', 'heading', __('heading')),
+                Field::make('text', 'description', __('Description')),
+              
+            ))
+            ->set_header_template('Blogs: <%- heading %>')
+
     ));

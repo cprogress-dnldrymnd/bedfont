@@ -371,28 +371,8 @@ function get__theme_option($value)
 {
 	return carbon_get_theme_option($value);
 }
-
-function rts()
-{
-	return '<sup>&#174;</sup>';
-}
-add_shortcode('rts', 'rts');
-
 /*-----------------------------------------------------------------------------------*/
 /* Require Files
 /*-----------------------------------------------------------------------------------*/
 require_once('inc/modules.php');
-
-function permalink($atts)
-{
-	extract(
-		shortcode_atts(
-			array(
-				'id' => '',
-			),
-			$atts
-		)
-	);
-	return get_the_permalink($id);
-}
-add_shortcode('permalink', 'permalink');
+require_once('inc/shortcodes.php');
