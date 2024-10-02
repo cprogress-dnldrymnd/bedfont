@@ -197,6 +197,7 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
+                                    ''      => 'Default',
                                     'purple'      => 'Style Purple',
                                     'blue'      => 'Style Blue',
                                     'pink'      => 'Style Pink',
@@ -204,15 +205,25 @@ Container::make('post_meta', 'Modules')
                                     'orange'      => 'Style Orange',
                                     'brown'      => 'Style Brown Gradient',
                                 )
+                            )
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'style',
+                                        'value'   => 'style-2',
+                                    )
+                                )
                             ),
                         Field::make('text', 'heading', __('Heading')),
                         Field::make('textarea', 'description', __('Description')),
                         Field::make('image', 'image', __('Image')),
                         Field::make('complex', 'highlight', 'Highlight Text')
-                            ->set_layout('tabbed-vertical')
+                            ->set_layout('tabbed-horizontal')
                             ->add_fields(array(
                                 Field::make('text', 'text', __('Text')),
                             ))
+                            ->set_header_template('<%- text %>')
+
 
                     ))
                     ->set_header_template('Slide: <%- heading %>')
