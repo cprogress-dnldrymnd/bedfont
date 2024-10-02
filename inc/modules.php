@@ -479,12 +479,12 @@ function __glide_slider($items)
         $color = $item['color'];
 
         if ($color) {
-            $style = "style='--color: var(--$color)'";
+            $style_inline = "style='--color: var(--$color)'";
         }
 
-        $html .= "<li class='glide__slide' >";
-        $html .= "<div class='inner' $color >";
-        
+        $html .= "<li class='glide__slide'>";
+        $html .= "<div class='inner $color' $style_inline >";
+
         if ($heading && $style == 'style-2') {
             $html .= "<h3 class='timeline-date text-center'>$heading</h3>";
         }
