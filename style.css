@@ -809,4 +809,7 @@ section.slider .inner.brown .timeline-date {
     background-color: transparent;
     background-image: var(--brown-bg); }
 
+section.text-section {
+  background-color: var(--color); }
+
 /*# sourceMappingURL=style.css.map */
