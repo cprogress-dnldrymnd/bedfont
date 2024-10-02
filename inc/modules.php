@@ -439,6 +439,8 @@ function _instagram_feed($module)
         </div>
     </div>
 </section>";
+return $html;
+
 }
 
 function ___button($data)
