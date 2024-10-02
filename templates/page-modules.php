@@ -13,7 +13,7 @@ foreach ($modules as $key => $module) {
         case 'hero':
             $style = $module['style'];
             echo $style;
-            get_template_part('template-parts/modules/hero', $style);
+            get_template_part('template-parts/modules/hero', $style, $module);
             break;
     }
 }
