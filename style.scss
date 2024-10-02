@@ -791,5 +791,8 @@ section.row-animation {
             right: 0;
             background-color: var(--color);
         }
+        &.brown {
+            background-image: linear-gradient(to right, #956E41, #000);
+        }
     }
 }
