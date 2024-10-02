@@ -276,6 +276,13 @@ function _image_grid($module)
 
     foreach ($items as $item) {
         $image = wp_get_attachment_image($item['image'], 'large');
+        if ($item['button_type'] == 'internal') {
+            $url = $item['button_url'][0];
+        } else {
+            $url = $item['button_custom_url'];
+        }
+        $permalink = "[permalink id='$url']";
+
         $button = ___button(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
@@ -285,12 +292,8 @@ function _image_grid($module)
             'button_target'     => $item['button_target'],
             'button_icon' => false
         ));
-        if ($item['button_type'] == 'internal') {
-            $url = $item['button_url'][0];
-        } else {
-            $url = $item['button_custom_url'];
-        }
-        $permalink = "[permalink id='$url']";
+
+
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
 				<div class='overflow-hidden h-100 grid-box position-relative'>
                 <a href='$permalink'>
