@@ -63,7 +63,7 @@ function modules()
             case 'icon_box':
                 $html .= _icon_box($module);
                 break;
-            case 'icon_box':
+            case 'instagram_feed':
                 $html .= _instagram_feed($module);
                 break;
         }
