@@ -18,7 +18,7 @@ Container::make('post_meta', 'Modules')
                 )
             )
             ->add_fields('hero', array(
-                Field::make('text', 'heading', __('Button Target')),
+                Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'subheading', __('Subheading')),
                 Field::make('image', 'bg_image', __('Background Image')),
                 Field::make('select', 'style', __('Style'))
@@ -27,7 +27,7 @@ Container::make('post_meta', 'Modules')
                     )),
 
             ))
-            ->set_header_template('Layouts: <%- heading %>')
+            ->set_header_template('Hero: <%- heading %>')
 
 
     ));

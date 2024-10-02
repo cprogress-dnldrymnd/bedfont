@@ -283,14 +283,14 @@ function __button($atts)
 			$atts
 		)
 	);
-	
-	if($link) {
+
+	if ($link) {
 		$url = $link;
 	} else {
 		$url = get_the_permalink($page_id);
 	}
 
-	$html = '<a target="'.$target.'" href="' . $url . '" class="btn '.$class.'" title="'.$title.'" rel="noopener">';
+	$html = '<a target="' . $target . '" href="' . $url . '" class="btn ' . $class . '" title="' . $title . '" rel="noopener">';
 
 	$html .= '<span> ' . __($button_text, 'bedfont') . '</span>';
 
@@ -371,3 +371,9 @@ function get__theme_option($value)
 {
 	return carbon_get_theme_option($value);
 }
+
+function rts()
+{
+	return '<sup>&#174;</sup>';
+}
+add_shortcode('rts', 'rts');
