@@ -89,7 +89,7 @@ function _two_column_image_text($module)
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
-        'button_url_custom' => $module['button_url_custom'],
+        'button_custom_url' => $module['button_custom_url'],
         'button_style'      => $module['button_style'],
         'button_target'     => $module['button_target'],
     ));
@@ -134,14 +134,14 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $color = $item['color'];
         $style = $item['style'];
         $description = isset($module['description']) ? wpautop($module['description']) : '';
-        
+
 
         $button = ___button(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
             'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
-            'button_url_custom' => $item['button_url_custom'],
-            'button_style'      => $item['button_style'],
+            'button_custom_url' => $item['button_custom_url'],
+            'button_style'      => 'button-' . $style,
             'button_target'     => $item['button_target'],
         ));
 
@@ -188,7 +188,7 @@ function ___button($data)
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
     $button_text = isset($data['button_text']) ? $data['button_text'] : false;
     $button_url = isset($data['button_url']) ? $data['button_url'] : false;
-    $button_url_custom = isset($data['button_url_custom']) ? $data['button_url_custom'] : false;
+    $button_custom_url = isset($data['button_custom_url']) ? $data['button_custom_url'] : false;
     $button_style = isset($data['button_style']) ? $data['button_style'] : false;
     $button_text = isset($data['button_text']) ? $data['button_text'] : false;
     $button_target = isset($data['button_target']) ? $data['button_target'] : false;
@@ -206,9 +206,9 @@ function ___button($data)
             $display = false;
         }
     } else if ($button_type == 'custom') {
-        $button_url = $button_url_custom;
+        $button_url = $button_custom_url;
         $tag = 'a';
-        $link = "href='$button_url_custom'";
+        $link = "href='$button_custom_url'";
     }
 
     if ($button_text && $link && $display == true) {
