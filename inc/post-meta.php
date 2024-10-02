@@ -101,7 +101,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
                     ->add_fields(array(
-                        Field::make('select', 'style', __('Style'))
+                        Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
                                     'style-purple'      => 'Style Purple',
@@ -109,6 +109,13 @@ Container::make('post_meta', 'Modules')
                                     'style-pink'      => 'Style Pink',
                                     'style-red'      => 'Style Red',
                                     'style-brown-gradient'      => 'Style Brown Gradient',
+                                )
+                            ),
+                        Field::make('select', 'style', __('Style'))
+                            ->set_options(
+                                array(
+                                    ''      => 'Image on Left',
+                                    'flex-row-reverse'      => 'Image on Right',
                                 )
                             ),
                         Field::make('text', 'heading', __('Heading')),
