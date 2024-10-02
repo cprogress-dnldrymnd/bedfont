@@ -35,8 +35,10 @@ function modules()
                 $style = $module['style'];
                 if ($style == 'style-1') {
                     $html .= _hero_style_1($module);
-                } else {
+                } else if ($style == 'style-2') {
                     $html .= _hero_style_2($module);
+                } else {
+                    $html .= _hero_style_3($module);
                 }
                 break;
             case 'two_column_image_text':
@@ -120,6 +122,27 @@ function _hero_style_2($module)
 		</div>
 	</div>
 </section>";
+}
+
+function _hero_style_3($module)
+{
+
+    $heading = $module['heading'];
+    $image = $module['image'];
+    $image_url = wp_get_attachment_image_url($image, 'full');
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+
+    return "<section id='eco-section'>
+		<img src='$image_url' id='eco-planet' alt='Image Bedfont Scientific Ltd Eco page' style='border-bottom-color: rgba(0, 0, 0, 0);'>
+	 	<div class='container'>
+			<div class='row'>
+				<div class='col-12 col-lg-7'>
+					<h1 class='eco'>$heading</h1>
+					$description
+				</div>
+			</div>
+		</div>
+	</section>";
 }
 
 function _two_column_image_text($module)
@@ -439,8 +462,7 @@ function _instagram_feed($module)
         </div>
     </div>
 </section>";
-return $html;
-
+    return $html;
 }
 
 function ___button($data)

@@ -21,11 +21,13 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
-                        'style-2' => 'Style 2'
+                        'style-2' => 'Style 2',
+                        'style-2' => 'Style 3'
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'subheading', __('Subheading')),
+                Field::make('rich_text', 'description', __('Description')),
                 Field::make('text', 'youtube_url', __('Youtube URL'))
                     ->set_conditional_logic(
                         array(
@@ -157,7 +159,6 @@ Container::make('post_meta', 'Modules')
                         'style-1' => 'Style 1',
                         'style-2' => 'Style 2',
                         'style-3' => 'Style 3',
-                        'style-4' => 'Style 4',
                     )),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
