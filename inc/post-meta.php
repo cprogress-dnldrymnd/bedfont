@@ -180,7 +180,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'description', __('Description')),
 
             ))
-            ->set_header_template('Slider: <%- heading %>')
+            ->set_header_template('Blogs: <%- heading %>')
             ->add_fields('slider', array(
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
@@ -215,6 +215,8 @@ Container::make('post_meta', 'Modules')
                             ))
 
                     ))
+                    ->set_header_template('Slide: <%- heading %>')
+
 
             ))
             ->set_header_template('Slider: <%- heading %>')
