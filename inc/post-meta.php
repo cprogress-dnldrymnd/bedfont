@@ -89,7 +89,7 @@ Container::make('post_meta', 'Modules')
             ->set_header_template('Two Column Image and Text: <%- heading %>')
             ->add_fields('text', array(
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('text', 'description', __('Description')),
+                Field::make('textarea', 'description', __('Description')),
 
             ))
             ->set_header_template('Text: <%- heading %>')
