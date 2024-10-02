@@ -207,9 +207,12 @@ function _blogs($module)
 
     $html  = "<section class='blogs grey_bg'>";
     $html  = "<div class='container'>";
+    $html  = "<div class='text-center'>";
     $html .= "<h2>$heading</h2>
 				";
     $html .= $description;
+    $html .= "</div>";
+
     $html .= "[blogs source='most-recent' posts_per_page='3']";
     $html .= "</div>";
     $html  .= "</section>";
