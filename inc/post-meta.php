@@ -252,6 +252,18 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
             ->add_fields('text', array(
+                Field::make('select', 'color', __('Color'))
+                    ->set_options(
+                        array(
+                            ''      => 'Default',
+                            'purple'      => 'Style Purple',
+                            'blue'      => 'Style Blue',
+                            'pink'      => 'Style Pink',
+                            'red'      => 'Style Red',
+                            'orange'      => 'Style Orange',
+                            'brown'      => 'Style Brown Gradient',
+                        )
+                    ),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
 
