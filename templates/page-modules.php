@@ -11,7 +11,7 @@ foreach ($modules as $key => $module) {
     $type = $module['_type'];
     switch ($type) {
         case 'hero':
-            $style = $section['style'];
+            $style = $module['style'];
             echo $style;
             get_template_part('template-parts/modules/hero', $style);
             break;
