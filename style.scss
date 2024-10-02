@@ -772,7 +772,6 @@ template {
         }
     }
     &.button-large {
-
     }
 }
 
@@ -881,8 +880,17 @@ section.image-grid {
 
 section.icon-boxes {
     .style-1 {
-        .img {
-            
+        .image-box {
+            position: relative;
+            padding: 50% 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;    
+                top: 0;
+            }
         }
     }
 }
