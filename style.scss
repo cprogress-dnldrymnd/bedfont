@@ -804,23 +804,25 @@ section.row-animation {
                 background-image: linear-gradient(to right, #956e41, #000);
                 opacity: 1;
             }
-            p,h2 {
+            p,
+            h2 {
                 color: var(--white);
             }
         }
     }
 }
 
-
 .awards-slider {
+    overflow: hidden;
     .glide__slide {
         overflow: hidden;
+        img {
+            border-radius: 16px 16px 0 0;
+            width: 100%;
+            height: auto;
+        }
     }
-    img {
-        border-radius: 16px 16px 0 0;
-        width: 100%;
-        height: auto;
-    }
+
     .hightlights {
         display: flex;
         span {
