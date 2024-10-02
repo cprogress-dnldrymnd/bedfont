@@ -282,7 +282,7 @@ function _image_grid($module)
             $url = $item['button_custom_url'];
         }
         $permalink = "[permalink id='$url']";
-
+        $html .= $permalink;
         $button = ___button(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
