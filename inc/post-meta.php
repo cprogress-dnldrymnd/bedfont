@@ -232,5 +232,11 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Slider: <%- heading %>')
+            ->add_fields('text_over_curve_shape', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('text', 'description', __('Description')),
+
+            ))
+            ->set_header_template('Text Over Curved Shape: <%- heading %>')
 
     ));

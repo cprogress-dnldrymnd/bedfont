@@ -50,6 +50,9 @@ function modules()
             case 'slider':
                 $html .= _slider($module);
                 break;
+            case 'text_over_curve_shape':
+                $html .= _text_over_curve_shape($module);
+                break;
         }
     }
     return $html;
@@ -237,6 +240,17 @@ function _slider($module)
 	<h2 class='text-left'>$heading</span></h2>
 				$description
                 $glide_slider
+	</div>
+</section>";
+}
+
+function _text_over_curve_shape($module)
+{
+    return "<section class='slideanim rounded_top text-white mt-5 slide'>
+	<div class='container'>
+		<div class='col-12'>
+			<p>The Bedfont vision is a world where everyone has access to instant, non-invasive,<br>simple breath testing to aid in medical diagnosis.</p>
+		</div>
 	</div>
 </section>";
 }
