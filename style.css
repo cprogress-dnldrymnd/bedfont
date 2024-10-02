@@ -723,6 +723,12 @@ section.icon-boxes.style-1 .icon-box {
     left: 0;
     top: 0; }
 
+@media (min-width: 992px) {
+  section.two-column-image-text.style-2 img {
+    width: 75%;
+    margin-left: auto;
+    display: block;
+    height: auto; } }
 section.two-column-image-text.style-2 .flex-row-reverse img {
   margin-right: auto; }
 section.two-column-image-text.style-2 .inner {
@@ -731,12 +737,6 @@ section.two-column-image-text.style-2 .inner {
   text-align: center;
   position: relative;
   overflow: hidden; }
-  @media (min-width: 992px) {
-    section.two-column-image-text.style-2 .inner img {
-      width: 75%;
-      margin-left: auto;
-      display: block;
-      height: auto; } }
   section.two-column-image-text.style-2 .inner * {
     position: relative;
     text-align: center !important;
@@ -749,7 +749,7 @@ section.two-column-image-text.style-2 .inner {
     font-style: italic;
     font-size: 110%; }
   section.two-column-image-text.style-2 .inner:before {
-    content: '';
+    content: "";
     opacity: 0.2;
     position: absolute;
     left: 0;

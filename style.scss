@@ -897,25 +897,27 @@ section.icon-boxes {
 
 section.two-column-image-text {
     &.style-2 {
+        img {
+            @media (min-width: 992px) {
+                width: 75%;
+                margin-left: auto;
+                display: block;
+                height: auto;
+            }
+        }
         .flex-row-reverse {
             img {
                 margin-right: auto;
             }
         }
+
         .inner {
             border-radius: 20px;
             padding: 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            img {
-                @media (min-width: 992px) {
-                    width: 75%;
-                    margin-left: auto;
-                    display: block;
-                    height: auto;
-                }
-            }
+
             * {
                 position: relative;
                 text-align: center !important;
@@ -930,7 +932,7 @@ section.two-column-image-text {
                 font-size: 110%;
             }
             &:before {
-                content: '';
+                content: "";
                 opacity: 0.2;
                 position: absolute;
                 left: 0;
