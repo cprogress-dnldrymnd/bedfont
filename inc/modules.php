@@ -274,12 +274,31 @@ function _image_grid($module)
 	<div class='container-fluid px-0'>
 		<div class='row gx-0'>";
 
-        f
+    foreach ($items as $item) {
+        $image = wp_get_attachment_image($item['image'], 'large');
+        $button = ___button(array(
+            'button_type'       => $module['button_type'],
+            'button_text'       => $module['button_text'],
+            'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+            'button_custom_url' => $module['button_custom_url'],
+            'button_style'      => 'button-large',
+            'button_target'     => $module['button_target'],
+        ));
+
+        $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
+				<div class='overflow-hidden h-100'>
+					<div class='bg_image h-100'>$image</div>
+					$button
+				</div>
+			</div>";
+    }
 
 
     $html .= "</div>
 	</div>
 </section>";
+
+    return $html;
 }
 
 function ___button($data)
