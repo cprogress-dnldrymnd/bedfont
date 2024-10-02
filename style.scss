@@ -797,7 +797,7 @@ section.row-animation {
             background-color: var(--color);
         }
     }
-    &.brown {
+    .brown {
         .product-bubble-home {
             &:before {
                 background-image: linear-gradient(to right, #956e41, #000);
