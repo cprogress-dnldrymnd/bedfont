@@ -26,8 +26,18 @@ Container::make('post_meta', 'Modules')
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
+
                 Field::make('text', 'subheading', __('Subheading')),
                 Field::make('rich_text', 'description', __('Description')),
+                Field::make('text', 'image', __('Image'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-3',
+                            )
+                        )
+                    ),
                 Field::make('text', 'youtube_url', __('Youtube URL'))
                     ->set_conditional_logic(
                         array(
@@ -470,7 +480,7 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Icon Box: <%- heading %>')
             ->add_fields('instagram_feed', array(
-         
+
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('text', 'shortcode', __('Shortcode')),
