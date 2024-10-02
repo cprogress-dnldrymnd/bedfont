@@ -83,20 +83,15 @@ function _two_column_image_text($module)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
-    $button_type = $module['button_type'];
-    $button_style = $module['button_style'];
-    $button_text = $module['button_text'];
-    $button_url = $module['button_url'];
-    $button_url_custom = $module['button_url_custom'];
-    $button_target = $module['button_target'];
+
 
     $button = ___button(array(
-        'button_type'       => $button_type,
-        'button_text'       => $button_text,
-        'button_url'        => isset($button_url) ? $button_url[0] : false,
-        'button_url_custom' => $button_url_custom,
-        'button_style'      => $button_style,
-        'button_target'     => $button_target,
+        'button_type'       => $module['button_type'],
+        'button_text'       => $module['button_text'],
+        'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+        'button_url_custom' => $module['button_url_custom'],
+        'button_style'      => $module['button_style'],
+        'button_target'     => $module['button_target'],
     ));
 
     return "<section class='two-column-image-text'>
@@ -134,15 +129,25 @@ function _row_animation($module, $html = "<section class='row-animation'>")
     $items = $module['items'];
     $html .= "<div class='container'>";
     foreach ($items as $item) {
+        $heading = $item['heading'];
+        $subheading = $item['subheading'];
+
+        $button = ___button(array(
+            'button_type'       => $item['button_type'],
+            'button_text'       => $item['button_text'],
+            'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
+            'button_url_custom' => $item['button_url_custom'],
+            'button_style'      => $item['button_style'],
+            'button_target'     => $item['button_target'],
+        ));
+
         $html .= "<div class='slideanim row'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' id='nobreath-bubble'>
-			<h2></h2>
-			<h3></h3>
-			<p></p>
-			<a href='https://www.nobreathfeno.com/' class='btn btn-nobreath mx-auto d-table float-none' target='_blank'
-				title='Click here for the NObreath website' rel='noopener'>More info <i class='fa fa-arrow-right ms-1'
-					aria-hidden='true'></i></a>
+			<h2>$heading</h2>
+			<h3>$subheading</h3>
+			$description
+			$button
 		</div>
 	</div>
 	<div class='col-12 col-lg-6 order-1 order-lg-2'>
