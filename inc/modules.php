@@ -260,6 +260,8 @@ function _text_over_curve_shape($module)
 		</div>
 	</div>
 </section>";
+
+return $html;
 }
 
 function ___button($data)
