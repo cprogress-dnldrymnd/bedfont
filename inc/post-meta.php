@@ -155,7 +155,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
-                        'style-2' => 'Style 2'
+                        'style-2' => 'Style 2',
+                        'style-3' => 'Style 3',
                     )),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
