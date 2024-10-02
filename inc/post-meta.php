@@ -22,7 +22,7 @@ Container::make('post_meta', 'Modules')
                     ->set_options(array(
                         'style-1' => 'Style 1',
                         'style-2' => 'Style 2',
-                        'style-2' => 'Style 3'
+                        'style-3' => 'Style 3'
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
