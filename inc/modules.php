@@ -134,7 +134,13 @@ function _two_column_image_text($module)
     } else {
         $col_1_class = 'col-12 col-lg-7 my-auto order-2 order-lg-1';
         $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
+
+        if ($color) {
+            $style = "style='--color: $color'";
+        }
     }
+
+
 
     $button = ___button(array(
         'button_type'       => $module['button_type'],
