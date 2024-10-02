@@ -288,7 +288,7 @@ function _image_grid($module)
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
 				<div class='overflow-hidden h-100 grid-box'>
 					<div class='bg_image h-100'>$image</div>
-					$button
+					<h3>$button</h3>
 				</div>
 			</div>";
     }
