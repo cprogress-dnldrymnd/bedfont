@@ -277,7 +277,7 @@ function _image_grid($module)
     foreach ($items as $item) {
         $image = wp_get_attachment_image($item['image'], 'large');
         if ($item['button_type'] == 'internal-url') {
-            $url = $item['button_url'][0];
+            $url = $item['button_url'][0]['id'];
             $permalink = "[permalink id='$url']";
         } else {
             $permalink = $item['button_custom_url'];
