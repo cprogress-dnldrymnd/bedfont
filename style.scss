@@ -906,6 +906,7 @@ section.two-column-image-text {
             border-radius: 20px;
             padding: 30px;
             text-align: center;
+            position: relative;
             img {
                 @media (min-width: 992px) {
                     width: 75%;
