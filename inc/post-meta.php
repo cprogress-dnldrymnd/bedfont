@@ -25,7 +25,16 @@ Container::make('post_meta', 'Modules')
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('text', 'subheading', __('Subheading')),
+                Field::make('text', 'subheading', __('Subheading'),
+                Field::make('text', 'youtube_url', __('Youtube URL'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    ),
                 Field::make('image', 'bg_image', __('Background Image'))
                     ->set_conditional_logic(
                         array(
