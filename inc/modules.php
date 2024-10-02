@@ -154,7 +154,7 @@ function _two_column_image_text($module)
     return "<section class='two-column-image-text'>
 	<div class='container'>
 		<div class='row $image_position'>
-			<div class='$col_1_class $style'>
+			<div class='$col_1_class' $style>
 	<div class='inner'>
 
 				<h2 class='text-left'>$heading</span></h2>
