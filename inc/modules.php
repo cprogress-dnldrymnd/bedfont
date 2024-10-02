@@ -33,7 +33,11 @@ function modules()
         switch ($type) {
             case 'hero':
                 $style = $module['style'];
-                $html .= _hero($module);
+                if ($style == 'style-1') {
+                    $html .= _hero_style_1($module);
+                } else {
+                    $html .= _hero_style_2($module);
+                }
                 break;
             case 'two_column_image_text':
                 $html .= _two_column_image_text($module);
@@ -62,7 +66,7 @@ function modules()
 }
 
 
-function _hero($module)
+function _hero_style_1($module)
 {
 
     $heading = $module['heading'];
@@ -88,6 +92,29 @@ function _hero($module)
 </section>";
 }
 
+function _hero_style_2($module)
+{
+
+    $heading = $module['heading'];
+    $subheading = $module['subheading'];
+    $bg_image = $module['bg_image'];
+
+    return "<section class='subtle-bg'>
+	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-12 col-md-6 pe-5 my-auto'>
+				<h1 class='text-left mt-lg-0'>$heading</h1>
+				<p>$subheading</p>
+				<a target='_self' href='https://bedfont.theprogressteam.com/contact/' class='btn btn-smokerlyzer float-none' title='' rel='noopener'><span> Contact Us</span><i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
+			</div>
+			<div class='col-12 col-md-6 mt-5 mt-lg-0'>
+				<iframe width='560' height='315' src='https://www.youtube.com/embed/P-h7KpMn5Ds' frameborder='0' allowfullscreen='' illow-src='https://www.youtube.com/embed/P-h7KpMn5Ds' class='w-100 br-30'></iframe>
+			</div>
+		</div>
+	</div>
+</section>";
+}
 
 function _two_column_image_text($module)
 {
@@ -160,7 +187,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
-            $permalink = '[permalink id="'.$url.'"]';
+            $permalink = '[permalink id="' . $url . '"]';
         } else {
             $permalink = $item['button_custom_url'];
         }
@@ -278,7 +305,7 @@ function _image_grid($module)
         $image = wp_get_attachment_image($item['image'], 'large');
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0]['id'];
-            $permalink = '[permalink id="'.$url.'"]';
+            $permalink = '[permalink id="' . $url . '"]';
         } else {
             $permalink = $item['button_custom_url'];
         }

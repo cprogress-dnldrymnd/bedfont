@@ -23,8 +23,106 @@ Container::make('post_meta', 'Modules')
                 Field::make('image', 'bg_image', __('Background Image')),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
-                        'style-1' => 'Style 1'
+                        'style-1' => 'Style 1',
+                        'style-2' => 'Style 2'
                     )),
+
+                Field::make('select', 'button_type', __('Button Type'))
+                    ->set_options(
+                        array(
+                            'internal-url'        => 'Internal',
+                            'custom'      => 'Custom',
+                        )
+                    )
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    ),
+                Field::make('select', 'button_style', __('Button Style'))
+                    ->set_options(
+                        array(
+                            'button-pink'        => 'Button Pink',
+                            'button-purple'      => 'Button Purple',
+                            'button-brown'      => 'Button Purple',
+                            'button-orange'      => 'Button Orange',
+                            'button-blue'      => 'Button BLue',
+                            'button-red'      => 'Button Red',
+                        )
+                    )
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    ),
+                Field::make('text', 'button_text', __('Button Text'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+
+                        )
+                    ),
+
+                Field::make('association', 'button_url', __('Button URL'))
+                    ->set_max(1)
+                    ->set_types(array(
+                        array(
+                            'type'      => 'post',
+                            'post_type' => 'post',
+                        ),
+                        array(
+                            'type'      => 'post',
+                            'post_type' => 'page',
+                        )
+                    ))
+                    ->set_conditional_logic(
+                        array(
+                            'relation' => 'AND',
+                            array(
+                                'field'   => 'button_type',
+                                'value'   => 'custom',
+                                'compare' => '!='
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    ),
+                Field::make('text', 'button_custom_url', __('Button Custom URL'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'button_type',
+                                'value'   => 'custom',
+                                'compare' => '='
+                            ),
+                        )
+                    ),
+                Field::make('select', 'button_target', __('Button Target'))
+                    ->set_options(
+                        array(
+                            'target="_self"'  => 'Default',
+                            'target="_blank"' => 'New Tab',
+                        )
+                    )
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2',
+                            )
+                        )
+                    )
 
             ))
             ->set_header_template('Hero: <%- heading %>')
