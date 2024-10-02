@@ -729,6 +729,7 @@ template {
     --orange: #ef7926;
     --white: #fff;
     --dark-blue: #002b53;
+    --brown-bg: linear-gradient(to right, #956e41, #000);
 }
 .button-box {
     .btn.btn {
@@ -1000,6 +1001,15 @@ section.slider {
                 bottom: 0;
                 right: 0;
                 background-color: var(--color);
+            }
+        }
+        &.brown {
+            .timeline-date {
+                position: relative;
+                &:before {
+                    background-color: transparent;
+                    background-image: var(--brown-bg);
+                }
             }
         }
     }
