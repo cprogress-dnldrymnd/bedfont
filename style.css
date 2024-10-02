@@ -612,12 +612,14 @@ template {
   object-fit: cover; }
 
 :root {
-  --pink: #e5147d; }
+  --pink: #e5147d;
+  --white: #fff; }
 
 .button-box .btn {
   border-radius: 30px;
   padding: 10px 25px; }
 .button-box.button-pink .btn {
-  background-color: var(--pink); }
+  background-color: var(--pink);
+  color: var(--white); }
 
 /*# sourceMappingURL=style.css.map */

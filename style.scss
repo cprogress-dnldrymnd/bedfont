@@ -722,6 +722,7 @@ template {
 }
 :root {
     --pink: #e5147d;
+    --white: #fff;
 }
 .button-box {
     .btn {
@@ -731,6 +732,7 @@ template {
     &.button-pink {
         .btn {
             background-color: var(--pink);
+            color: var(--white);
         }
     }
 }
