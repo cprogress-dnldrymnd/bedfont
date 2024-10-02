@@ -283,6 +283,7 @@ function _image_grid($module)
             'button_custom_url' => $item['button_custom_url'],
             'button_style'      => 'button-large',
             'button_target'     => $item['button_target'],
+            'button_icon' => false
         ));
         if ($item['button_type'] == 'internal') {
             $url = $item['button_url'][0];
@@ -316,6 +317,9 @@ function ___button($data)
     $button_style = isset($data['button_style']) ? $data['button_style'] : false;
     $button_text = isset($data['button_text']) ? $data['button_text'] : false;
     $button_target = isset($data['button_target']) ? $data['button_target'] : false;
+    $button_icon = isset($data['button_icon']) ? $data['button_icon'] : true;
+
+
     $link = '';
     $class = '';
     $display = true;
@@ -339,8 +343,10 @@ function ___button($data)
         $html = "<div class='button-box $button_style'>";
         $html .= "<$tag class='btn $class' $link $button_target>";
         $html .= $button_text;
-        $html .= "<i
-						class='fa fa-arrow-right ms-1' aria-hidden='true'></i>";
+        if ($button_icon) {
+            $html .= "<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i>";
+        }
+
         $html .= "</$tag>";
         $html .= "</div>";
 

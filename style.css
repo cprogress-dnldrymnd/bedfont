@@ -707,6 +707,9 @@ section.image-grid .grid-box .bg_image img {
 section.image-grid .grid-box h3 {
   padding: 0; }
   section.image-grid .grid-box h3 a {
-    position: static; }
+    position: static;
+    font-size: inherit;
+    font-weight: bold;
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

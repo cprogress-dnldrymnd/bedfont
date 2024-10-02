@@ -871,6 +871,9 @@ section.image-grid {
             padding: 0;
             a {
                 position: static;
+                font-size: inherit;
+                font-weight: bold;
+                width: 100%;
             }
         }
     }
