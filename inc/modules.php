@@ -323,7 +323,7 @@ function __glide_slider($items)
     }
 
     $html .= "</ul>
-	</div>
+	</div>[__glide_arrows]
 </div>";
 
     return $html;
