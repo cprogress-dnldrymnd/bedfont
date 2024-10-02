@@ -149,7 +149,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         if ($item['button_type'] == 'internal') {
             $url = $item['button_url'];
         } else {
-            $url = $item['button_url'];
+            $url = $item['button_custom_url'];
         }
         $permalink = "[permalink id='$url']";
 
