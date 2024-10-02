@@ -620,24 +620,20 @@ template {
   --orange: #ef7926;
   --white: #fff; }
 
-.button-box .btn {
+.button-box .btn.btn {
   border-radius: 30px;
-  padding: 10px 25px; }
+  padding: 10px 25px;
+  color: var(--white); }
 .button-box.button-pink .btn {
-  background-color: var(--pink);
-  color: var(--white); }
+  background-color: var(--pink); }
 .button-box.button-blue .btn {
-  background-color: var(--blue);
-  color: var(--white); }
+  background-color: var(--blue); }
 .button-box.button-red .btn {
-  background-color: var(--white);
-  color: var(--white); }
+  background-color: var(--white); }
 .button-box.button-purple .btn {
-  background-color: var(--purple);
-  color: var(--white); }
+  background-color: var(--purple); }
 .button-box.button-orange .btn {
-  background-color: var(--orange);
-  color: var(--white); }
+  background-color: var(--orange); }
 .button-box.button-box-shadow .btn {
   box-shadow: 0px 2px 3px #555; }
 

@@ -730,38 +730,34 @@ template {
     --white: #fff;
 }
 .button-box {
-    .btn {
+    .btn.btn {
         border-radius: 30px;
         padding: 10px 25px;
+        color: var(--white);
     }
     &.button-pink {
         .btn {
             background-color: var(--pink);
-            color: var(--white);
         }
     }
     &.button-blue {
         .btn {
             background-color: var(--blue);
-            color: var(--white);
         }
     }
     &.button-red {
         .btn {
             background-color: var(--white);
-            color: var(--white);
         }
     }
     &.button-purple {
         .btn {
             background-color: var(--purple);
-            color: var(--white);
         }
     }
     &.button-orange {
         .btn {
             background-color: var(--orange);
-            color: var(--white);
         }
     }
     &.button-box-shadow {
