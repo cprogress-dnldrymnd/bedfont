@@ -285,7 +285,7 @@ function ___button($data)
 function __glide_slider($items)
 {
 
-    $html = "<div class='glide'>
+    $html = "<div class='glide awards-slider'>
 	<div class='glide__track' data-glide-el='track'>
 		<ul class='glide__slides'>";
 
@@ -313,7 +313,7 @@ function __glide_slider($items)
             $html .= "<div class='hightlights'>";
             foreach ($highlights as $highlight) {
                 $html .= "<span>";
-                $html .= $highlight;
+                $html .= $highlight['text'];
                 $html .= "</span>";
             }
             $html .= "</div>";
