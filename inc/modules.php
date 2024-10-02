@@ -76,7 +76,7 @@ function _two_column_image_text($module)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $image = isset($module['image']) ? wp_get_attachment_image($module['image']) : '';
+    $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
     return "<section class='two-column-image-text'>
 	<div class='container'>
