@@ -136,7 +136,7 @@ function _two_column_image_text($module)
         $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
 
         if ($color) {
-            $style = "style='--color: $color'";
+            $style_inline = "style='--color: $color'";
         }
     }
 
@@ -151,10 +151,10 @@ function _two_column_image_text($module)
         'button_target'     => $module['button_target'],
     ));
 
-    return "<section class='two-column-image-text'>
+    return "<section class='two-column-image-text $style'>
 	<div class='container'>
 		<div class='row $image_position'>
-			<div class='$col_1_class' $style>
+			<div class='$col_1_class' $style_inline>
 	<div class='inner'>
 
 				<h2 class='text-left'>$heading</span></h2>
