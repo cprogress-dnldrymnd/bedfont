@@ -26,18 +26,3 @@ function action_module_content()
 }
 //add_action('shutdown', 'action_module_content');
 
-function modules()
-{
-    $html = '';
-    $modules = get__post_meta_by_id(get_the_ID(), 'modules');
-    foreach ($modules as $key => $module) {
-        $type = $module['_type'];
-        switch ($type) {
-            case 'hero':
-                $style = $module['style'];
-                $html .= get_template_part('template-parts/modules/hero', $style, $module);
-                break;
-        }
-    }
-    return $html;
-}
