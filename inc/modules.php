@@ -292,7 +292,7 @@ function _image_grid($module)
         }
         $permalink = "[permalink id='$url']";
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
-				<div class='overflow-hidden h-100 grid-box'>
+				<div class='overflow-hidden h-100 grid-box position-relative'>
                 <a href='$url'>
 					<div class='bg_image h-100'>$image</div>
 					<h3>$button</h3>
