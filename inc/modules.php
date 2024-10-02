@@ -107,6 +107,15 @@ function _hero_style_2($module)
     $heading = $module['heading'];
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
 
+    $button = ___button(array(
+        'button_type'       => $module['button_type'],
+        'button_text'       => $module['button_text'],
+        'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+        'button_custom_url' => $module['button_custom_url'],
+        'button_style'      => $module['button_style'],
+        'button_target'     => $module['button_target'],
+    ));
+
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
@@ -114,7 +123,7 @@ function _hero_style_2($module)
 			<div class='col-12 col-md-6 pe-5 my-auto'>
 				<h1 class='text-left mt-lg-0'>$heading</h1>
 				<p>$description</p>
-				<a target='_self' href='https://bedfont.theprogressteam.com/contact/' class='btn btn-smokerlyzer float-none' title='' rel='noopener'><span> Contact Us</span><i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a>
+				$button
 			</div>
 			<div class='col-12 col-md-6 mt-5 mt-lg-0'>
 				<iframe width='560' height='315' src='$youtube_url' frameborder='0' allowfullscreen='' illow-src='$youtube_url' class='w-100 br-30'></iframe>
@@ -131,6 +140,14 @@ function _hero_style_3($module)
     $image = $module['image'];
     $image_url = wp_get_attachment_image_url($image, 'full');
     $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $button = ___button(array(
+        'button_type'       => $module['button_type'],
+        'button_text'       => $module['button_text'],
+        'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+        'button_custom_url' => $module['button_custom_url'],
+        'button_style'      => $module['button_style'],
+        'button_target'     => $module['button_target'],
+    ));
 
     return "<section id='eco-section'>
 		<img src='$image_url' id='eco-planet' alt='Image Bedfont Scientific Ltd Eco page' style='border-bottom-color: rgba(0, 0, 0, 0);'>
@@ -139,6 +156,7 @@ function _hero_style_3($module)
 				<div class='col-12 col-lg-7'>
 					<h1 class='eco'>$heading</h1>
 					$description
+                    $button
 				</div>
 			</div>
 		</div>
