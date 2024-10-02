@@ -63,7 +63,7 @@ function _post_grid($post)
     $permalink = "[permalink id=$post_id]";
     $image = get_the_post_thumbnail($post_id, 'large');
 
-    return "<li class='wp-block-post post-$post_id post type-post status-publish format-standard has-post-thumbnail '>
+    $html = "<li class='wp-block-post post-$post_id post type-post status-publish format-standard has-post-thumbnail '>
         <figure class='wp-block-post-featured-image'>
             <a href='$permalink' target='_self' rel='noopener'>
                 $image
@@ -75,5 +75,6 @@ function _post_grid($post)
         <h2 class='has-text-align-center wp-block-post-title has-medium-font-size'>$post_title</h2>
         </div>
     </li>";
-    
+
+    return do_shortcode($html);
 }
