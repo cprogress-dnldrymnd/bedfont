@@ -133,6 +133,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $subheading = $item['subheading'];
         $color = $item['color'];
         $style = $item['style'];
+        $image = isset($item['image']) ? wp_get_attachment_image($item['image'], 'large') : false;
         $description = isset($item['description']) ? wpautop($item['description']) : '';
         $button_style = 'button-' . $style;
 
@@ -145,6 +146,13 @@ function _row_animation($module, $html = "<section class='row-animation'>")
             'button_target'     => $item['button_target'],
         ));
 
+        if ($item['button_type'] == 'internal') {
+            $url = $item['button_url'];
+        } else {
+            $url = $item['button_url'];
+        }
+        $permalink = "[permalink id='$url']";
+
         $html .= "<div class='slideanim row $color $style'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' id='nobreath-bubble'>
@@ -155,10 +163,10 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 		</div>
 	</div>
 	<div class='col-12 col-lg-6 order-1 order-lg-2'>
-		<a href='https://www.nobreathfeno.com/' target='_blank' title='Click for the NObreath website'
-			rel='noopener'><img
-				src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/NObreath-monitor-face-on-with-mouthpiece-home.png'
-				class='img-fluid mx-auto d-block mt-2 mb-5 my-lg-0' alt='Imnage of NObreath device'></a>
+		<a href='$permalink' target='_blank' title='Click for the NObreath website'
+			rel='noopener'>
+                $image
+            </a>
 	</div>
 </div>
 <div class='slideanim row product-break'>
