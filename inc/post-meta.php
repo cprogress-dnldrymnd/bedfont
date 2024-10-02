@@ -190,7 +190,7 @@ Container::make('post_meta', 'Modules')
                         )
                     ),
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('rich_text', 'description', __('Description')),
+                Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image')),
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
