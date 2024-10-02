@@ -270,7 +270,7 @@ function _text_over_curve_shape($module)
 function _image_grid($module)
 {
     $items = $module['items'];
-    $html = "<section class='py-0'>
+    $html = "<section class='py-0 image-grid'>
 	<div class='container-fluid px-0'>
 		<div class='row gx-0'>";
 
@@ -286,7 +286,7 @@ function _image_grid($module)
         ));
 
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
-				<div class='overflow-hidden h-100'>
+				<div class='overflow-hidden h-100 grid-box'>
 					<div class='bg_image h-100'>$image</div>
 					$button
 				</div>
