@@ -1021,6 +1021,7 @@ section.slider {
 }
 
 section.text-section {
+    background-color: var(--color);
     &[style="--color: var(--green)"] {
         * {
             color: var(--white);
