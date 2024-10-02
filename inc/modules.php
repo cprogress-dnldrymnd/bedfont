@@ -156,10 +156,16 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $html .= "<div class='slideanim row $style' style='--color: var(--$color)'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
 		<div class='product-bubble-home' >
-			<h2>$heading</h2>
-            " . $subheading ? "<h3>$subheading</h3>" : '' . "
-			$description
-			$button
+			<h2>$heading</h2>";
+
+
+        if ($subheading) {
+            $html .= "<h3>$subheading</h3>";
+        }
+
+
+        $html .= "$description
+$button
 		</div>
 	</div>
 	<div class='col-12 col-lg-6 order-1 order-lg-2'>
