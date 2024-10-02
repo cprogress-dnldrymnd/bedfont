@@ -95,9 +95,9 @@ function _hero_style_1($module)
 function _hero_style_2($module)
 {
 
+    $youtube_url = $module['youtube_url'];
     $heading = $module['heading'];
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
-    $youtube_url = isset($module['subheading']) ? wpautop($module['youtube_url']) : '';
     
     return "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
