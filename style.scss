@@ -953,6 +953,9 @@ section.two-column-image-text {
         background-color: var(--dark-blue);
         color: var(--white);
         padding: 0;
+        h2 {
+            color: var(--white);
+        }
         .container {
             max-width: 100%;
             --bs-gutter-x: 0;
@@ -960,6 +963,22 @@ section.two-column-image-text {
                 --bs-gutter-x: 0;
                 flex-direction: row-reverse;
             }
+        }
+        .image-col {
+            position: relative;
+            padding: 40%;
+            img {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .inner {
+            padding: 48px;
         }
     }
 }
