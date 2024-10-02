@@ -70,9 +70,9 @@ function _post_grid($post)
             </a>
         </figure>
     <div class='p-3'>
-        <div class='has-text-align-center wp-block-post-date has-small-font-size'>$post_date</div>
+        <div class='has-text-align-center wp-block-post-date has-small-font-size mb-2'>$post_date</div>
 
-        <h2 class='has-text-align-center wp-block-post-title has-medium-font-size'>$post_title</h2>
+        <h2 class='has-text-align-center wp-block-post-title has-medium-font-size mb-0'>$post_title</h2>
         </div>
     </li>";
 
