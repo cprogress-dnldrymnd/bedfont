@@ -338,7 +338,7 @@ add_shortcode('__image', '__image');
 add_action('carbon_fields_register_fields', 'tissue_paper_register_custom_fields');
 function tissue_paper_register_custom_fields()
 {
-	require_once('includes/post-meta.php');
+	require_once('inc/post-meta.php');
 }
 function get__post_meta($value)
 {
