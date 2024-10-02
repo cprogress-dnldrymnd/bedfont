@@ -344,7 +344,7 @@ function _icon_box($module)
 {
     $heading = $module['heading'];
     $items = $module['items'];
-    $style = $module['itemstyles'];
+    $style = $module['style'];
 
     $description = isset($module['bottom_text']) ? wpautop($module['description']) : '';
 
