@@ -476,8 +476,18 @@ function __glide_slider($items)
         $image = $item['image'];
         $highlights = $item['highlight'];
         $style = $item['style'];
+        $color = $item['color'];
 
-        $html .= "<li class='glide__slide'>";
+        if ($color) {
+            $style = "style='--color: var(--$color)'";
+        }
+
+        $html .= "<li class='glide__slide' $color>";
+
+        if ($heading && $style == 'style-2') {
+            $html .= "<h3 class='timeline-date text-center'>$heading</h3>";
+        }
+
         $html .= wp_get_attachment_image($image, 'large');
         $html .= "<div class='content'>";
         if ($heading && $style == 'style-1') {

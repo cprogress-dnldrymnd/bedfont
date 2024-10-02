@@ -353,6 +353,8 @@ Container::make('post_meta', 'Modules')
                                     'orange'      => 'Style Orange',
                                     'brown'      => 'Style Brown Gradient',
                                     'dark-blue'      => 'Style Dark Blue',
+                                    'dark-green'      => 'Style Dark Green',
+                                    'green'      => 'Style Green',
                                 )
                             )
                             ->set_conditional_logic(
