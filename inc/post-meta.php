@@ -292,7 +292,7 @@ Container::make('post_meta', 'Modules')
                                 )
                             ),
                     ))
-                    ->set_header_template('Slide: <%- button_text %>')
+                    ->set_header_template('Grid: <%- button_text %>')
 
             ))
             ->set_header_template('Image Grid: <%- title %>')

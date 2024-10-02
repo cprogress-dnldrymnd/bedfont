@@ -53,6 +53,9 @@ function modules()
             case 'text_over_curve_shape':
                 $html .= _text_over_curve_shape($module);
                 break;
+            case 'image_grid':
+                $html .= _image_grid($module);
+                break;
         }
     }
     return $html;
@@ -261,11 +264,22 @@ function _text_over_curve_shape($module)
 	</div>
 </section>";
 
-return $html;
+    return $html;
 }
 
-function _image_grid($module) {
+function _image_grid($module)
+{
+    $items = $module['items'];
+    $html = "<section class='py-0'>
+	<div class='container-fluid px-0'>
+		<div class='row gx-0'>";
 
+        f
+
+
+    $html .= "</div>
+	</div>
+</section>";
 }
 
 function ___button($data)
