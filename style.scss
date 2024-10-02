@@ -724,6 +724,10 @@ template {
     --pink: #e5147d;
 }
 .button-box {
+    .btn {
+        border-radius: 30px;
+        padding: 10px 25px;
+    }
     &.button-pink {
         .btn {
             background-color: var(--pink);
