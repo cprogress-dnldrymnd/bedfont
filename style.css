@@ -670,7 +670,8 @@ section.row-animation .brown .product-bubble-home h2 {
   color: var(--white); }
 
 .awards-slider {
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
   .awards-slider .white-space {
     background: #fff;
     width: 100vw;
@@ -679,7 +680,8 @@ section.row-animation .brown .product-bubble-home h2 {
     z-index: 9;
     left: -100vw; }
   .awards-slider .glide__slide {
-    overflow: hidden; }
+    overflow: hidden;
+    height: auto; }
     .awards-slider .glide__slide img {
       border-radius: 16px 16px 0 0;
       width: 100%;

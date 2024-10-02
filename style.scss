@@ -819,6 +819,7 @@ section.row-animation {
 
 .awards-slider {
     position: relative;
+    margin-bottom: 2rem;
     .white-space {
         background: #fff;
         width: 100vw;
@@ -829,6 +830,7 @@ section.row-animation {
     }
     .glide__slide {
         overflow: hidden;
+        height: auto;
         img {
             border-radius: 16px 16px 0 0;
             width: 100%;
