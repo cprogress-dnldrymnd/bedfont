@@ -424,6 +424,7 @@ Container::make('post_meta', 'Modules')
                                 'style-2' => 'Style 2'
                             )),
                         Field::make('image', 'image', __('Image Icon')),
+                        Field::make('text', 'heading', __('Heading')),
                         Field::make('textarea', 'text', __('Text')),
 
                     ))
