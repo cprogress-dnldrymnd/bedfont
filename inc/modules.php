@@ -228,10 +228,12 @@ function _blogs($module)
 function _slider($module)
 {
     $heading = $module['heading'];
+    $items = $module['items'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $glide_slider = __glide_slider($items);
     return "<section class='slider'>
 	<div class='container'>
-	<h2>$heading</span></h2>
+	<h2 class='text-left'>$heading</span></h2>
 				$description
 	</div>
 </section>";
@@ -276,4 +278,53 @@ function ___button($data)
 
         return $html;
     }
+}
+
+function __glide_slider($items)
+{
+
+    $html = "<div class='glide'>
+	<div class='glide__track' data-glide-el='track'>
+		<ul class='glide__slides'>";
+
+    foreach ($items as $item) {
+        $heading = $item['item'];
+        $description = $item['description'];
+        $image = $item['image'];
+        $highlights = $item['highlight'];
+        $style = $item['style'];
+
+        $html .= "<li class='glide__slide'>";
+        $html .= wp_get_attachment_image($image, 'large');
+        $html .= "<div class='content'>";
+        if ($heading && $style == 'style-1') {
+            $html .= "<h3 class='text-left'>$heading</h3>";
+        }
+
+        if ($description) {
+            $html .= "<div class='timeline-content'>";
+            $html .= wpautop($description);
+            $html .= "</div>";
+        }
+
+        if ($highlights) {
+            $html .= "<div class='hightlights'>";
+            foreach ($highlights as $highlight) {
+                $html .= "<span>";
+                $html .= $highlight;
+                $html .= "</span>";
+            }
+            $html .= "</div>";
+        }
+
+        $html .= "</div>";
+
+        $html .= "</li>";
+    }
+
+    $html .= "</ul>
+	</div>
+</div>";
+
+    return $html;
 }
