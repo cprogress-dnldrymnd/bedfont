@@ -132,6 +132,7 @@ function _text($module)
 function _row_animation($module, $html = "<section class='row-animation'>")
 {
     $items = $module['items'];
+    $html .= "<div class='container'>";
     foreach ($items as $item) {
         $html .= "<div class='slideanim row'>
 	<div class='col-12 col-lg-6 my-auto order-2 order-lg-1'>
@@ -168,6 +169,7 @@ function _row_animation($module, $html = "<section class='row-animation'>")
 	<div class='col'></div>
 </div>";
     }
+    $html .= "</div>";
     $html .= "</section>";
     return $html;
 }
