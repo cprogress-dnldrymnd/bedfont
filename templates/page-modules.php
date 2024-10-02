@@ -17,4 +17,5 @@ foreach ($modules as $key => $module) {
             break;
     }
 }
+var_dump($modules);
 get_footer('');
