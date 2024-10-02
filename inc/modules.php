@@ -200,7 +200,7 @@ $button
     return $html;
 }
 
-function __blogs($module)
+function _blogs($module)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
