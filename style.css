@@ -785,4 +785,15 @@ section.two-column-image-text.style-3 {
   section.two-column-image-text.style-3 .text-col {
     padding: 0 !important; }
 
+section.slider .inner .timeline-date {
+  position: relative; }
+  section.slider .inner .timeline-date:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color); }
+
 /*# sourceMappingURL=style.css.map */
