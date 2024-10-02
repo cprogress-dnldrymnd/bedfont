@@ -6,10 +6,8 @@ function action_module_content()
         // Check if this is an autosave
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
             return;
-        $post_types = array(
-            'page',
-        );
-        if (in_array(get_post_type(), $post_types)) {
+        $template = get_page_template_slug();
+        if ($template == 'templates/page-modules.php') {
             $content_html = '<!-- wp:html -->';
             $content_html .= modules();
             $content_html .= '<!-- /wp:html -->';
