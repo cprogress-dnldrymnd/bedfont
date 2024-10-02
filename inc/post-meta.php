@@ -47,7 +47,8 @@ Container::make('post_meta', 'Modules')
                         )
                     ),
                 Field::make('text', 'button_text', __('Button Text')),
-                Field::make('association', 'button_url', __('Button Text'))
+                Field::make('association', 'button_url', __('Button URL'))
+                    ->set_max(1)
                     ->set_types(array(
                         array(
                             'type'      => 'post',
