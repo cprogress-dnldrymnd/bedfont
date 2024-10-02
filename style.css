@@ -726,10 +726,11 @@ section.icon-boxes.style-1 .icon-box {
 @media (min-width: 992px) {
   section.two-column-image-text.style-2 img {
     width: 75%;
-    margin-left: auto;
     display: block;
     height: auto; } }
-section.two-column-image-text.style-2 .flex-row-reverse img {
+section.two-column-image-text.style-2 .row:not(.flex-row-reverse) img {
+  margin-left: auto; }
+section.two-column-image-text.style-2 .row .flex-row-reverse {
   margin-right: auto; }
 section.two-column-image-text.style-2 .inner {
   border-radius: 20px;

@@ -900,13 +900,19 @@ section.two-column-image-text {
         img {
             @media (min-width: 992px) {
                 width: 75%;
-                margin-left: auto;
                 display: block;
                 height: auto;
             }
         }
         .flex-row-reverse {
-            img {
+        }
+        .row {
+            &:not(.flex-row-reverse) {
+                img {
+                    margin-left: auto;
+                }
+            }
+            & .flex-row-reverse {
                 margin-right: auto;
             }
         }
