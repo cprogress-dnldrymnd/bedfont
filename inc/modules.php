@@ -122,10 +122,19 @@ function _hero_style_2($module)
 function _two_column_image_text($module)
 {
     $heading = $module['heading'];
+    $style = $module['style'];
+    $color = $module['color'];
+    $image_position = $module['image_position'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
-
+    if ($style == 'style-1') {
+        $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto';
+        $col_2_class = 'col-12 col-lg-6';
+    } else {
+        $col_1_class = 'col-12 col-lg-7 my-auto order-2 order-lg-1';
+        $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
+    }
 
     $button = ___button(array(
         'button_type'       => $module['button_type'],
@@ -138,14 +147,14 @@ function _two_column_image_text($module)
 
     return "<section class='two-column-image-text'>
 	<div class='container'>
-		<div class='row'>
-			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto'>
+		<div class='row $image_position'>
+			<div class='$col_1_class'>
 				<h2 class='text-left'>$heading</span></h2>
 				$description
                 $button
 		
 			</div>
-			<div class='col-12 col-lg-6'>
+			<div class='$col_2_class'>
 				$image
 			</div>
 		</div>
