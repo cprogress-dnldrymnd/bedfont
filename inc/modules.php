@@ -85,7 +85,7 @@ function _two_column_image_text($module)
     $button_url_custom = $module['button_url_custom'];
     $button_target = $module['button_target'];
 
-    $button = __button(array(
+    $button = ___button(array(
         'button_type'       => $button_type,
         'button_text'       => $button_text,
         'button_url'        => isset($button_url) ? $button_url : false,
@@ -115,7 +115,7 @@ function _two_column_image_text($module)
 
 
 
-function __button($data)
+function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
     $button_text = isset($data['button_text']) ? $data['button_text'] : false;
