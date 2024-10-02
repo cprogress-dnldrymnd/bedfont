@@ -354,7 +354,7 @@ function _icon_box($module)
     if ($style == 'style-1') {
         $class = 'col-6 col-lg-2';
     }
-    $html .= "<div class='row my-lg-5 values d-none d-md-flex'>";
+    $html .= "<div class='row values d-none d-md-flex'>";
 
     foreach ($items as $item) {
         $heading = $item['heading'];
