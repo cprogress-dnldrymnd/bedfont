@@ -246,10 +246,17 @@ function _slider($module)
 
 function _text_over_curve_shape($module)
 {
-    return "<section class='slideanim rounded_top text-white mt-5 slide'>
+    $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $html = "<section class='slideanim rounded_top text-white mt-5 slide'>
 	<div class='container'>
-		<div class='col-12'>
-			<p>The Bedfont vision is a world where everyone has access to instant, non-invasive,<br>simple breath testing to aid in medical diagnosis.</p>
+		<div class='col-12'> ";
+
+    if ($heading) {
+        $html .= "<h2 class='text-center'>$heading</h2>";
+    }
+
+    $html .= "$description
 		</div>
 	</div>
 </section>";
