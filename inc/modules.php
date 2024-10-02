@@ -88,7 +88,7 @@ function _two_column_image_text($module)
     $button = ___button(array(
         'button_type'       => $button_type,
         'button_text'       => $button_text,
-        'button_url'        => isset($button_url) ? $button_url : false,
+        'button_url'        => isset($button_url) ? $button_url[0] : false,
         'button_url_custom' => $button_url_custom,
         'button_style'      => $button_style,
         'button_target'     => $button_target,
