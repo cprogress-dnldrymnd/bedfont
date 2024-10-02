@@ -238,5 +238,61 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Text Over Curved Shape: <%- heading %>')
+            ->add_fields('image_grid', array(
+                Field::make('complex', 'items', 'Items')
+                    ->set_layout('tabbed-vertical')
+                    ->add_fields(array(
+                        Field::make('image', 'image', __('Image')),
+                        Field::make('select', 'button_type', __('Button Type'))
+                            ->set_options(
+                                array(
+                                    'internal-url'        => 'Internal',
+                                    'custom'      => 'Custom',
+                                )
+                            ),
+                        Field::make('text', 'button_text', __('Button Text')),
+                        Field::make('association', 'button_url', __('Button URL'))
+                            ->set_max(1)
+                            ->set_types(array(
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'post',
+                                ),
+                                array(
+                                    'type'      => 'post',
+                                    'post_type' => 'page',
+                                )
+                            ))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '!='
+                                    )
+                                )
+                            ),
+                        Field::make('text', 'button_custom_url', __('Button Custom URL'))
+                            ->set_conditional_logic(
+                                array(
+                                    array(
+                                        'field'   => 'button_type',
+                                        'value'   => 'custom',
+                                        'compare' => '='
+                                    )
+                                )
+                            ),
+                        Field::make('select', 'button_target', __('Button Target'))
+                            ->set_options(
+                                array(
+                                    'target="_self"'  => 'Default',
+                                    'target="_blank"' => 'New Tab',
+                                )
+                            ),
+                    ))
+                    ->set_header_template('Slide: <%- heading %>')
+
+            ))
+            ->set_header_template('Text Over Curved Shape: <%- heading %>')
 
     ));

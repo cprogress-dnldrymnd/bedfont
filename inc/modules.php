@@ -264,6 +264,10 @@ function _text_over_curve_shape($module)
 return $html;
 }
 
+function _image_grid($module) {
+
+}
+
 function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
