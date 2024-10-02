@@ -782,5 +782,7 @@ section.two-column-image-text.style-3 {
       object-fit: cover; }
   section.two-column-image-text.style-3 .inner {
     padding: 48px; }
+  section.two-column-image-text.style-3 .text-col {
+    padding: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

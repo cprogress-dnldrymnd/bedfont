@@ -129,7 +129,7 @@ function _two_column_image_text($module)
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
     if ($style == 'style-1' || $style == 'style-3') {
-        $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto';
+        $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col';
         $col_2_class = 'col-12 col-lg-6';
     } else {
         $col_1_class = 'col-12 col-lg-7 my-auto order-2 order-lg-1';
