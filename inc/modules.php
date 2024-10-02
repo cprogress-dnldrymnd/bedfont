@@ -380,7 +380,7 @@ function _icon_box($module)
 
     $html .= "</div>";
     if ($style == 'style-1') {
-        $html .= "<div class='desc'>";
+        $html .= "<div class='desc text-center'>";
         $html .= $description;
         $html .= "</div>";
     }
