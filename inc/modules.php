@@ -215,6 +215,8 @@ function _blogs($module)
 
     $html .= "[blogs source='most-recent' posts_per_page='3']";
     $html .= "</div>";
+
+    $html .= "<div class='button-box button-blue button-box-shadow'><a class='btn ' href='/news' target='_blank' rel='noopener'>All Blogs<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i></a></div>";
     $html  .= "</section>";
 
     return $html;
