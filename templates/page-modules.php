@@ -6,5 +6,5 @@ Template Name: --Modules
  */
 
 get_header('');
-echo get_page_template_slug();
+the_content();
 get_footer('');
