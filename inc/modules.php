@@ -224,9 +224,16 @@ function _two_column_image_text($module)
 
 function _text($module)
 {
+    $text_align = $module['text_align'] ?  $module['text_align'] : 'text-center';
+    $color = $module['color'];
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    return "<section class='text-section text-center'>
+
+    if ($color) {
+        $style_inline = "style='--color: var(--$color)'";
+    }
+
+    return "<section class='text-section $text_align' $style_inline>
 	<div class='container'>
 	<h2 class='text-center'>$heading</span></h2>
 				$description
