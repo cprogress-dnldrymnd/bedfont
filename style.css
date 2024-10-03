@@ -818,8 +818,8 @@ section.text-section {
 .logo-slider {
   overflow: hidden; }
   .logo-slider .carousel {
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
     width: 100%;
     overflow: hidden; }
     .logo-slider .carousel img {
