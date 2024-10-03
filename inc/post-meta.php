@@ -198,7 +198,7 @@ Container::make('post_meta', 'Modules')
                             ),
                             array(
                                 'field'   => 'style',
-                                'value'   => 'style-3',
+                                'value'   => 'style-4',
                             )
                         )
                     ),
