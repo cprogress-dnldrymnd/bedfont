@@ -319,7 +319,7 @@ function _two_column_image_text_style_5($module)
 				</div>
 				<div class='col-1'></div>
 				<div class='col-12 col-lg-6 my-auto'>
-					<h2>$heading</h2>
+					<h2 class='text-left'>$heading</h2>
 				$description
 					$button
 				</div>
