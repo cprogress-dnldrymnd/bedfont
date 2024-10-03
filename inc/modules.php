@@ -544,6 +544,7 @@ function _logo_slider($module)
 
     $html .= "</div>";
     $html .= "</section>";
+    return $html;
 }
 function ___button($data)
 {
