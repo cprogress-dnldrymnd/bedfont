@@ -8,6 +8,7 @@ use Carbon_Fields\Field;
 
 Container::make('post_meta', 'Modules')
     ->where('post_template', '=', 'templates/page-modules.php')
+    ->or_where('post_type', '=', 'layouts')
     ->add_fields(array(
         Field::make('complex', 'modules', '')
             ->set_collapsed(true)
