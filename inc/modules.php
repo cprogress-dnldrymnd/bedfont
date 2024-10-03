@@ -527,7 +527,7 @@ function _logo_slider($module)
     $heading = $module['heading'];
     $html = "<section class='logo-slider'>";
     $html .= "<div class='container'>";
-    $html .= "<h2>$heading</h2>";
+    $html .= "<h2 class='text-left'>$heading</h2>";
 
 
     $html .= "<div class='carousel d-flex align-items-center carousel-logo-slider'>";
