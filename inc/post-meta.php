@@ -17,6 +17,18 @@ Container::make('post_meta', 'Modules')
                     'singular_name' => 'Module',
                 )
             )
+            ->add_fields('layouts', array(
+                Field::make('text', 'title', 'Title'),
+                Field::make('association', 'layouts', 'Select Layouts')
+                    ->set_types(
+                        array(
+                            array(
+                                'type'      => 'post',
+                                'post_type' => 'layouts',
+                            )
+                        )
+                    )
+            ))
             ->add_fields('hero', array(
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
@@ -246,13 +258,13 @@ Container::make('post_meta', 'Modules')
             ->set_header_template('Two Column Image and Text: <%- heading %>')
             ->add_fields('text', array(
                 Field::make('select', 'text_align', __('Text Align'))
-                ->set_options(
-                    array(
-                        'text-center'      => 'Default/Center',
-                        'text-left'      => 'Left',
-                        'text-right'      => 'Right',
-                    )
-                ),
+                    ->set_options(
+                        array(
+                            'text-center'      => 'Default/Center',
+                            'text-left'      => 'Left',
+                            'text-right'      => 'Right',
+                        )
+                    ),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
                         array(
