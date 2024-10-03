@@ -376,3 +376,4 @@ function get__theme_option($value)
 /*-----------------------------------------------------------------------------------*/
 require_once('inc/modules.php');
 require_once('inc/shortcodes.php');
+require_once('inc/post-types.php');
