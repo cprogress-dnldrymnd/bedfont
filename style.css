@@ -815,4 +815,20 @@ section.text-section {
   section.text-section[style="--color: var(--green)"] * {
     color: var(--white); }
 
+.logo-slider {
+  overflow: hidden; }
+  .logo-slider .carousel {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    width: 100%;
+    overflow: hidden; }
+    .logo-slider .carousel img {
+      height: 90px;
+      width: auto; }
+  .logo-slider .group {
+    animation: scrolling 25s linear infinite;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    flex: none; }
+
 /*# sourceMappingURL=style.css.map */
