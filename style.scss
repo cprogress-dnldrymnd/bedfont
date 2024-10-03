@@ -1048,3 +1048,11 @@ section.text-section {
         flex: none;
     }
 }
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
