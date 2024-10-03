@@ -1065,3 +1065,28 @@ section.text-section {
         min-height: 450px;
     }
 }
+
+.bg-gradient-purple {
+    background-image: linear-gradient(to right, #6a2581, #fff);
+}
+
+.bg-gradient-blue {
+    background-image: linear-gradient(to right, #fff, #0090d0);
+}
+
+.bg-gradient-pink {
+    background-image: linear-gradient(to right, #e5147d, #fff);
+}
+
+.bg-gradient-orange {
+    background-image: linear-gradient(to right, #fff, #ef7a23);
+}
+
+.bg-gradient-red {
+    background-image: linear-gradient(to right, #d00344, #fff);
+}
+
+.bg-gradient-brown {
+    background-image: linear-gradient(to right, #956E41, #000);
+}
+
