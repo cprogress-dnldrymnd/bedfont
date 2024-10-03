@@ -838,5 +838,9 @@ section.text-section {
     transform: translateX(-50%); } }
 .two-column-style-4 {
   background-color: var(--color); }
+  .two-column-style-4 .img-div {
+    background-size: cover;
+    background-position: center;
+    min-height: 450px; }
 
 /*# sourceMappingURL=style.css.map */

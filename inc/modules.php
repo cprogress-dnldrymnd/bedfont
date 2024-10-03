@@ -280,7 +280,7 @@ function _two_column_image_text_style_4($module)
 					<h2 class='text-left'>$heading</h2>
 					$description
 				</div>
-                <div class='col-12 col-lg-5 p-0 '></div>
+                <div class='col-12 col-lg-5 p-0  img-div'></div>
 			</div>
 		</div>
 	</section>";

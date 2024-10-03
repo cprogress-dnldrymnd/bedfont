@@ -1059,4 +1059,9 @@ section.text-section {
 
 .two-column-style-4 {
     background-color: var(--color);
+    .img-div {
+        background-size: cover;
+        background-position: center;
+        min-height: 450px;
+    }
 }
