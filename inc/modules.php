@@ -533,8 +533,11 @@ function _logo_slider($module)
     $html .= "<div class='carousel d-flex align-items-center carousel-logo-slider'>";
     $html .= "<div class='group d-flex align-items-center'>";
     foreach ($images as $image) {
+        $image_url = wp_get_attachment_image_url($image, 'large');
         $html .= "<div class='slide'>";
+        $html .= "<a href='$image_url' data-fancybox='gallery'>";
         $html .= wp_get_attachment_image($image, 'large');
+        $html .= "</a>";
         $html .= "</div>";
     }
     $html .= "</div>";
