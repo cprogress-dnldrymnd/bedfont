@@ -176,6 +176,7 @@ Container::make('post_meta', 'Modules')
                         'style-1' => 'Style 1',
                         'style-2' => 'Style 2',
                         'style-3' => 'Style 3',
+                        'style-4' => 'Style 4',
                     )),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
@@ -190,9 +191,14 @@ Container::make('post_meta', 'Modules')
                     )
                     ->set_conditional_logic(
                         array(
+                            'relation' => 'OR',
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-2',
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-3',
                             )
                         )
                     ),
