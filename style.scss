@@ -1088,5 +1088,8 @@ section.text-section {
 
 .bg-gradient-brown {
     background-image: linear-gradient(to right, #956E41, #000);
+    * {
+        color: var(--white-color);
+    }
 }
 

@@ -860,5 +860,7 @@ section.text-section {
 
 .bg-gradient-brown {
   background-image: linear-gradient(to right, #956E41, #000); }
+  .bg-gradient-brown * {
+    color: var(--white-color); }
 
 /*# sourceMappingURL=style.css.map */
