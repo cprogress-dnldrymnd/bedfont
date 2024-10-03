@@ -30,6 +30,7 @@ Container::make('post_meta', 'Modules')
                         )
                     )
             ))
+            ->set_header_template('Layout: <%- title %>')
             ->add_fields('hero', array(
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
