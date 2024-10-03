@@ -31,6 +31,13 @@ function modules()
     foreach ($modules as $key => $module) {
         $type = $module['_type'];
         switch ($type) {
+            case 'layouts':
+                $layouts = $module['layouts'];
+                foreach ($layouts as $layout) {
+                    $layout_id = $layout['id'];
+                    $html .= "[layouts id='$layout_id']";
+                }
+                break;
             case 'hero':
                 $style = $module['style'];
                 if ($style == 'style-1') {

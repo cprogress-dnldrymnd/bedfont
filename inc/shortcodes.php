@@ -78,3 +78,18 @@ function _post_grid($post)
 
     return do_shortcode($html);
 }
+
+function layouts($atts)
+{
+    extract(
+        shortcode_atts(
+            array(
+                'id' => '',
+            ),
+            $atts
+        )
+    );
+
+    return do_shortcode(__sections($id));
+}
+add_shortcode('layouts', 'layouts');
