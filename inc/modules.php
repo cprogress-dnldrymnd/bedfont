@@ -260,7 +260,6 @@ function _two_column_image_text($module)
 function _two_column_image_text_style_4($module)
 {
     $heading = $module['heading'];
-    $style = $module['style'];
     $color = $module['color'];
     $image_position = $module['image_position'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
@@ -268,14 +267,15 @@ function _two_column_image_text_style_4($module)
     if ($color) {
         $style_inline = "style='--color: var(--$color)'";
     }
+
     return "<section class='two-column-style-4 p-0 mab' $style_inline>
 		<div class='container-fluid m-0 p-0'>
 			<div class='row m-0 $image_position'>
-				<div class='col-12 col-lg-5 p-0 img-div-rodolfo'></div>
 				<div class='col-12 col-lg-7 my-auto img-div-content text-white'>
 					<h2 class='text-left'>$heading</h2>
 					$description
 				</div>
+                <div class='col-12 col-lg-5 p-0 img-div-rodolfo'></div>
 			</div>
 		</div>
 	</section>";
