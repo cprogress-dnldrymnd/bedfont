@@ -7,7 +7,7 @@ function action_module_content()
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
             return;
         $template = get_page_template_slug();
-        if ($template == 'templates/page-modules.php') {
+        if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
             $content_html = '<!-- wp:html -->';
             $content_html .= modules();
             $content_html .= '<!-- /wp:html -->';
