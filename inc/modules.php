@@ -525,6 +525,7 @@ function _logo_slider($module)
 {
     $images = $module['images'];
     $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
     $html = "<section class='logo-slider'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-left'>$heading</h2>";
@@ -544,7 +545,7 @@ function _logo_slider($module)
 
 
     $html .= "</div>";
-
+    $html .= $description;
     $html .= "</div>";
     $html .= "</section>";
     return $html;
