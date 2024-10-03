@@ -149,3 +149,15 @@ $Layouts->publicly_queryable = true;
 $Layouts->show_in_admin_bar = true;
 $Layouts->has_archive = false;
 $Layouts->show_in_rest = true;
+
+
+$Layouts = new newPostType();
+$Layouts->name = 'Medical Advisory Board';
+$Layouts->singular_name = 'Medical Advisory Board';
+$Layouts->icon = 'dashicons-layout';
+$Layouts->supports = array('title', 'revisions', 'page-attributes', 'editor', 'excerpt', 'thumbnail');
+$Layouts->exclude_from_search = true;
+$Layouts->publicly_queryable = false;
+$Layouts->show_in_admin_bar = false;
+$Layouts->has_archive = false;
+$Layouts->show_in_rest = true;
