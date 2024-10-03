@@ -77,6 +77,9 @@ function modules($id)
             case 'instagram_feed':
                 $html .= _instagram_feed($module);
                 break;
+            case 'logo_slider':
+                $html .= _logo_slider($module);
+                break;
         }
     }
     return $html;
@@ -518,6 +521,30 @@ function _instagram_feed($module)
     return $html;
 }
 
+function _logo_slider($module)
+{
+    $images = $module['images'];
+    $heading = $module['heading'];
+    $html = "<section class='logo-slider'>";
+    $html .= "<div class='container'>";
+    $html .= "<h2>$heading</h2>";
+
+
+    $html .= "<div class='carousel d-flex align-items-center carousel-logo-slider'>";
+    $html .= "<div class='group d-flex align-items-center'>";
+    foreach ($images as $image) {
+        $html .= "<div class='slide'>";
+        $html .= wp_get_attachment_image($image, 'large');
+        $html .= "</div>";
+    }
+    $html .= "</div>";
+
+
+    $html .= "</div>";
+
+    $html .= "</div>";
+    $html .= "</section>";
+}
 function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
