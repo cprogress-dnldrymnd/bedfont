@@ -369,6 +369,12 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Blogs: <%- heading %>')
+            ->add_fields('logo_slider', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('media_gallery', 'images', __('Image')),
+
+            ))
+            ->set_header_template('Blogs: <%- heading %>')
             ->add_fields('slider', array(
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
