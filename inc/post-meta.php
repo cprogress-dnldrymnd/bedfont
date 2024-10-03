@@ -48,15 +48,7 @@ Container::make('post_meta', 'Modules')
                             )
                         )
                     ),
-                Field::make('image', 'bg_image', __('Background Image'))
-                    ->set_conditional_logic(
-                        array(
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style1',
-                            )
-                        )
-                    ),
+                Field::make('image', 'bg_image', __('Background Image')),
 
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
