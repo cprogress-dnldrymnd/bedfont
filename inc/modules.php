@@ -309,13 +309,9 @@ function _two_column_image_text_style_5($module)
         'button_target'     => $module['button_target'],
     ));
 
-    if ($color) {
-        $style_inline = "style='--color: var(--$color);'";
-    }
 
 
-
-    return "<section class='two-column-style-5' $style_inline>
+    return "<section class='two-column-style-5 bg-gradient-$color'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 				<div class='col-12 col-lg-5'>
