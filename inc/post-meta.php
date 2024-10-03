@@ -226,6 +226,7 @@ Container::make('post_meta', 'Modules')
                             'button-orange'      => 'Button Orange',
                             'button-blue'      => 'Button BLue',
                             'button-red'      => 'Button Red',
+                            'button-brown'      => 'Button Brown',
                         )
                     ),
                 Field::make('text', 'button_text', __('Button Text')),
