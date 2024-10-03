@@ -90,6 +90,6 @@ function layouts($atts)
         )
     );
 
-    return do_shortcode(__sections($id));
+    return do_shortcode(modules($id));
 }
 add_shortcode('layouts', 'layouts');

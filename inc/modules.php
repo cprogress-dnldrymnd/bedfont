@@ -9,7 +9,7 @@ function action_module_content()
         $template = get_page_template_slug();
         if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
             $content_html = '<!-- wp:html -->';
-            $content_html .= modules();
+            $content_html .= modules(get_the_ID());
             $content_html .= '<!-- /wp:html -->';
 
             if ($content_html) {
@@ -24,10 +24,10 @@ function action_module_content()
 }
 add_action('shutdown', 'action_module_content');
 
-function modules()
+function modules($id)
 {
     $html = '';
-    $modules = get__post_meta_by_id(get_the_ID(), 'modules');
+    $modules = get__post_meta_by_id($id, 'modules');
     foreach ($modules as $key => $module) {
         $type = $module['_type'];
         switch ($type) {
@@ -171,7 +171,8 @@ function _hero_style_3($module)
 		</div>
 	</section>";
 }
-function _hero_style_4($module) {
+function _hero_style_4($module)
+{
     return "<section class='hero-style-4 p-0 position-relative'>
 		<div class='container-fluid overlay-img-holder'>
 			<img src='https://www.bedfont.com/wp-content/themes/bedfont/assets/img/who-we-are.jpg' class='w-100' alt='Image of front of Bedfont Scientific Ltd' style='border-bottom-color: rgba(0, 0, 0, 0);'>
