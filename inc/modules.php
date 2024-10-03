@@ -262,11 +262,16 @@ function _two_column_image_text_style_4($module)
     $heading = $module['heading'];
     $color = $module['color'];
     $image_position = $module['image_position'];
+    $image = $module['image'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $image_url = wp_get_attachment_image_url($image, 'large');
 
     if ($color) {
-        $style_inline = "style='--color: var(--$color)'";
+        $style_inline = "style='--color: var(--$color); style='background-image: $image_url''";
+    } else {
+        $style_inline = "style='background-image: $image_url'";
     }
+
 
     return "<section class='two-column-style-4 p-0 mab' $style_inline>
 		<div class='container-fluid m-0 p-0'>
@@ -275,7 +280,7 @@ function _two_column_image_text_style_4($module)
 					<h2 class='text-left'>$heading</h2>
 					$description
 				</div>
-                <div class='col-12 col-lg-5 p-0 img-div-rodolfo'></div>
+                <div class='col-12 col-lg-5 p-0 '></div>
 			</div>
 		</div>
 	</section>";
