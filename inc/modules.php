@@ -267,9 +267,11 @@ function _two_column_image_text_style_4($module)
     $image_url = wp_get_attachment_image_url($image, 'large');
 
     if ($color) {
-        $style_inline = "style='--color: var(--$color); style='background-image: $image_url''";
-    } else {
-        $style_inline = "style='background-image: $image_url'";
+        $style_inline = "style='--color: var(--$color);'";
+    }
+
+    if ($image) {
+        $style_inline_image = "style='background-image: $image_url'";
     }
 
 
@@ -280,7 +282,7 @@ function _two_column_image_text_style_4($module)
 					<h2 class='text-left'>$heading</h2>
 					$description
 				</div>
-                <div class='col-12 col-lg-5 p-0  img-div'></div>
+                <div class='col-12 col-lg-5 p-0  img-div' $style_inline_image></div>
 			</div>
 		</div>
 	</section>";
