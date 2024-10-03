@@ -271,7 +271,7 @@ function _two_column_image_text_style_4($module)
     }
 
     if ($image) {
-        $style_inline_image = "style='background-image: $image_url'";
+        $style_inline_image = "style='background-image: url($image_url)'";
     }
 
 
