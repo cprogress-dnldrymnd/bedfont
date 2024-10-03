@@ -298,7 +298,7 @@ function _two_column_image_text_style_5($module)
     $image = $module['image'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
-        'class' => 'w-100'
+        'class' => 'img-fluid mb-5 mb-lg-0'
     ));
     $button = ___button(array(
         'button_type'       => $module['button_type'],
