@@ -51,7 +51,12 @@ function modules($id)
                 }
                 break;
             case 'two_column_image_text':
-                $html .= _two_column_image_text($module);
+                $style = $module['style'];
+                if ($style == 'style-4') {
+                    $html .= _two_column_image_text_style_4($module);
+                } else {
+                    $html .= _two_column_image_text($module);
+                }
                 break;
             case 'text':
                 $html .= _text($module);
@@ -252,7 +257,29 @@ function _two_column_image_text($module)
 </section>";
 }
 
+function _two_column_image_text_style_4($module)
+{
+    $heading = $module['heading'];
+    $style = $module['style'];
+    $color = $module['color'];
+    $image_position = $module['image_position'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
 
+    if ($color) {
+        $style_inline = "style='--color: var(--$color)'";
+    }
+    return "<section class='two-column-style-4 p-0 mab' $style_inline>
+		<div class='container-fluid m-0 p-0'>
+			<div class='row m-0 $image_position'>
+				<div class='col-12 col-lg-5 p-0 img-div-rodolfo'></div>
+				<div class='col-12 col-lg-7 my-auto img-div-content text-white'>
+					<h2 class='text-left'>$heading</h2>
+					$description
+				</div>
+			</div>
+		</div>
+	</section>";
+}
 function _text($module)
 {
     $text_align = $module['text_align'] ?  $module['text_align'] : 'text-center';
@@ -543,7 +570,7 @@ function _logo_slider($module)
     }
     $html .= "</div>";
 
-    
+
     $html .= "<div class='group d-flex align-items-center'>";
     foreach ($images as $image) {
         $image_url = wp_get_attachment_image_url($image, 'large');
