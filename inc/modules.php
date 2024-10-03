@@ -543,6 +543,8 @@ function _logo_slider($module)
     }
     $html .= "</div>";
 
+    
+    $html .= "<div class='group d-flex align-items-center'>";
     foreach ($images as $image) {
         $image_url = wp_get_attachment_image_url($image, 'large');
         $html .= "<div class='slide'>";
