@@ -372,6 +372,7 @@ Container::make('post_meta', 'Modules')
             ->add_fields('logo_slider', array(
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('media_gallery', 'images', __('Image')),
+                Field::make('text', 'description', __('Description')),
 
             ))
             ->set_header_template('Logo Slider: <%- heading %>')
