@@ -590,6 +590,18 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'subheading', __('Subheading')),
             ))
             ->set_header_template('Careers: <%- heading %>')
+            ->add_fields('accordion', array(
+                Field::make('image', 'image', __('Image')),
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'bottom_text', __('Bottom_text')),
+                Field::make('complex', 'items', 'Items')
+                    ->set_layout('tabbed-vertical')
+                    ->add_fields(array(
+                        Field::make('text', 'title', __('Title')),
+                        Field::make('textarea', 'content', __('Content')),
+                    ))
+            ))
+            ->set_header_template('Accordion: <%- heading %>')
 
     ));
 
