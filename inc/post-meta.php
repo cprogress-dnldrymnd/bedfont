@@ -598,8 +598,14 @@ Container::make('post_meta', 'Modules')
                     ->set_layout('tabbed-vertical')
                     ->add_fields(array(
                         Field::make('text', 'title', __('Title')),
-                        Field::make('textarea', 'content', __('Content')),
+                        Field::make('complex', 'contents', 'Contents')
+                            ->set_layout('tabbed-vertical')
+                            ->add_fields(array(
+                                Field::make('textarea', 'text', __('Text')),
+                            ))
                     ))
+                    ->set_header_template('Item: <%- title %>')
+
             ))
             ->set_header_template('Accordion: <%- heading %>')
 
