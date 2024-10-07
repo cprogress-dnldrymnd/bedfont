@@ -152,10 +152,10 @@ function contact_details()
     $address = get__theme_option('address');
 
     if ($tel) {
-        $html .= "<p class='mt-4'><strong>Tel: </strong>$tel</p>";
+        $html .= "<p class='mt-5'><strong>Tel: </strong>$tel</p>";
     }
     if ($email) {
-        $html .= "<p class='mb-4'><strong>Email: </strong>$email</p>";
+        $html .= "<p class='mb-5'><strong>Email: </strong>$email</p>";
     }
     if ($address) {
         $html .= wpautop($address);
