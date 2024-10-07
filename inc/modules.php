@@ -576,7 +576,7 @@ function _icon_box($module)
     } else {
         $class = 'col col-md-4 col-sm-3';
     }
-    $html .= "<div class='row values d-none d-md-flex'>";
+    $html .= "<div class='row values g-3 d-none d-md-flex'>";
 
     foreach ($items as $item) {
         $heading = $item['heading'];
