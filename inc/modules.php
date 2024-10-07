@@ -93,6 +93,9 @@ function modules($id)
             case 'careers':
                 $html .= _careers($module);
                 break;
+            case 'accordion':
+                $html .= _accordion($module);
+                break;
         }
     }
     return $html;
@@ -608,7 +611,7 @@ function _icon_box($module)
             $html .= "<div class='col-12 col-lg-9 my-auto'>";
         }
 
-        
+
         if ($heading) {
             $html .= "<h3>$heading</h3>";
         }
@@ -724,7 +727,30 @@ function _careers($module)
 
     return $html;
 }
+function _accordion($module)
+{
+    $heading = $module['heading'];
+    $items = $module['items'];
+    $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
+    return "<section class='two-column-image-text style-3'>
+	<div class='container'>
+		<div class='row '>
+			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col'>
+	<div class='inner text-center'>
 
+				<h2 class='center-left'>$heading</h2>
+	$bottom_text
+			</div>
+			</div>
+			<div class='col-12 col-lg-6'>
+			<div class='image-box'>
+				<img width='2000' height='1499' src='https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office.jpg' class='attachment-full size-full' alt='' decoding='async' loading='lazy' srcset='https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office.jpg 2000w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-300x225.jpg 300w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-1024x767.jpg 1024w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-768x576.jpg 768w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-1536x1151.jpg 1536w' sizes='(max-width: 2000px) 100vw, 2000px' style='border-bottom-color: rgba(0, 0, 0, 0);'>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>";
+}
 function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
