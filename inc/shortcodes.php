@@ -9,8 +9,14 @@ add_shortcode('rts', 'rts');
 function tms() {
     return "<sup>&#8482;</sup>";
 }
-
 add_shortcode('tms', 'tms');
+
+function ptms() {
+    return "<sup>+&#8482;</sup>";
+}
+
+
+add_shortcode('ptms', 'ptms');
 
 function permalink($atts)
 {
