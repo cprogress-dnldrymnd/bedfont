@@ -728,10 +728,9 @@ section.icon-boxes.style-1 .icon-box, section.icon-boxes.style-2 .icon-box {
     position: absolute;
     left: 0;
     top: 0; }
-section.icon-boxes.style-2 .row .col .icon-box {
+section.icon-boxes.style-2 .row .col .inner {
   border: 1px solid rgba(0, 144, 208, 0.1);
   border-radius: 10px;
-  padding: 10px;
   background: rgba(0, 144, 208, 0.1); }
 @media (min-width: 992px) {
   section.icon-boxes.style-2 .row .col {

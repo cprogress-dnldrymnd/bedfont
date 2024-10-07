@@ -585,6 +585,7 @@ function _icon_box($module)
 
         $html .= "<div class='$class'>";
         $html .= "<div class='icon-box'>";
+        $html .= "<div class='inner'>";
         $html .= wp_get_attachment_image($item['image'], 'medium');
         $html .= "</div>";
 
@@ -597,6 +598,7 @@ function _icon_box($module)
             $html .= $text;
             $html .= "</div>";
         }
+        $html .= "</div>";
         $html .= "</div>";
     }
 
