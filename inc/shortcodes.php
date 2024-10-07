@@ -2,9 +2,15 @@
 
 function rts()
 {
-    return '<sup>&#174;</sup>';
+    return "<sup>&#174;</sup>";
 }
 add_shortcode('rts', 'rts');
+
+function tms() {
+    return "<sup>&#8482;</sup>";
+}
+
+add_shortcode('tms', 'tms');
 
 function permalink($atts)
 {
