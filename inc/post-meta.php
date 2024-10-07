@@ -585,7 +585,7 @@ Container::make('post_meta', 'Modules')
             ->set_header_template('Instagram Feed: <%- heading %>')
             ->add_fields('careers', array(
                 Field::make('text', 'heading', __('Heading')),
-                Field::make('textarea', 'description', __('Description')),
+                Field::make('text', 'subheading', __('Subheading')),
             ))
             ->set_header_template('Careers: <%- heading %>')
 

@@ -90,6 +90,9 @@ function modules($id)
             case 'logo_slider':
                 $html .= _logo_slider($module);
                 break;
+            case 'careers':
+                $html .= _careers($module);
+                break;
         }
     }
     return $html;
@@ -672,6 +675,13 @@ function _logo_slider($module)
     $html .= "</section>";
     return $html;
 }
+
+
+function _careers($module) {
+    $heading = $module['heading'];
+    $subheading = $module['subheading'];
+}
+
 function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
