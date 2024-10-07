@@ -572,6 +572,8 @@ function _icon_box($module)
     <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
     if ($style == 'style-1') {
         $class = 'col-6 col-lg-2';
+    } else {
+        $class = 'col col-md-4 col-sm-3';
     }
     $html .= "<div class='row values d-none d-md-flex'>";
 
