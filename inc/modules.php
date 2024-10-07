@@ -400,12 +400,12 @@ function _two_column_image_text_style_6($module)
 }
 function _two_column_image_text_style_7($module)
 {
-    $heading = $module['heading'];
+    $heading_main = $module['heading'];
     $color = $module['color'];
     $image_position = $module['image_position'];
     $image = $module['image'];
     $text_boxes = $module['text_boxes'];
-    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $description_main = isset($module['description']) ? wpautop($module['description']) : '';
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
         'class' => 'img-fluid w-75 mx-auto d-block'
     ));
@@ -440,8 +440,8 @@ function _two_column_image_text_style_7($module)
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
                     <div class='box'>
-					<h2 class='text-left'>$heading</h2>
-				$description
+					<h2 class='text-left'>$heading_main</h2>
+				$description_main
 					$button
 				</div>
 
