@@ -715,7 +715,7 @@ function _careers($module)
 
 
 
-    $html = "<section class='two-column-text'>";
+    $html = "<section class='two-column-text accordion'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= "<h3 class='pink'>$subheading</h3>";
