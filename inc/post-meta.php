@@ -60,7 +60,7 @@ Container::make('post_meta', 'Modules')
                             ),
                             array(
                                 'field'   => 'style',
-                                'value'   => 'style-2-image',
+                                'value'   => 'style-2',
                                 'compare' => '!='
                             )
                         )
