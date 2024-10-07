@@ -149,3 +149,14 @@ $Layouts->publicly_queryable = true;
 $Layouts->show_in_admin_bar = true;
 $Layouts->has_archive = false;
 $Layouts->show_in_rest = true;
+
+$Careers = new newPostType();
+$Careers->name = 'Careers';
+$Careers->singular_name = 'Career';
+$Careers->icon = 'dashicons-layout';
+$Careers->supports = array('title', 'revisions', 'page-attributes', 'editor');
+$Careers->exclude_from_search = true;
+$Careers->publicly_queryable = true;
+$Careers->show_in_admin_bar = true;
+$Careers->has_archive = false;
+$Careers->show_in_rest = true;

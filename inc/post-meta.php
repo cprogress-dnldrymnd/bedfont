@@ -535,3 +535,11 @@ Container::make('post_meta', 'Modules')
             ->set_header_template('Instagram Feed: <%- heading %>')
 
     ));
+
+
+    Container::make('post_meta', 'Modules')
+    ->where('post_template', '=', 'templates/page-modules.php')
+    ->or_where('post_type', '=', 'layouts')
+    ->add_fields(array(
+        Field::make('text', 'salary', __('Salary')),
+    ));
