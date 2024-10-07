@@ -85,7 +85,7 @@
 					'walker' => new bootstrap_5_wp_nav_menu_walker()
 				));
 				?>
-				<ul class="navbar-nav">
+				<ul class="navbar-nav d-none d-lg-block">
 					
 			
 				<li id="menu-item-904" class="request-a-quote menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-904"><a href="/wp/request-a-quote?customize_changeset_uuid=98accc47-5848-4b29-9d10-e2c22e75d500&amp;customize_messenger_channel=preview-0" class="nav-link">Request a Quote</a></li>
