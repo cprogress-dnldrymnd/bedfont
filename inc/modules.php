@@ -805,17 +805,29 @@ function _form($module)
     $form_script = $module['form_script'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
+    if ($style == 'style-2') {
+        $class = 'text-left';
+    } else {
+        $class = 'text-center';
+    }
 
 
-
-    $html = "<section class='form text-center'>";
+    $html = "<section class='form $class $style'>";
     $html .= "<div class='container'>";
     if ($style == 'style-2') {
         $html .= "<div class='row'>";
         $html .= "<div class='col-lg-5'>";
+        $html .= "<h1 class='$class'>$heading</h1>";
+    } else {
+        $html .= "<h2 class='$class'>$heading</h2>";
     }
-    $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= $description;
+
+    if ($style == 'style-2') {
+        $html .= "[contact_details]";
+        $html .= "[socials]";
+    }
+
 
     if ($style == 'style-2') {
         $html .= "</div>";

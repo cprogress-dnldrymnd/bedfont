@@ -101,7 +101,7 @@ function careers()
         'numberposts' => -1,
     ));
     $html = "<div class='job-holder'>";
-    foreach ($jobs as $key=> $job) {
+    foreach ($jobs as $key => $job) {
         $title = $job->post_title;
         $salary = get__post_meta_by_id($job->ID, 'salary');
         $job_spec = get__post_meta_by_id($job->ID, 'job_spec');
@@ -142,3 +142,24 @@ function careers()
 }
 
 add_shortcode('careers', 'careers');
+
+
+function contact_details()
+{
+    $html = "";
+    $tel = get__theme_option('tel');
+    $email = get__theme_option('email');
+    $address = get__theme_option('address');
+
+    if ($tel) {
+        $html .= "<p><strong>Tel: </strong>$tel</p>";
+    }
+    if ($email) {
+        $html .= "<p><strong>Email: </strong>$email</p>";
+    }
+    if ($address) {
+        $html .= wpautop($address);
+    }
+}
+
+add_shortcode('contact_details', 'contact_details');
