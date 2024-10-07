@@ -48,9 +48,14 @@ Container::make('post_meta', 'Modules')
                 Field::make('image', 'image', __('Image'))
                     ->set_conditional_logic(
                         array(
+                            'relation' => 'OR',
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-3',
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2-image',
                             )
                         )
                     ),
@@ -538,7 +543,7 @@ Container::make('post_meta', 'Modules')
     ));
 
 
-    Container::make('post_meta', 'Career Settings')
+Container::make('post_meta', 'Career Settings')
     ->or_where('post_type', '=', 'careers')
     ->add_fields(array(
         Field::make('text', 'salary', __('Salary')),
