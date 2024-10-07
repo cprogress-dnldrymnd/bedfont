@@ -720,6 +720,11 @@ template {
     height: 100%;
     object-fit: cover;
 }
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
 :root {
     --pink: #e5147d;
     --brown: #956e41;
