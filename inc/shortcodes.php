@@ -160,6 +160,8 @@ function contact_details()
     if ($address) {
         $html .= wpautop($address);
     }
+
+    return $html;
 }
 
 add_shortcode('contact_details', 'contact_details');
