@@ -370,7 +370,7 @@ function _two_column_text($module)
     $description_2 = isset($module['description_2']) ? wpautop($module['description_2']) : '';
     $html = "<section class='two-column-text'>";
     $html .= "<div class='container'>";
-    $html .= "<div class='row mb-5'>
+    $html .= "<div class='row'>
 				<div class='col-12 col-lg-6 text-center'>
 					<h2 class='text-center'>$heading_1</h2>
 				$description_1
