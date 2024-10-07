@@ -801,6 +801,7 @@ function _accordion($module)
 function _form($module)
 {
     $heading = $module['heading'];
+    $style = $module['style'];
     $form_script = $module['form_script'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
@@ -809,10 +810,24 @@ function _form($module)
 
     $html = "<section class='form text-center'>";
     $html .= "<div class='container'>";
+    if ($style == 'style-2') {
+        $html .= "<div class='row'>";
+        $html .= "<div class='col-lg-5'>";
+    }
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= $description;
 
+    if ($style == 'style-2') {
+        $html .= "</div>";
+        $html .= "<div class='col-lg-7'>";
+    }
+
     $html .= $form_script;
+
+    if ($style == 'style-2') {
+        $html .= "</div>";
+        $html .= "</div>";
+    }
 
     $html .= "</div>";
     $html .= "</section>";
@@ -828,7 +843,7 @@ function _map($module)
     $html .= "<iframe src='$map_src' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy'></iframe>";
     $html .= "</div>";
     $html .= "</section>";
-    
+
     return $html;
 }
 function ___button($data)
