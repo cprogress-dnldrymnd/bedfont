@@ -566,11 +566,15 @@ function _icon_box($module)
     $style = $module['style'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
-    
+
     $html = "<section class='icon-boxes $style'>
 	<div class='container'>
     <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
-    $html .= $description;
+    if ($description) {
+        $html .= "<div class='desc-box text-center'>";
+        $html .= $description;
+        $html .= "</div>";
+    }
     if ($style == 'style-1') {
         $class = 'col-6 col-lg-2';
     } else {
