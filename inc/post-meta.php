@@ -338,7 +338,7 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('two_column_text', array(
-                
+
                 Field::make('text', 'heading_1', __('Heading Col 1'))->set_width(50),
                 Field::make('text', 'heading_2', __('Heading Col 2'))->set_width(50),
                 Field::make('textarea', 'description_1', __('Description Col 1'))->set_width(50),
@@ -583,6 +583,11 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Instagram Feed: <%- heading %>')
+            ->add_fields('careers', array(
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'description', __('Description')),
+            ))
+            ->set_header_template('Careers: <%- heading %>')
 
     ));
 
