@@ -220,6 +220,7 @@ Container::make('post_meta', 'Modules')
                         'style-4' => 'Style 4',
                         'style-5' => 'Style 5',
                         'style-6' => 'Style 6',
+                        'style-7' => 'Style 7',
                     )),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
@@ -250,11 +251,33 @@ Container::make('post_meta', 'Modules')
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-6',
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-7',
                             )
                         )
                     ),
-                Field::make('text', 'heading', __('Heading')),
-                Field::make('textarea', 'description', __('Description')),
+                Field::make('text', 'heading', __('Heading'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-7',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
+                Field::make('textarea', 'description', __('Description'))
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-7',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
                 Field::make('image', 'image', __('Image')),
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
