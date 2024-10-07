@@ -1,7 +1,7 @@
 <?php
 /*
 
-Template Name: --Text Only
+Template Name: --Gutenberg
 
  */
 
