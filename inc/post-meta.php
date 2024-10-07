@@ -43,7 +43,7 @@ Container::make('post_meta', 'Modules')
 
                 Field::make('text', 'heading', __('Heading')),
 
-                Field::make('text', 'subheading', __('Subheading')),
+                Field::make('textarea', 'subheading', __('Subheading')),
                 Field::make('textarea', 'description', __('Description'))
                     ->set_conditional_logic(
                         array(
