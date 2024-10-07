@@ -152,10 +152,10 @@ function contact_details()
     $address = get__theme_option('address');
 
     if ($tel) {
-        $html .= "<p><strong>Tel: </strong>$tel</p>";
+        $html .= "<p class='mt-4'><strong>Tel: </strong>$tel</p>";
     }
     if ($email) {
-        $html .= "<p><strong>Email: </strong>$email</p>";
+        $html .= "<p class='mb-4'><strong>Email: </strong>$email</p>";
     }
     if ($address) {
         $html .= wpautop($address);
@@ -173,18 +173,14 @@ function socials()
 
     if ($socials) {
         $html = "<div class='socials d-inline-block'>";
-        $html .= "<ul class='d-inline-flex align-items-center m-0 p-0'>";
         foreach ($socials as $social) {
             $url = $social['url'];
             $icon = $social['icon'];
-            $html .= "<li>";
             $html .= "<a class='nav-social-icon' target='_blank' href='$url'>";
             $html .= "<i class='$icon' aria-hidden='true'></i>";
             $html .= "</a>";
-            $html .= "</li>";
         }
 
-        $html .= "</ul>";
         $html .= "</div>";
         return $html;
     }
