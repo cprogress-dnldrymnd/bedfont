@@ -603,7 +603,7 @@ Container::make('post_meta', 'Modules')
                             ->add_fields(array(
                                 Field::make('textarea', 'text', __('Text')),
                             ))
-                            ->set_header_template('Text: <%- title %>')
+                            ->set_header_template('Text: <%- text %>')
 
 
                     ))
