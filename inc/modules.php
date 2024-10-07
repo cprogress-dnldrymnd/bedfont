@@ -732,6 +732,9 @@ function _accordion($module)
     $heading = $module['heading'];
     $items = $module['items'];
     $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
+    $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
+
+
     return "<section class='two-column-image-text style-3'>
 	<div class='container'>
 		<div class='row '>
@@ -744,12 +747,13 @@ function _accordion($module)
 			</div>
 			<div class='col-12 col-lg-6'>
 			<div class='image-box'>
-				<img width='2000' height='1499' src='https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office.jpg' class='attachment-full size-full' alt='' decoding='async' loading='lazy' srcset='https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office.jpg 2000w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-300x225.jpg 300w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-1024x767.jpg 1024w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-768x576.jpg 768w, https://bedfont.theprogressteam.com/wp-content/uploads/2024/10/bedfont-office-1536x1151.jpg 1536w' sizes='(max-width: 2000px) 100vw, 2000px' style='border-bottom-color: rgba(0, 0, 0, 0);'>
+			$image
 			</div>
 			</div>
 		</div>
 	</div>
 </section>";
+return $html;
 }
 function ___button($data)
 {
