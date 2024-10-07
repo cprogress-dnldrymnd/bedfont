@@ -735,7 +735,8 @@ section.icon-boxes.style-2 .row .col .icon-box img {
 section.icon-boxes.style-2 .row .col .inner {
   border: 1px solid rgba(0, 144, 208, 0.1);
   border-radius: 10px;
-  background: rgba(0, 144, 208, 0.1); }
+  background: rgba(0, 144, 208, 0.1);
+  height: 100%; }
 @media (min-width: 992px) {
   section.icon-boxes.style-2 .row .col {
     width: 20%; } }
