@@ -626,7 +626,7 @@ function _icon_box($module)
     }
 
     $html .= "</div>";
-    if ($style == 'style-1') {
+    if ($bottom_text) {
         $html .= "<div class='desc text-center'>";
         $html .= $bottom_text;
         $html .= "</div>";
