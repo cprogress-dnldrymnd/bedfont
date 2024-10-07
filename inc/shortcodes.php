@@ -101,7 +101,7 @@ function careers()
         'numberposts' => -1,
     ));
     $html = "<div class='job-holder'>";
-    foreach ($jobs as $key => $job) {
+    foreach ($jobs as $key=> $job) {
         $title = $job->post_title;
         $salary = get__post_meta_by_id($job->ID, 'salary');
         $job_spec = get__post_meta_by_id($job->ID, 'job_spec');
@@ -115,13 +115,13 @@ function careers()
     <div class='col-12 col-md-8 my-auto'>
         <div class='accordion' id='accordionJob'>
             <div class='accordion-item'>
-                <h4 class='accordion-header' id='heading<?=$key ?>'>
+                <h4 class='accordion-header' id='heading$key'>
                     <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse'
-                        data-bs-target='#collapse<?=$key ?>' aria-expanded='false' aria-controls='collapse<?=$key ?>'>
+                        data-bs-target='#collapse$key' aria-expanded='false' aria-controls='collapse$key'>
                         What does it take to be a $title at Bedfont Scientific Ltd?
                     </button>
                 </h4>
-                <div id='collapse<?=$key ?>' class='accordion-collapse collapse' aria-labelledby='heading<?=$key ?>'
+                <div id='collapse$key' class='accordion-collapse collapse' aria-labelledby='heading$key'
                     data-bs-parent='#accordionJob'>
                     <div class='accordion-body'>
                         $details
