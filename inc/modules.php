@@ -99,6 +99,9 @@ function modules($id)
             case 'form':
                 $html .= _form($module);
                 break;
+            case 'map':
+                $html .= _map($module);
+                break;
         }
     }
     return $html;
@@ -814,6 +817,18 @@ function _form($module)
     $html .= "</div>";
     $html .= "</section>";
 
+    return $html;
+}
+
+function _map($module)
+{
+    $map_src = $module['map_src'];
+    $html = "<section class='map'>";
+    $html .= "<div class='container-fluid p-0'>";
+    $html .= "<iframe src='$map_src' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy'></iframe>";
+    $html .= "</div>";
+    $html .= "</section>";
+    
     return $html;
 }
 function ___button($data)
