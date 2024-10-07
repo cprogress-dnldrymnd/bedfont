@@ -734,6 +734,11 @@ function _accordion($module)
     $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
+    if ($bottom_text) {
+        $bottom_text_val = "<div class='bottom-text mt-4 text-center'>";
+        $bottom_text_val .= $bottom_text;
+        $bottom_text_val .= "</div>";
+    }
 
 
     $accordion = "<div class='accordion' id='accordionModule'>";
@@ -773,7 +778,7 @@ function _accordion($module)
 
 				<h2 class='text-center'>$heading</h2>
     $accordion
-	$bottom_text
+	$bottom_text_val
 			</div>
 			</div>
 			<div class='col-12 col-lg-6'>
