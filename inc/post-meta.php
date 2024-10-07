@@ -86,10 +86,10 @@ Container::make('post_meta', 'Modules')
                 Field::make('image', 'bg_image', __('Background Image'))
                     ->set_conditional_logic(
                         array(
-                            'relation' => 'OR',
+                            'relation' => 'AND',
                             array(
                                 'field'   => 'style',
-                                'value'   => 'style-3',
+                                'value'   => 'style-2',
                                 'compare' => '!='
                             ),
                             array(
