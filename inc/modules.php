@@ -160,6 +160,7 @@ function _hero_style_2($module)
 		</div>
 	</div>
 </section>";
+return $html;
 }
 
 function _hero_style_3($module)
