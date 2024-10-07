@@ -903,6 +903,12 @@ section.icon-boxes {
     &.style-2 {
         .row {
             .col {
+                .icon-box {
+                    border: 1px solid rgb(0 144 208 / 10%);
+                    border-radius: 10px;
+                    padding: 10px;
+                    background: rgb(0 144 208 / 10%);
+                }
                 @media (min-width: 992px) {
                     width: 20%;
                 }

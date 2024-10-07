@@ -570,6 +570,7 @@ function _icon_box($module)
     $html = "<section class='icon-boxes $style'>
 	<div class='container'>
     <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
+    $html .= $description;
     if ($style == 'style-1') {
         $class = 'col-6 col-lg-2';
     } else {
