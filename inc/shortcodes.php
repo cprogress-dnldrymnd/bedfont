@@ -172,7 +172,7 @@ function socials()
     $socials = get__theme_option('socials');
 
     if ($socials) {
-        $html = "<div class='socials d-inline-block'>";
+        $html = "<div class='socials d-inline-block mt-5'>";
         foreach ($socials as $social) {
             $url = $social['url'];
             $icon = $social['icon'];
