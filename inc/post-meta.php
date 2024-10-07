@@ -345,7 +345,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'description_2', __('Description Col 2'))->set_width(50),
 
             ))
-            ->set_header_template('Text: <%- heading %>')
+            ->set_header_template('Two Column Text: <%- heading_1 %>')
             ->add_fields('row_animation', array(
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
