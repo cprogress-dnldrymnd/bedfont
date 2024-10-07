@@ -56,9 +56,12 @@ function modules($id)
                     $html .= _two_column_image_text_style_4($module);
                 } else if ($style == 'style-5') {
                     $html .= _two_column_image_text_style_5($module);
+                } else if ($style == 'style-6') {
+                    $html .= _two_column_image_text_style_6($module);
                 } else {
                     $html .= _two_column_image_text($module);
                 }
+
                 break;
             case 'text':
                 $html .= _text($module);
@@ -348,6 +351,44 @@ function _two_column_image_text_style_5($module)
 					<h2 class='text-left'>$heading</h2>
 				$description
 					$button
+				</div>
+			</div>
+		</div>
+	</section>";
+}
+function _two_column_image_text_style_6($module)
+{
+    $heading = $module['heading'];
+    $color = $module['color'];
+    $image_position = $module['image_position'];
+    $image = $module['image'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $image_el = wp_get_attachment_image($image, 'ful;', false, array(
+        'class' => 'img-fluid mb-5 mb-lg-0'
+    ));
+    $button = ___button(array(
+        'button_type'       => $module['button_type'],
+        'button_text'       => $module['button_text'],
+        'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+        'button_custom_url' => $module['button_custom_url'],
+        'button_style'      => $module['button_style'] . ' button-box-shadow',
+        'button_target'     => $module['button_target'],
+    ));
+
+
+
+    return "<section class='two-column-style-5 bg-gradient-$color'>
+	 	<div class='container'>
+			<div class='row $image_position'>
+					<div class='col-12 col-lg-6 my-auto'>
+					<h2 class='text-left'>$heading</h2>
+				$description
+					$button
+				</div>
+				<div class='col-1'></div>
+			
+                <div class='col-12 col-lg-5'>
+					$image_el
 				</div>
 			</div>
 		</div>

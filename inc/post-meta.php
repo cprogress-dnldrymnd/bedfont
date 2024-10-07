@@ -219,6 +219,7 @@ Container::make('post_meta', 'Modules')
                         'style-3' => 'Style 3',
                         'style-4' => 'Style 4',
                         'style-5' => 'Style 5',
+                        'style-6' => 'Style 6',
                     )),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
