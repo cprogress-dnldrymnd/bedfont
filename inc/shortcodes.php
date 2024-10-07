@@ -14,9 +14,12 @@ add_shortcode('tms', 'tms');
 function ptms() {
     return "<sup>+&#8482;</sup>";
 }
-
-
 add_shortcode('ptms', 'ptms');
+
+function btms() {
+    return "<sup>baby™&#8482;</sup>";
+}
+add_shortcode('btms', 'btms');
 
 function permalink($atts)
 {
