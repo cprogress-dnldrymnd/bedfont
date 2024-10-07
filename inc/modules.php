@@ -379,6 +379,8 @@ function _two_column_text($module)
 			</div>";
     $html .= "</div>";
     $html .= "</section>";
+
+    return $html;
 }
 function _row_animation($module, $html = "<section class='row-animation'>")
 {
