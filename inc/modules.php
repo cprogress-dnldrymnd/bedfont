@@ -592,7 +592,7 @@ function _icon_box($module)
 
     foreach ($items as $item) {
         $heading = $item['heading'];
-        $text = isset($module['text']) ? wpautop($module['text']) : '';
+        $text = isset($item['text']) ? wpautop($item['text']) : '';
 
         $html .= "<div class='$class'>";
         $html .= "<div class='$inner_class'>";
