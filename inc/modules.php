@@ -715,7 +715,7 @@ function _careers($module)
 
 
 
-    $html = "<section class='two-column-text accordion'>";
+    $html = "<section class='two-column-text '>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= "<h3 class='pink'>$subheading</h3>";
@@ -765,15 +765,15 @@ function _accordion($module)
 
     $accordion .= "</div>";
 
-    return "<section class='two-column-image-text style-3'>
+    return "<section class='two-column-image-text style-3 accordion'>
 	<div class='container'>
 		<div class='row '>
 			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col'>
-	<div class='inner text-center'>
+	<div class='inner'>
 
-				<h2 class='center-left'>$heading</h2>
-	$bottom_text
+				<h2 class='text-center'>$heading</h2>
     $accordion
+	$bottom_text
 			</div>
 			</div>
 			<div class='col-12 col-lg-6'>
