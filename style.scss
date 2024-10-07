@@ -1158,3 +1158,17 @@ section.accordion-module {
         height: 100%;
     }
 }
+
+.page-template-page-gutenberg {
+    .wp-block-table {
+        table {
+            background-color: var(--white);
+            td,th {
+                border: none;
+            }
+            tr {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}
