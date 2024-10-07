@@ -734,7 +734,7 @@ section.icon-boxes.style-2 .row .col .icon-box img {
   object-fit: contain; }
 section.icon-boxes.style-2 .row .col h3 {
   margin-bottom: 0;
-  font-size: 16px; }
+  font-size: 16px !important; }
 section.icon-boxes.style-2 .row .col .inner {
   border: 1px solid rgba(0, 144, 208, 0.1);
   border-radius: 10px;
