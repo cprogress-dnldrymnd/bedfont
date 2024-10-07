@@ -885,8 +885,7 @@ section.image-grid {
 }
 
 section.icon-boxes {
-    &.style-1,
-    &.style-2 {
+    &.style-1 {
         .icon-box {
             position: relative;
             padding: 50% 0;
@@ -903,6 +902,13 @@ section.icon-boxes {
     &.style-2 {
         .row {
             .col {
+                .icon-box {
+                    img {
+                        width: 125px;
+                        height: 125px;
+                        object-fit: contain;
+                    }
+                }
                 .inner {
                     border: 1px solid rgba(0, 144, 208, 0.1);
                     border-radius: 10px;
