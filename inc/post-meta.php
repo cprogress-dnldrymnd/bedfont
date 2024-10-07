@@ -616,6 +616,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'description', __('Description')),
                 Field::make('textarea', 'form_script', __('Form Script')),
             ))
+            ->set_header_template('Form: <%- heading %>')
+
 
     ));
 

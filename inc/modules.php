@@ -96,6 +96,9 @@ function modules($id)
             case 'accordion':
                 $html .= _accordion($module);
                 break;
+            case 'form':
+                $html .= _form($module);
+                break;
         }
     }
     return $html;
@@ -789,6 +792,28 @@ function _accordion($module)
 		</div>
 	</div>
 </section>";
+    return $html;
+}
+
+function _form($module)
+{
+    $heading = $module['heading'];
+    $form_script = $module['$form_script'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+
+
+
+
+    $html = "<section class='two-column-text '>";
+    $html .= "<div class='container'>";
+    $html .= "<h2 class='text-center'>$heading</h2>";
+    $html .= $description;
+
+    $html .= $form_script;
+
+    $html .= "</div>";
+    $html .= "</section>";
+
     return $html;
 }
 function ___button($data)
