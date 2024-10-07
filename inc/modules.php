@@ -735,6 +735,34 @@ function _accordion($module)
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], 'large') : '';
 
 
+
+    $accordion = "<div class='accordion' id='accordionExample'>";
+    foreach ($items as $item) {
+        $title = $item['title'];
+        $contents = $item['contents'];
+
+        $accordion .= "<div class='accordion-item'>";
+        $accordion .= "<h2 class='accordion-header' id='headingOne'> <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'> $title </button> </h2>";
+
+        $accordion .= "<div id='collapseOne' class='accordion-collapse collapse show' aria-labelledby='headingOne' data-bs-parent='#accordionExample' style=''>
+								<div class='accordion-body'>
+									<ul class='distributor-checklist'>";
+
+        foreach ($contents as $content) {
+            $text = $content['text'];
+            $accordion .= "<li><i class='fa-solid fa-check' aria-hidden='true'></i>$text</li>";
+        }
+
+
+        $accordion .= "</ul>
+								</div>
+							</div>";
+
+        $accordion .= "</div>";
+    }
+
+    $accordion .= "</div>";
+
     return "<section class='two-column-image-text style-3'>
 	<div class='container'>
 		<div class='row '>
@@ -743,6 +771,7 @@ function _accordion($module)
 
 				<h2 class='center-left'>$heading</h2>
 	$bottom_text
+    $accordion
 			</div>
 			</div>
 			<div class='col-12 col-lg-6'>
@@ -753,7 +782,7 @@ function _accordion($module)
 		</div>
 	</div>
 </section>";
-return $html;
+    return $html;
 }
 function ___button($data)
 {
