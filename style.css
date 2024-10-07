@@ -903,13 +903,14 @@ section.accordion-module .image-box {
 
 .page-template-page-gutenberg .wp-block-table table {
   background-color: var(--white); }
-  .page-template-page-gutenberg .wp-block-table table td, .page-template-page-gutenberg .wp-block-table table th {
+  .page-template-page-gutenberg .wp-block-table table td,
+  .page-template-page-gutenberg .wp-block-table table th {
     border: none; }
   .page-template-page-gutenberg .wp-block-table table tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
 .page-template-page-gutenberg .request-a-quote {
   margin-top: 0 !important; }
-.page-template-page-gutenberg .wp-block-heading {
+.page-template-page-gutenberg .wp-block-heading:not(.has-text-align-center) {
   text-align: left; }
 
 /*# sourceMappingURL=style.css.map */
