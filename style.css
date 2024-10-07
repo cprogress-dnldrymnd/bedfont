@@ -913,7 +913,8 @@ section.accordion-module .image-box {
 .page-template-page-gutenberg .wp-block-heading:not(.has-text-align-center) {
   text-align: left; }
 
-section.two-column-style-6 .box {
+section.two-column-style-6 .box,
+section.two-column-style-7 .box {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 25px; }
