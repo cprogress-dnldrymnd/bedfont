@@ -381,9 +381,11 @@ function _two_column_image_text_style_6($module)
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-4 my-auto'>
+                    <div class='box'>
 					<h2 class='text-left'>$heading</h2>
 				$description
 					$button
+				</div>
 				</div>
 				<div class='col-1'></div>
 			
