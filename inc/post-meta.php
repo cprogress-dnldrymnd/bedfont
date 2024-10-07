@@ -617,6 +617,11 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'form_script', __('Form Script')),
             ))
             ->set_header_template('Form: <%- heading %>')
+            ->add_fields('map', array(
+                Field::make('text', 'title', __('Title')),
+                Field::make('textarea', 'map_src', __('MAP SRC')),
+            ))
+            ->set_header_template('Map: <%- title %>')
 
 
     ));
