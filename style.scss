@@ -926,6 +926,20 @@ section.icon-boxes {
             }
         }
     }
+    &.style-3 {
+        > .container {
+            > .row {
+                .col-12 {
+                    .row {
+                        background: #ebf4fa;
+                        border-radius: 20px;
+                        padding: 20px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 section.two-column-image-text {
