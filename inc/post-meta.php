@@ -537,9 +537,8 @@ Container::make('post_meta', 'Modules')
     ));
 
 
-    Container::make('post_meta', 'Modules')
-    ->where('post_template', '=', 'templates/page-modules.php')
-    ->or_where('post_type', '=', 'layouts')
+    Container::make('post_meta', 'Career Settings')
+    ->or_where('post_type', '=', 'careers')
     ->add_fields(array(
         Field::make('text', 'salary', __('Salary')),
     ));
