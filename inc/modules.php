@@ -804,7 +804,7 @@ function _form($module)
 
 
 
-    $html = "<section class='two-column-text '>";
+    $html = "<section class='form text-center'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= $description;
