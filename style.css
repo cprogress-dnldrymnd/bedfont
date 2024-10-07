@@ -755,6 +755,9 @@ section.icon-boxes.style-3 .icon-box {
     width: 180px;
     height: 180px;
     object-fit: contain; }
+section.icon-boxes.style-3 h3 {
+  color: var(--blue);
+  text-align: left; }
 
 @media (min-width: 992px) {
   section.two-column-image-text.style-2 img {
