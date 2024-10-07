@@ -58,6 +58,8 @@ function modules($id)
                     $html .= _two_column_image_text_style_5($module);
                 } else if ($style == 'style-6') {
                     $html .= _two_column_image_text_style_6($module);
+                } else if ($style == 'style-7') {
+                    $html .= _two_column_image_text_style_7($module);
                 } else {
                     $html .= _two_column_image_text($module);
                 }
@@ -378,6 +380,46 @@ function _two_column_image_text_style_6($module)
 
 
     return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color'>
+	 	<div class='container'>
+			<div class='row $image_position'>
+					<div class='col-12 col-lg-7 my-auto'>
+                    <div class='box'>
+					<h2 class='text-left'>$heading</h2>
+				$description
+					$button
+				</div>
+				</div>
+				<div class='col-1'></div>
+			
+                <div class='col-12 col-lg-4'>
+					$image_el
+				</div>
+			</div>
+		</div>
+	</section>";
+}
+function _two_column_image_text_style_7($module)
+{
+    $heading = $module['heading'];
+    $color = $module['color'];
+    $image_position = $module['image_position'];
+    $image = $module['image'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $image_el = wp_get_attachment_image($image, 'ful;', false, array(
+        'class' => 'img-fluid w-75 mx-auto d-block'
+    ));
+    $button = ___button(array(
+        'button_type'       => $module['button_type'],
+        'button_text'       => $module['button_text'],
+        'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
+        'button_custom_url' => $module['button_custom_url'],
+        'button_style'      => $module['button_style'] . ' button-box-shadow',
+        'button_target'     => $module['button_target'],
+    ));
+
+
+
+    return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
