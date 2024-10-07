@@ -765,7 +765,7 @@ function _accordion($module)
 
     $accordion .= "</div>";
 
-    return "<section class='two-column-image-text style-3 accordion'>
+    return "<section class='two-column-image-text style-3 accordion-module'>
 	<div class='container'>
 		<div class='row '>
 			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col'>

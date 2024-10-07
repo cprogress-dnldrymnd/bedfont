@@ -896,4 +896,7 @@ section.text-section {
   .bg-gradient-brown * {
     color: var(--white); }
 
+section.accordion-mobule #accordionModule {
+  color: var(--dark-blue); }
+
 /*# sourceMappingURL=style.css.map */
