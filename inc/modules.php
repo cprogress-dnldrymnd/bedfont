@@ -377,7 +377,7 @@ function _two_column_image_text_style_6($module)
 
 
 
-    return "<section class='two-column-style-5 bg-gradient-$color'>
+    return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-6 my-auto'>
