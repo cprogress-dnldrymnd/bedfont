@@ -44,7 +44,22 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'heading', __('Heading')),
 
                 Field::make('text', 'subheading', __('Subheading')),
-                Field::make('textarea', 'description', __('Description')),
+                Field::make('textarea', 'description', __('Description'))
+                    ->set_conditional_logic(
+                        array(
+                            'relation' => 'OR',
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-3',
+                                'compare' => '!='
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2-image',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
                 Field::make('image', 'image', __('Image'))
                     ->set_conditional_logic(
                         array(
@@ -68,7 +83,22 @@ Container::make('post_meta', 'Modules')
                             )
                         )
                     ),
-                Field::make('image', 'bg_image', __('Background Image')),
+                Field::make('image', 'bg_image', __('Background Image'))
+                    ->set_conditional_logic(
+                        array(
+                            'relation' => 'OR',
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-3',
+                                'compare' => '!='
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2-image',
+                                'compare' => '!='
+                            )
+                        )
+                    ),
 
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
