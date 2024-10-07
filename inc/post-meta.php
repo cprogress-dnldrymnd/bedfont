@@ -541,4 +541,5 @@ Container::make('post_meta', 'Modules')
     ->or_where('post_type', '=', 'careers')
     ->add_fields(array(
         Field::make('text', 'salary', __('Salary')),
+        Field::make('file', 'job_spec', __('Job Spec')),
     ));
