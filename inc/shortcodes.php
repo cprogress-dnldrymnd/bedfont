@@ -165,3 +165,28 @@ function contact_details()
 }
 
 add_shortcode('contact_details', 'contact_details');
+
+function socials()
+{
+
+    $socials = get__theme_option('socials');
+
+    if ($socials) {
+        $html = "<div class='socials d-inline-block'>";
+        $html .= "<ul class='d-inline-flex align-items-center m-0 p-0'>";
+        foreach ($socials as $social) {
+            $url = $social['url'];
+            $icon = $social['icon'];
+            $html .= "<li>";
+            $html .= "<a class='nav-social-icon' target='_blank' href='$url'>";
+            $html .= "<i class='$icon' aria-hidden='true'></i>";
+            $html .= "</a>";
+            $html .= "</li>";
+        }
+
+        $html .= "</ul>";
+        $html .= "</div>";
+        return $html;
+    }
+}
+add_shortcode('socials', 'socials');
