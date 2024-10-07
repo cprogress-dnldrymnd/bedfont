@@ -562,6 +562,7 @@ Container::make('post_meta', 'Modules')
                         'style-2' => 'Style 2'
                     )),
                 Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'description', __('Description')),
                 Field::make('textarea', 'bottom_text', __('Bottom Text')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
