@@ -42,7 +42,7 @@ function modules($id)
                 $style = $module['style'];
                 if ($style == 'style-1') {
                     $html .= _hero_style_1($module);
-                } else if ($style == 'style-2') {
+                } else if ($style == 'style-2' || $style == 'style-2-image') {
                     $html .= _hero_style_2($module);
                 } else if ($style == 'style-3') {
                     $html .= _hero_style_3($module);
@@ -123,8 +123,10 @@ function _hero_style_2($module)
 {
 
     $youtube_url = $module['youtube_url'];
+    $image = $module['image'];
     $heading = $module['heading'];
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
+    $style = $module['style'];
 
     $button = ___button(array(
         'button_type'       => $module['button_type'],
@@ -135,7 +137,7 @@ function _hero_style_2($module)
         'button_target'     => $module['button_target'],
     ));
 
-    return "<section class='subtle-bg'>
+    $html = "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
 		<div class='row'>
@@ -144,9 +146,17 @@ function _hero_style_2($module)
 				<p>$description</p>
 				$button
 			</div>
-			<div class='col-12 col-md-6 mt-5 mt-lg-0'>
-				<iframe width='560' height='315' src='$youtube_url' frameborder='0' allowfullscreen='' illow-src='$youtube_url' class='w-100 br-30'></iframe>
-			</div>
+			<div class='col-12 col-md-6 mt-5 mt-lg-0'>";
+
+    if ($style == 'style-2') {
+        $html .= "<iframe width='560' height='315' src='$youtube_url' frameborder='0' allowfullscreen='' illow-src='$youtube_url' class='w-100 br-30'></iframe>";
+    } else {
+        $html .= wp_get_attachment_image($image, 'large;', false, array(
+            'class' => 'img-fluid br-30'
+        ));
+    }
+
+    $html .= "</div>
 		</div>
 	</div>
 </section>";
