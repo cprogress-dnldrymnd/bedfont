@@ -612,6 +612,11 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Accordion: <%- heading %>')
             ->add_fields('form', array(
+                Field::make('select', 'style', __('Style'))
+                    ->set_options(array(
+                        'style-1' => 'Style 1',
+                        'style-2' => 'Style 2',
+                    )),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
                 Field::make('textarea', 'form_script', __('Form Script')),
