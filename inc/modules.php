@@ -404,6 +404,7 @@ function _two_column_image_text_style_7($module)
     $color = $module['color'];
     $image_position = $module['image_position'];
     $image = $module['image'];
+    $text_boxes = $module['text_boxes'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
         'class' => 'img-fluid w-75 mx-auto d-block'
@@ -417,6 +418,21 @@ function _two_column_image_text_style_7($module)
         'button_target'     => $module['button_target'],
     ));
 
+    if ($text_boxes) {
+        $textboxes_html = "<div class='row'>";
+        foreach ($text_boxes as $text_box) {
+            $heading = $text_box['heading'];
+            $description = isset($text_box['description']) ? wpautop($text_box['description']) : '';
+            $textboxes_html .= "<div class='col-12 col-lg-4 mt-3'>";
+            $textboxes_html .= "<div class='box text-center'>";
+            $textboxes_html .= "<h3>$heading</h3>";
+            $textboxes_html .= $description;
+            $textboxes_html .= "</div>";
+            $textboxes_html .= "</div>";
+        }
+        $textboxes_html .= "</div>";
+    }
+
 
 
     return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color'>
@@ -428,6 +444,9 @@ function _two_column_image_text_style_7($module)
 				$description
 					$button
 				</div>
+
+                $textboxes_html
+
 				</div>
 				<div class='col-1'></div>
 			
