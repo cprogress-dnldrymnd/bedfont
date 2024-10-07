@@ -815,7 +815,7 @@ function _form($module)
     $html = "<section class='form $class $style'>";
     $html .= "<div class='container'>";
     if ($style == 'style-2') {
-        $html .= "<div class='row'>";
+        $html .= "<div class='row g-5'>";
         $html .= "<div class='col-lg-5'>";
         $html .= "<h1 class='$class'>$heading</h1>";
     } else {
