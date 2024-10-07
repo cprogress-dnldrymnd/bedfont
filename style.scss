@@ -1163,7 +1163,8 @@ section.accordion-module {
     .wp-block-table {
         table {
             background-color: var(--white);
-            td,th {
+            td,
+            th {
                 border: none;
             }
             tr {
@@ -1175,6 +1176,8 @@ section.accordion-module {
         margin-top: 0 !important;
     }
     .wp-block-heading {
-        text-align: left;
+        &:not(.has-text-align-center) {
+            text-align: left;
+        }
     }
 }
