@@ -35,7 +35,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
-                        'style-2' => 'Style 2',
+                        'style-2' => 'Style 2[Youtube]',
+                        'style-2-image' => 'Style 2[Image]',
                         'style-3' => 'Style 3',
                         'style-4' => 'Style 4',
                     )),
