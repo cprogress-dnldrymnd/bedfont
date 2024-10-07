@@ -63,6 +63,9 @@ function modules($id)
             case 'text':
                 $html .= _text($module);
                 break;
+            case 'two_column_text':
+                $html .= _two_column_text($module);
+                break;
             case 'row_animation':
                 $html .= _row_animation($module);
                 break;
@@ -160,7 +163,7 @@ function _hero_style_2($module)
 		</div>
 	</div>
 </section>";
-return $html;
+    return $html;
 }
 
 function _hero_style_3($module)
@@ -356,7 +359,27 @@ function _text($module)
 	</div>
 </section>";
 }
-
+function _two_column_text($module)
+{
+    $heading_1 = $module['heading_1'];
+    $heading_2 = $module['heading_2'];
+    $description_1 = isset($module['description_1']) ? wpautop($module['description_1']) : '';
+    $description_2 = isset($module['description_2']) ? wpautop($module['description_2']) : '';
+    $html = "<section class='two-column-text'>";
+    $html .= "<div class='container'>";
+    $html .= "<div class='row mb-5'>
+				<div class='col-12 col-lg-6 text-center'>
+					<h2 class='text-center'>$heading_1</h2>
+				$description_1
+				</div>
+				<div class='col-12 col-lg-6 text-center'>
+					<h2 class='text-center'>$heading_2</h2>
+					$description_2
+				</div>
+			</div>";
+    $html .= "</div>";
+    $html .= "</section>";
+}
 function _row_animation($module, $html = "<section class='row-animation'>")
 {
     $items = $module['items'];
