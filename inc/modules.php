@@ -380,7 +380,7 @@ function _two_column_image_text_style_6($module)
     return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color'>
 	 	<div class='container'>
 			<div class='row $image_position'>
-					<div class='col-12 col-lg-4 my-auto'>
+					<div class='col-12 col-lg-7 my-auto'>
                     <div class='box'>
 					<h2 class='text-left'>$heading</h2>
 				$description
@@ -389,7 +389,7 @@ function _two_column_image_text_style_6($module)
 				</div>
 				<div class='col-1'></div>
 			
-                <div class='col-12 col-lg-7'>
+                <div class='col-12 col-lg-4'>
 					$image_el
 				</div>
 			</div>
