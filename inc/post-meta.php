@@ -649,18 +649,23 @@ Container::make('theme_options', __('Theme Settings'))
     ->add_tab('Socials', array(
         Field::make('complex', 'socials')
             ->add_fields('facebook', array(
+                Field::make('hidden', 'icon', __('fa fa-facebook-f'))->set_classes('inline-field'),
                 Field::make('text', 'url', __('Facebook URL'))->set_classes('inline-field'),
             ))
             ->add_fields('instagram', array(
+                Field::make('hidden', 'icon', __('fa fa-instagram'))->set_classes('inline-field'),
                 Field::make('text', 'url', __('Instagram URL'))->set_classes('inline-field'),
             ))
             ->add_fields('x', array(
+                Field::make('hidden', 'icon', __('fa fa-twitter'))->set_classes('inline-field'),
                 Field::make('text', 'url', __('X URL'))->set_classes('inline-field'),
             ))
             ->add_fields('linkedin', array(
+                Field::make('hidden', 'icon', __('fa fa-linkedin'))->set_classes('inline-field'),
                 Field::make('text', 'url', __('Linkedin URL'))->set_classes('inline-field'),
             ))
             ->add_fields('youtube', array(
+                Field::make('hidden', 'icon', __('fa fa-youtube'))->set_classes('inline-field'),
                 Field::make('text', 'url', __('Youtube URL'))->set_classes('inline-field'),
             ))
             ->add_fields('google', array(
