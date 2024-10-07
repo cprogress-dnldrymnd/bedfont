@@ -585,7 +585,7 @@ function _icon_box($module)
         $class = 'col col-md-4 col-sm-3';
     } else {
         $inner_class = "row g-3";
-        $row_class = "row g-5";
+        $row_class = "row g-4";
         $class = 'col-12';
     }
     $html .= "<div class='$row_class'>";
