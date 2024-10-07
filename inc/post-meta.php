@@ -638,3 +638,34 @@ Container::make('post_meta', 'Career Settings')
         Field::make('text', 'salary', __('Salary')),
         Field::make('file', 'job_spec', __('Job Spec')),
     ));
+
+
+Container::make('theme_options', __('Theme Settings'))
+    ->add_tab('General Settings', array(
+        Field::make('text', 'tel', __('Telephone')),
+        Field::make('text', 'email', __('Email')),
+        Field::make('textarea', 'address', __('Address')),
+    ))
+    ->add_tab('Socials', array(
+        Field::make('complex', 'socials')
+            ->add_fields('facebook', array(
+                Field::make('text', 'url', __('Facebook URL'))->set_classes('inline-field'),
+            ))
+            ->add_fields('instagram', array(
+                Field::make('text', 'url', __('Instagram URL'))->set_classes('inline-field'),
+            ))
+            ->add_fields('x', array(
+                Field::make('text', 'url', __('X URL'))->set_classes('inline-field'),
+            ))
+            ->add_fields('linkedin', array(
+                Field::make('text', 'url', __('Linkedin URL'))->set_classes('inline-field'),
+            ))
+            ->add_fields('youtube', array(
+                Field::make('text', 'url', __('Youtube URL'))->set_classes('inline-field'),
+            ))
+            ->add_fields('google', array(
+                Field::make('text', 'url', __('Google URL'))->set_classes('inline-field'),
+            ))
+            ->set_duplicate_groups_allowed(false)
+            ->set_collapsed(true)
+    ));
