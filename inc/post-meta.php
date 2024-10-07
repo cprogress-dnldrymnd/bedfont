@@ -47,10 +47,15 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'description', __('Description'))
                     ->set_conditional_logic(
                         array(
-                            'relation' => 'OR',
+                            'relation' => 'AND',
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-3',
+                                'compare' => '!='
+                            ),
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-2-image',
                                 'compare' => '!='
                             ),
                             array(
@@ -63,7 +68,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('image', 'image', __('Image'))
                     ->set_conditional_logic(
                         array(
-                            'relation' => 'OR',
+                            'relation' => 'AND',
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-3',
