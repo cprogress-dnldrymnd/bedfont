@@ -749,6 +749,12 @@ section.icon-boxes.style-3 > .container > .row .col-12 .row {
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 30px; }
+section.icon-boxes.style-3 .icon-box {
+  text-align: center; }
+  section.icon-boxes.style-3 .icon-box img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain; }
 
 @media (min-width: 992px) {
   section.two-column-image-text.style-2 img {
