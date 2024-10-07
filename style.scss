@@ -885,7 +885,8 @@ section.image-grid {
 }
 
 section.icon-boxes {
-    &.style-1 {
+    &.style-1,
+    &.style-2 {
         .icon-box {
             position: relative;
             padding: 50% 0;
@@ -896,6 +897,15 @@ section.icon-boxes {
                 position: absolute;
                 left: 0;
                 top: 0;
+            }
+        }
+    }
+    &.style-2 {
+        .row {
+            .col {
+                @media (min-width: 992px) {
+                    width: 20%;
+                }
             }
         }
     }
@@ -1087,9 +1097,8 @@ section.text-section {
 }
 
 .bg-gradient-brown {
-    background-image: linear-gradient(to right, #956E41, #000);
+    background-image: linear-gradient(to right, #956e41, #000);
     * {
         color: var(--white);
     }
 }
-

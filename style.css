@@ -718,16 +718,19 @@ section.image-grid .grid-box h3 {
     font-weight: bold;
     width: 100%; }
 
-section.icon-boxes.style-1 .icon-box {
+section.icon-boxes.style-1 .icon-box, section.icon-boxes.style-2 .icon-box {
   position: relative;
   padding: 50% 0; }
-  section.icon-boxes.style-1 .icon-box img {
+  section.icon-boxes.style-1 .icon-box img, section.icon-boxes.style-2 .icon-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     left: 0;
     top: 0; }
+@media (min-width: 992px) {
+  section.icon-boxes.style-2 .row .col {
+    width: 20%; } }
 
 @media (min-width: 992px) {
   section.two-column-image-text.style-2 img {
@@ -859,7 +862,7 @@ section.text-section {
   background-image: linear-gradient(to right, #d00344, #fff); }
 
 .bg-gradient-brown {
-  background-image: linear-gradient(to right, #956E41, #000); }
+  background-image: linear-gradient(to right, #956e41, #000); }
   .bg-gradient-brown * {
     color: var(--white); }
 
