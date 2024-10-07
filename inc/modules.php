@@ -677,9 +677,64 @@ function _logo_slider($module)
 }
 
 
-function _careers($module) {
+function _careers($module)
+{
     $heading = $module['heading'];
     $subheading = $module['subheading'];
+
+    $jobs = get_posts(array(
+        'post_type' => 'careers',
+        'numberposts' => -1,
+    ));
+
+    $html = "<section class='two-column-text'>";
+    $html .= "<div class='container'>";
+    $html .= "<h2 class='text-center'>$heading</h2>";
+    $html .= "<h3 class='pink'>$subheading</h3>";
+
+    $html .= "<div class='job-holder'>";
+    foreach ($jobs as $job) {
+        $title = $job->post_title;
+        $salary = get__post_meta_by_id($job->ID, 'salary');
+        $job_spec = get__post_meta_by_id($job->ID, 'job_spec');
+        $job_spec_url = wp_get_attachment_url($job_spec);
+        $details = $job->post_content;
+        $html .= "<div class='row job'>
+    <div class='col-12 col-md-4 pe-lg-5'>
+        <h2>$title</h2>
+        <h3>Salary: $salary</h3>
+    </div>
+    <div class='col-12 col-md-8 my-auto'>
+        <div class='accordion' id='accordionJob'>
+            <div class='accordion-item'>
+                <h4 class='accordion-header' id='headingOne'>
+                    <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse'
+                        data-bs-target='#collapseOne' aria-expanded='false' aria-controls='collapseOne'>
+                        What does it take to be a $title at Bedfont Scientific Ltd?
+                    </button>
+                </h4>
+                <div id='collapseOne' class='accordion-collapse collapse' aria-labelledby='headingOne'
+                    data-bs-parent='#accordionJob'>
+                    <div class='accordion-body'>
+                        $details
+                        <a href='$job_spec_url'
+                            class='btn btn-job-spec' title='Click here for the full job spec'>View job spec</a>
+                        <a href='https://share.hsforms.com/1h2T77eqwRBCI8JdCCvChSw3qxlb' class='btn btn-apply-now'
+                            title='Click here to apply for a job at Bedfont Scientific Ltd.'>Apply now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";
+    }
+
+    $html .= "</div>";
+
+    $html .= "</div>";
+    $html .= "</section>";
+
+    return $html;
 }
 
 function ___button($data)
