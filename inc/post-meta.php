@@ -258,27 +258,25 @@ Container::make('post_meta', 'Modules')
                             )
                         )
                     ),
-                Field::make('text', 'heading', __('Heading'))
-                    ->set_conditional_logic(
-                        array(
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style-7',
-                                'compare' => '!='
-                            )
-                        )
-                    ),
-                Field::make('textarea', 'description', __('Description'))
-                    ->set_conditional_logic(
-                        array(
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style-7',
-                                'compare' => '!='
-                            )
-                        )
-                    ),
+                Field::make('text', 'heading', __('Heading')),
+                Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image')),
+                Field::make('complex', 'text_boxes', 'Text Boxes')
+                    ->set_layout('tabbed-vertical')
+                    ->add_fields(array(
+                        Field::make('text', 'heading', __('Heading')),
+                        Field::make('textarea', 'description', __('Description')),
+                    ))
+                    ->set_header_template('Text Boxes: <%- heading %>')
+                    ->set_conditional_logic(
+                        array(
+                            array(
+                                'field'   => 'style',
+                                'value'   => 'style-7',
+                                'compare' => '='
+                            )
+                        )
+                    ),
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
                         array(
