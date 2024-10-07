@@ -798,7 +798,7 @@ function _accordion($module)
 function _form($module)
 {
     $heading = $module['heading'];
-    $form_script = $module['$form_script'];
+    $form_script = $module['form_script'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
 
