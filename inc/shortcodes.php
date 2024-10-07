@@ -109,7 +109,7 @@ function careers()
         $details = $job->post_content;
         $html .= "<div class='row job'>
     <div class='col-12 col-md-4 pe-lg-5'>
-        <h2>$title</h2>
+        <h2 class='text-left'>$title</h2>
         <h3>Salary: $salary</h3>
     </div>
     <div class='col-12 col-md-8 my-auto'>
