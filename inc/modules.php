@@ -424,7 +424,7 @@ function _two_column_image_text_style_7($module)
             $heading = $text_box['heading'];
             $description = isset($text_box['description']) ? wpautop($text_box['description']) : '';
             $textboxes_html .= "<div class='col-12 col-lg-4 mt-3'>";
-            $textboxes_html .= "<div class='box text-center'>";
+            $textboxes_html .= "<div class='box h-100 text-center'>";
             $textboxes_html .= "<h3>$heading</h3>";
             $textboxes_html .= $description;
             $textboxes_html .= "</div>";
