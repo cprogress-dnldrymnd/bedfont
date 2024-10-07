@@ -68,7 +68,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('image', 'image', __('Image'))
                     ->set_conditional_logic(
                         array(
-                            'relation' => 'AND',
+                            'relation' => 'OR',
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-3',
