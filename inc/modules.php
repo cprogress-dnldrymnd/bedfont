@@ -740,11 +740,13 @@ function _accordion($module)
     foreach ($items as $key => $item) {
         $title = $item['title'];
         $contents = $item['contents'];
+        $aria_expanded = $key == 0 ? 'true' : 'false';
+        $class = $key == 0 ? 'show' : '';
 
         $accordion .= "<div class='accordion-item'>";
-        $accordion .= "<h2 class='accordion-header' id='heading$key'> <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse$key' aria-expanded='true' aria-controls='collapse$key'> $title </button> </h2>";
+        $accordion .= "<h2 class='accordion-header' id='heading$key'> <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse$key' aria-expanded='$aria_expanded' aria-controls='collapse$key'> $title </button> </h2>";
 
-        $accordion .= "<div id='collapse$key' class='accordion-collapse collapse show' aria-labelledby='heading$key' data-bs-parent='#accordionModule' style=''>
+        $accordion .= "<div id='collapse$key' class='accordion-collapse collapse $class' aria-labelledby='heading$key' data-bs-parent='#accordionModule'>
 								<div class='accordion-body'>
 									<ul class='distributor-checklist'>";
 
