@@ -898,5 +898,7 @@ section.text-section {
 
 section.accordion-module #accordionModule {
   color: var(--dark-blue); }
+section.accordion-module .image-box {
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
