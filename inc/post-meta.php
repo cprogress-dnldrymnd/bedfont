@@ -337,6 +337,15 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Text: <%- heading %>')
+            ->add_fields('two_column_text', array(
+                
+                Field::make('text', 'heading_1', __('Heading Col 1'))->set_width(50),
+                Field::make('text', 'heading_2', __('Heading Col 2'))->set_width(50),
+                Field::make('textarea', 'description_1', __('Description Col 1'))->set_width(50),
+                Field::make('textarea', 'description_2', __('Description Col 2'))->set_width(50),
+
+            ))
+            ->set_header_template('Text: <%- heading %>')
             ->add_fields('row_animation', array(
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
