@@ -1123,7 +1123,9 @@ section.text-section {
         min-height: 450px;
     }
 }
-
+img {
+    max-width: 100%;
+}
 .bg-gradient-purple {
     background-image: linear-gradient(to right, #6a2581, #fff);
 }
