@@ -640,7 +640,7 @@ function _image_grid($module)
         $image = wp_get_attachment_image($item['image'], 'large');
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0]['id'];
-            $permalink = '[permalink id="' . $url . '"]';
+            $permalink = "[permalink id=$url]";
         } else {
             $permalink = $item['button_custom_url'];
         }
