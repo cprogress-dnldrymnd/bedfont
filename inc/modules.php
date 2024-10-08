@@ -543,7 +543,7 @@ $button
 		</div>
 	</div>
 	<div class='col-12 col-lg-6 order-1 order-lg-2'>
-		<a href='$permalink' target='_blank' title='Click for the NObreath website'
+		<a href='$permalink' target='_blank' 
 			rel='noopener'>
                 $image
             </a>
