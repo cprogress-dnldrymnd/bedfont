@@ -88,12 +88,13 @@ function layouts($atts)
             $atts
         )
     );
-    $wpml_post_language_details = apply_filters('wpml_post_language_details', NULL, $id);
-    $language_code = $wpml_post_language_details['language_code'];
-    $my_current_lang = apply_filters('wpml_current_language', NULL);
-    if ($language_code == $my_current_lang) {
-        return do_shortcode(get_the_content(NULL, false, $id));
+    $lang_id = apply_filters('wpml_object_id', $id, 'post');
+    if ($lang_id) {
+        $final_id = $lang_id;
+    } else {
+        $final_id = $id;
     }
+    return do_shortcode(get_the_content(NULL, false, $final_id));
 }
 add_shortcode('layouts', 'layouts');
 
