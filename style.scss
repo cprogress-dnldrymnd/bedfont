@@ -870,6 +870,9 @@ section.slider {
 
 section.image-grid {
     .grid-box {
+        &+ a {
+            z-index: 1;
+        }
         .bg_image {
             img {
                 width: 100%;
