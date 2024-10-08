@@ -9,7 +9,12 @@ function permalink($atts)
             $atts
         )
     );
-    $final_id = apply_filters('wpml_object_id', $id, 'post');
+    $lang_id = apply_filters('wpml_object_id', $id, 'post');
+    if ($lang_id) {
+        $final_id = $lang_id;
+    } else {
+        $final_id = $id;
+    }
     return get_the_permalink($final_id);
 }
 add_shortcode('permalink', 'permalink');
@@ -83,8 +88,13 @@ function layouts($atts)
             $atts
         )
     );
-
-    return do_shortcode(modules($id));
+    $lang_id = apply_filters('wpml_object_id', $id, 'post');
+    if ($lang_id) {
+        $final_id = $lang_id;
+    } else {
+        $final_id = $id;
+    }
+    return do_shortcode(modules($final_id));
 }
 add_shortcode('layouts', 'layouts');
 
