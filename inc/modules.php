@@ -1099,7 +1099,7 @@ function action_admin_head()
 {
     $template = get_page_template_slug();
 
-    if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts' && !current_user_can('administrator')) {
+    if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
 ?>
         <style>
             .is-root-container {
