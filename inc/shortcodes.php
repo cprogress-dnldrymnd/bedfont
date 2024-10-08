@@ -1,22 +1,33 @@
 <?php
 
-function rts()
+function rts($atts)
 {
-    return "<sup>&#174;</sup>";
+    extract(
+        shortcode_atts(
+            array(
+                'text' => '',
+            ),
+            $atts
+        )
+    );
+    return "$text<sup>&#174;</sup>";
 }
 add_shortcode('rts', 'rts');
 
-function tms() {
+function tms()
+{
     return "<sup>&#8482;</sup>";
 }
 add_shortcode('tms', 'tms');
 
-function ptms() {
+function ptms()
+{
     return "<sup>+&#8482;</sup>";
 }
 add_shortcode('ptms', 'ptms');
 
-function btms() {
+function btms()
+{
     return "<sup>baby&#8482;</sup>";
 }
 add_shortcode('btms', 'btms');
