@@ -9,7 +9,8 @@ function permalink($atts)
             $atts
         )
     );
-    return get_the_permalink($id);
+    $final_id = apply_filters('wpml_object_id', $id, 'post');
+    return get_the_permalink($final_id);
 }
 add_shortcode('permalink', 'permalink');
 function blogs($atts)
