@@ -660,7 +660,7 @@ function _image_grid($module)
                 <a href='$permalink'>
 					<div class='bg_image h-100'>$image</div>
 					<h3>$button</h3>
-				</div>
+				</a>
 			</div>";
     }
 
