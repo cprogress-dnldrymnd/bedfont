@@ -1093,3 +1093,21 @@ function __glide_slider($items)
 
     return $html;
 }
+
+
+function action_admin_head()
+{
+    $template = get_page_template_slug();
+
+    if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
+?>
+        <style>
+            .is-root-container {
+                display: none !important;
+            }
+        </style>
+<?php
+    }
+}
+
+add_action('admin_head', 'action_admin_head');
