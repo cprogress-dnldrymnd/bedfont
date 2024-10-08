@@ -1021,7 +1021,7 @@ function ___button($data)
     if ($button_text && $link && $display == true) {
         $html = "<div class='button-box $button_style'>";
         $html .= "<$tag class='btn $class' $link $button_target>";
-        $html .= $button_text;
+        $html .= __($button_text, 'bedfont');
         if ($button_icon) {
             $html .= "<i class='fa fa-arrow-right ms-1' aria-hidden='true'></i>";
         }
