@@ -180,9 +180,3 @@ function socials()
     }
 }
 add_shortcode('socials', 'socials');
-
-add_filter( 'the_content', 'remove_shortcodes_from_wpml', 10, 1 );
-
-function remove_shortcodes_from_wpml( $content ) {
-  return preg_replace( '/\[[^\]]*\]/', '', $content );
-}
