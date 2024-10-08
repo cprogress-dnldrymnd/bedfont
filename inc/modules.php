@@ -17,7 +17,7 @@ function action_module_content()
                     'ID'           => get_the_ID(),
                     'post_content' => $content_html
                 );
-                //wp_update_post($my_post);
+                wp_update_post($my_post);
             }
         }
     }
