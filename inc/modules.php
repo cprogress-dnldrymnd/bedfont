@@ -148,7 +148,9 @@ function _hero_style_2($module)
     $description = isset($module['subheading']) ? wpautop($module['subheading']) : '';
     $style = $module['style'];
 
-    $button = ___button(array(
+
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -156,6 +158,8 @@ function _hero_style_2($module)
         'button_style'      => $module['button_style'],
         'button_target'     => $module['button_target'],
     ));
+
+    $button = "[button args='$button_args']";
 
     $html = "<section class='subtle-bg'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
@@ -190,7 +194,8 @@ function _hero_style_3($module)
     $image = $module['image'];
     $image_url = wp_get_attachment_image_url($image, 'full');
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $button = ___button(array(
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -198,6 +203,8 @@ function _hero_style_3($module)
         'button_style'      => $module['button_style'],
         'button_target'     => $module['button_target'],
     ));
+
+    $button = "[button args='$button_args']";
 
     return "<section id='eco-section'>
 		<img src='$image_url' id='eco-planet' alt='Image Bedfont Scientific Ltd Eco page' style='border-bottom-color: rgba(0, 0, 0, 0);'>
@@ -260,7 +267,8 @@ function _two_column_image_text($module)
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], $size) : '';
 
 
-    $button = ___button(array(
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -268,6 +276,8 @@ function _two_column_image_text($module)
         'button_style'      => $module['button_style'],
         'button_target'     => $module['button_target'],
     ));
+
+    $button = "[button args='$button_args']";
 
     return "<section class='two-column-image-text $style'>
 	<div class='container'>
@@ -331,7 +341,10 @@ function _two_column_image_text_style_5($module)
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
         'class' => 'img-fluid mb-5 mb-lg-0'
     ));
-    $button = ___button(array(
+
+
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -340,6 +353,7 @@ function _two_column_image_text_style_5($module)
         'button_target'     => $module['button_target'],
     ));
 
+    $button = "[button args='$button_args']";
 
 
     return "<section class='two-column-style-5 bg-gradient-$color'>
@@ -368,7 +382,9 @@ function _two_column_image_text_style_6($module)
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
         'class' => 'img-fluid w-75 mx-auto d-block'
     ));
-    $button = ___button(array(
+
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -377,6 +393,7 @@ function _two_column_image_text_style_6($module)
         'button_target'     => $module['button_target'],
     ));
 
+    $button = "[button args='$button_args']";
 
 
     return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color'>
@@ -409,7 +426,8 @@ function _two_column_image_text_style_7($module)
     $image_el = wp_get_attachment_image($image, 'ful;', false, array(
         'class' => 'img-fluid w-75 mx-auto d-block'
     ));
-    $button = ___button(array(
+
+    $button_args = serialize(array(
         'button_type'       => $module['button_type'],
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
@@ -417,6 +435,8 @@ function _two_column_image_text_style_7($module)
         'button_style'      => $module['button_style'] . ' button-box-shadow',
         'button_target'     => $module['button_target'],
     ));
+
+    $button = "[button args='$button_args']";
 
     if ($text_boxes) {
         $textboxes_html = "<div class='row'>";
@@ -511,7 +531,8 @@ function _row_animation($module, $html = "<section class='row-animation'>")
         $description = isset($item['description']) ? wpautop($item['description']) : '';
         $button_style = 'button-' . $color;
 
-        $button = ___button(array(
+
+        $button_args = serialize(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
             'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
@@ -519,6 +540,9 @@ function _row_animation($module, $html = "<section class='row-animation'>")
             'button_style'      => $button_style . ' button-box-shadow',
             'button_target'     => $item['button_target'],
         ));
+
+        $button = "[button args='$button_args']";
+
 
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
