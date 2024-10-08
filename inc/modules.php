@@ -1029,7 +1029,7 @@ function ___button($data)
         $html .= "</$tag>";
         $html .= "</div>";
 
-        return $html;
+        return do_shortcode($html);
     }
 }
 
