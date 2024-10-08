@@ -709,7 +709,7 @@ section.row-animation .brown .product-bubble-home h2 {
 section.slider {
   padding-bottom: 100px; }
 
-section.image-grid .grid-box + a {
+section.image-grid .grid-box a {
   z-index: 1; }
 section.image-grid .grid-box .bg_image img {
   width: 100%;

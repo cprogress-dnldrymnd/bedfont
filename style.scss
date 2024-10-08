@@ -870,7 +870,7 @@ section.slider {
 
 section.image-grid {
     .grid-box {
-        & + a {
+        a {
             z-index: 1;
         }
         .bg_image {
