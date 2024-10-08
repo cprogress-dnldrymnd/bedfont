@@ -207,7 +207,7 @@ function _hero_style_3($module)
     $button = "[button args='$button_args']";
 
     return "<section id='eco-section'>
-		<img src='$image_url' id='eco-planet' alt='Image Bedfont Scientific Ltd Eco page' style='border-bottom-color: rgba(0, 0, 0, 0);'>
+		<img src='$image_url' id='eco-planet'>
 	 	<div class='container'>
 			<div class='row'>
 				<div class='col-12 col-lg-7'>
