@@ -6,7 +6,7 @@ Template Name: --Modules
  */
 
 get_header('');
-the_content();
+echo modules(get_the_ID());
 ?>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script>
