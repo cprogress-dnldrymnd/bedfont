@@ -644,7 +644,7 @@ function _image_grid($module)
         } else {
             $permalink = $item['button_custom_url'];
         }
-        $button = ___button(array(
+        $button_args = serialize(array(
             'button_type'       => $item['button_type'],
             'button_text'       => $item['button_text'],
             'button_url'        => isset($item['button_url']) ? $item['button_url'][0] : false,
@@ -654,6 +654,7 @@ function _image_grid($module)
             'button_icon' => false
         ));
 
+        $button = "[button args='$button_args']";
 
         $html .= "<div class='col-12 col-lg-4 home_panel_bg'>
 				<div class='overflow-hidden h-100 grid-box position-relative'>

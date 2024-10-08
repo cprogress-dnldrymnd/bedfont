@@ -180,3 +180,21 @@ function socials()
     }
 }
 add_shortcode('socials', 'socials');
+
+function button($atts)
+{
+    extract(
+        shortcode_atts(
+            array(
+                'args' => '',
+            ),
+            $atts
+        )
+    );
+
+    $data = unserialize($args);
+
+    return ___button($data);
+}
+
+add_shortcode('button', 'button');
