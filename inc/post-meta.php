@@ -51,7 +51,7 @@ Container::make('post_meta', 'Modules')
                             array(
                                 'field'   => 'style',
                                 'value'   => 'style-3',
-                                'compare' => '!='
+                                'compare' => '=='
                             ),
                             array(
                                 'field'   => 'style',
