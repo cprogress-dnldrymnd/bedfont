@@ -44,27 +44,7 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'heading', __('Heading')),
 
                 Field::make('textarea', 'subheading', __('Subheading')),
-                Field::make('textarea', 'description', __('Description'))
-                    ->set_conditional_logic(
-                        array(
-                            'relation' => 'AND',
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style-3',
-                                'compare' => '=='
-                            ),
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style-2-image',
-                                'compare' => '!='
-                            ),
-                            array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
-                                'compare' => '!='
-                            )
-                        )
-                    ),
+                Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image'))
                     ->set_conditional_logic(
                         array(
