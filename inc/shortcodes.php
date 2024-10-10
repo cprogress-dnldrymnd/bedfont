@@ -123,7 +123,7 @@ function careers()
                 <h4 class='accordion-header' id='heading$key'>
                     <button class='accordion-button collapsed' type='button' data-bs-toggle='collapse'
                         data-bs-target='#collapse$key' aria-expanded='false' aria-controls='collapse$key'>
-                        What does it take to be a $title at Bedfont Scientific Ltd?
+                        " . __("What does it take to be a $title at Bedfont Scientific Ltd?", 'bedfont') . "
                     </button>
                 </h4>
                 <div id='collapse$key' class='accordion-collapse collapse' aria-labelledby='heading$key'
