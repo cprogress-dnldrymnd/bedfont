@@ -35,7 +35,7 @@ $address = get__theme_option('address');
 				<hr>
 			</div>
 			<div class="col-lg-4 col-md-12 icons-space text-center icons px-0">
-				<?= do_shortcode('[socials]') ?>
+				<?= do_shortcode('[socials class=""]') ?>
 			</div>
 			<div class="col-lg-4 col-md-6 hr-space">
 				<hr>
