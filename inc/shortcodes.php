@@ -151,22 +151,44 @@ function careers()
 add_shortcode('careers', 'careers');
 
 
-function contact_details()
+function contact_details($atts)
 {
+    extract(
+        shortcode_atts(
+            array(
+                'is_footer' => 'false',
+            ),
+            $atts
+        )
+    );
     $html = "";
     $tel = get__theme_option('tel');
     $email = get__theme_option('email');
     $address = get__theme_option('address');
 
-    if ($tel) {
-        $html .= "<p class='mt-5'><strong>Tel: </strong>$tel</p>";
+    if ($is_footer == 'true') {
+        if ($address) {
+            $html .= wpautop($address);
+        }
+        if ($tel) {
+            $html .= "<p><strong>Tel: </strong>$tel</p>";
+        }
+        if ($email) {
+            $html .= "<p><strong>Email: </strong>$email</p>";
+        }
+    } else {
+        if ($tel) {
+            $html .= "<p class='mt-5'><strong>Tel: </strong>$tel</p>";
+        }
+        if ($email) {
+            $html .= "<p class='mb-5'><strong>Email: </strong>$email</p>";
+        }
+        if ($address) {
+            $html .= wpautop($address);
+        }
     }
-    if ($email) {
-        $html .= "<p class='mb-5'><strong>Email: </strong>$email</p>";
-    }
-    if ($address) {
-        $html .= wpautop($address);
-    }
+
+
 
     return $html;
 }
