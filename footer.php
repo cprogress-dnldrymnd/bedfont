@@ -19,12 +19,12 @@ $address = get__theme_option('address');
 		<div class="row">
 			<div class="col-lg-3 col-md-6 location">
 				<h3 class="mt-lg-0 mt-sm-3">Contact Details</h4>
-					<p>Bedfont<sup>®</sup> Scientific Ltd<br>
-						Station Road, Harrietsham, Maidstone<br>
-						Kent, ME17 1JA, England</p>
+					<p>
+						<?= $address ?>
+					</p>
 					<p>
 						<strong>Tel:</strong> <?= $tel ?><br>
-						<strong>Email:</strong> ask@bedfont.com
+						<strong>Email:</strong> <?= $email ?>
 					</p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
