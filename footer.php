@@ -18,29 +18,16 @@ $address = get__theme_option('address');
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 location">
-				<h3 class="mt-lg-0 mt-sm-3"><?= __("Contact Details", 'bedfont') ?></h3>
 				<?php dynamic_sidebar('footer_column_1') ?>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-3"><?= __("Products", 'bedfont') ?></h3>
-				<p><a href="https://www.nobreathfeno.com" target="_blank" title="Click here for the NObreath website">NObreath<sup>®</sup></a></p>
-				<p><a href="/smokerlyzer">Smokerlyzer<sup>®</sup></a></p>
-				<p><a href="https://www.gastrolyzer.com" target="_blank" title="Click here for the Gastrolyzer website">Gastrolyzer<sup>®</sup></a></p>
-				<p><a href="https://www.toxco.co.uk" target="_blank" title="Click here for the ToxCO website">ToxCO<sup>®</sup></a></p>
-				<p><a href="/medi-gas-check">Medi-Gas Check</a></p>
+				<?php dynamic_sidebar('footer_column_2') ?>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-4"><?= __("Accreditations", 'bedfont') ?></h3>
-				<p><a href="<?php bloginfo('stylesheet_directory'); ?>/assets/documents/downloads/MD-502905-ISO13485-2023-2026.pdf" target="_blank" title="Click here to view our ISO accreditation">ISO 13485:2023 - 2026</a></p>
+				<?php dynamic_sidebar('footer_column_3') ?>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-4"><?= __("Useful Links", 'bedfont') ?></h3>
-				<p><a href="https://www.bedfont-distributor.com/" target="_blank" title="Click here for the distributor log in page">Distributor Log-in</a></p>
-				<p><a href="/careers" title="Click here for the careers page">Careers</a></p>
-				<p><a href="https://support.bedfont.com/" target="_blank" title="Click here for the Bedfont help centre">Help Centre</a></p>
-				<p><a href="/software" title="Click here for the software page">Software</a></p>
-				<p><a href="/wp-content/themes/bedfont/assets/documents/downloads/Firmware_Updater.exe" title="Click here for the Firmware Updater Tool">Firmware Updater Tool v1.84</a></p>
-				<p><a href="/cleaning-bedfont-devices" title="Click here for the Cleaning Bedfont Devices page">Cleaning Bedfont Devices</a></p>
+				<?php dynamic_sidebar('footer_column_4') ?>
 			</div>
 		</div>
 		<div class="row">
