@@ -18,17 +18,15 @@ $address = get__theme_option('address');
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 location">
-				<h3 class="mt-lg-0 mt-sm-3">Contact Details</h4>
-					<p>
-						<?= $address ?>
-					</p>
+				<h3 class="mt-lg-0 mt-sm-3"><?= __("Contact Details", 'bedfont') ?></h4>
+					<?= wpautop($address) ?>
 					<p>
 						<strong>Tel:</strong> <?= $tel ?><br>
 						<strong>Email:</strong> <?= $email ?>
 					</p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-3">Products</h4>
+				<h3 class="mt-lg-0 mt-sm-3"><?= __("Products", 'bedfont') ?></h4>
 					<p><a href="https://www.nobreathfeno.com" target="_blank" title="Click here for the NObreath website">NObreath<sup>®</sup></a></p>
 					<p><a href="/smokerlyzer">Smokerlyzer<sup>®</sup></a></p>
 					<p><a href="https://www.gastrolyzer.com" target="_blank" title="Click here for the Gastrolyzer website">Gastrolyzer<sup>®</sup></a></p>
@@ -36,11 +34,11 @@ $address = get__theme_option('address');
 					<p><a href="/medi-gas-check">Medi-Gas Check</a></p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-4">Accreditations</h3>
+				<h3 class="mt-lg-0 mt-sm-4"><?= __("Accreditations", 'bedfont') ?></h3>
 				<p><a href="<?php bloginfo('stylesheet_directory'); ?>/assets/documents/downloads/MD-502905-ISO13485-2023-2026.pdf" target="_blank" title="Click here to view our ISO accreditation">ISO 13485:2023 - 2026</a></p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
-				<h3 class="mt-lg-0 mt-sm-4">Useful Links</h3>
+				<h3 class="mt-lg-0 mt-sm-4"><?= __("Useful Links", 'bedfont') ?></h3>
 				<p><a href="https://www.bedfont-distributor.com/" target="_blank" title="Click here for the distributor log in page">Distributor Log-in</a></p>
 				<p><a href="/careers" title="Click here for the careers page">Careers</a></p>
 				<p><a href="https://support.bedfont.com/" target="_blank" title="Click here for the Bedfont help centre">Help Centre</a></p>
