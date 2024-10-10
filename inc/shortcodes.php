@@ -195,13 +195,21 @@ function contact_details($atts)
 
 add_shortcode('contact_details', 'contact_details');
 
-function socials()
+function socials($atts)
 {
-
+    extract(
+        shortcode_atts(
+            array(
+                'class' => 'socials d-inline-block mt-5',
+            ),
+            $atts
+        )
+    );
     $socials = get__theme_option('socials');
 
+
     if ($socials) {
-        $html = "<div class='socials d-inline-block mt-5'>";
+        $html = "<div class='$class'>";
         foreach ($socials as $social) {
             $url = $social['url'];
             $icon = $social['icon'];
