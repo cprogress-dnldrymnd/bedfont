@@ -103,7 +103,6 @@ function careers()
     $jobs = get_posts(array(
         'post_type' => 'careers',
         'numberposts' => -1,
-        'suppress_filters' => false
     ));
     $html = "<div class='job-holder'>";
     foreach ($jobs as $key => $job) {
