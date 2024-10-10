@@ -707,7 +707,7 @@ function _icon_box($module)
 
     $html = "<section class='icon-boxes $style'>
 	<div class='container'>
-    <h2 class='mb-3'>Our <span class='blue-text'>$heading</span></h2>";
+    <h2 class='mb-3'>$heading</h2>";
     if ($description) {
         $html .= "<div class='desc-box text-center mb-5'>";
         $html .= $description;
