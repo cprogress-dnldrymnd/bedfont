@@ -108,8 +108,11 @@ function careers()
     $html = "<div class='job-holder'>";
     foreach ($jobs as $key => $job) {
         $title = $job->post_title;
-        $salary = get__post_meta_by_id($job->ID, 'salary');
-        $job_spec = get__post_meta_by_id($job->ID, 'job_spec');
+
+        $lang_id = apply_filters('wpml_object_id', $job->ID, 'post');
+
+        $salary = get__post_meta_by_id($lang_id, 'salary');
+        $job_spec = get__post_meta_by_id($lang_id, 'job_spec');
         $job_spec_url = wp_get_attachment_url($job_spec);
         $details = $job->post_content;
         $html .= "<div class='row job'>
