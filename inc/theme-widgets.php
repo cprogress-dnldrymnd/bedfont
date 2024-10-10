@@ -8,8 +8,8 @@ function action_widgets_init()
             'id'            => 'footer_column_1',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget-title">',
-            'after_title'   => '</h5>',
+            'before_title'  => '<h3 class="widget-title mt-lg-0 mt-sm-3">',
+            'after_title'   => '</h3>',
         )
     );
 
@@ -20,8 +20,8 @@ function action_widgets_init()
             'id'            => 'footer_column_2',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget-title">',
-            'after_title'   => '</h5>',
+            'before_title'  => '<h3 class="widget-title mt-lg-0 mt-sm-3">',
+            'after_title'   => '</h3>',
         )
     );
 
@@ -31,8 +31,8 @@ function action_widgets_init()
             'id'            => 'footer_column_3',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget-title">',
-            'after_title'   => '</h5>',
+            'before_title'  => '<h3 class="widget-title mt-lg-0 mt-sm-3">',
+            'after_title'   => '</h3>',
         )
     );
 
@@ -42,8 +42,8 @@ function action_widgets_init()
             'id'            => 'footer_column_4',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5 class="widget-title">',
-            'after_title'   => '</h5>',
+            'before_title'  => '<h3 class="widget-title mt-lg-0 mt-sm-3">',
+            'after_title'   => '</h3>',
         )
     );
 }
