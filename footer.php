@@ -40,7 +40,7 @@ $address = get__theme_option('address');
 			<div class="col-lg-4 col-md-6 hr-space">
 				<hr>
 			</div>
-			<div class="col-12 text-center mt-50">
+			<div class="col-12 text-center mt-50 footer-bottom">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bedfont-text-logo-white.png" class="footer-logo mx-auto" alt="White Bedfont text logo" />
 				<p><small class="text-white-50">© 1976-<?php echo date("Y"); ?> Bedfont® Scientific Ltd., all rights reserved | Incorporated in England and Wales under registered number: 1289798</small></p>
 				<p class="footer-link-color"><a href="/terms-and-conditions" title="Click here for our terms and conditions page">Legal Stuff</a> | <a href="/privacy-notice" title="Click here for our privacy notice page">Privacy Notice</a> | <a href="https://support.bedfont.com/en/knowledge" target="_blank" title="Click here for the support page">Help Centre</a></p>

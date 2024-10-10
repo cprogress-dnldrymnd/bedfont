@@ -1204,4 +1204,31 @@ footer {
         padding: 0;
         margin: 0;
     }
+    .footer-logo-v2 {
+        img {
+            max-width: 150px;
+        }
+    }
+
+    .footer-bottom {
+        .menu {
+            display: inline-flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 1rem;
+            li {
+                a {
+                    color: #fff !important;
+                    font-size: 85%;
+                }
+                &:not(:last-child) {
+                    &:after {
+                        content: " | ";
+                    }
+                }
+            }
+        }
+    }
 }

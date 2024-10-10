@@ -931,5 +931,19 @@ footer .menu {
   list-style: none;
   padding: 0;
   margin: 0; }
+footer .footer-logo-v2 img {
+  max-width: 150px; }
+footer .footer-bottom .menu {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem; }
+  footer .footer-bottom .menu li a {
+    color: #fff !important;
+    font-size: 85%; }
+  footer .footer-bottom .menu li:not(:last-child):after {
+    content: " | "; }
 
 /*# sourceMappingURL=style.css.map */
