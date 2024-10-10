@@ -201,6 +201,7 @@ function socials($atts)
         shortcode_atts(
             array(
                 'class' => 'socials d-inline-block mt-5',
+                'item_class' => 'nav-social-icon'
             ),
             $atts
         )
@@ -213,7 +214,7 @@ function socials($atts)
         foreach ($socials as $social) {
             $url = $social['url'];
             $icon = $social['icon'];
-            $html .= "<a class='nav-social-icon' target='_blank' href='$url'>";
+            $html .= "<a class='$item_class' target='_blank' href='$url'>";
             $html .= "<i class='$icon' aria-hidden='true'></i>";
             $html .= "</a>";
         }
