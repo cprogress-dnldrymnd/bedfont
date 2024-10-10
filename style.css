@@ -927,4 +927,9 @@ section.two-column-style-7 .box {
   border-radius: 20px;
   padding: 25px; }
 
+footer .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 /*# sourceMappingURL=style.css.map */
