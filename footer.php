@@ -35,11 +35,7 @@ $address = get__theme_option('address');
 				<hr>
 			</div>
 			<div class="col-lg-4 col-md-12 icons-space text-center icons px-0">
-				<a target="_blank" href="https://www.facebook.com/Bedfontltd/"><i class="fa fa-facebook-f"></i></a>
-				<a target="_blank" href="https://twitter.com/BedfontLtd"><i class="fa-brands fa-x-twitter"></i></a>
-				<a target="_blank" href="https://www.instagram.com/bedfontltd/"><i class="fa fa-instagram"></i></a>
-				<a target="_blank" href="https://www.linkedin.com/company/bedfont-scientific-ltd"><i class="fa fa-linkedin"></i></a>
-				<a target="_blank" href="https://www.youtube.com/user/BedfontScientificLtd"><i class="fa fa-youtube"></i></a>
+				<?= do_shortcode('[socials]') ?>
 			</div>
 			<div class="col-lg-4 col-md-6 hr-space">
 				<hr>
