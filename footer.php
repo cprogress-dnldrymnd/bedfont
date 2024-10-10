@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -8,7 +9,9 @@
  *
  * @package Bedfont
  */
-
+$tel = get__theme_option('tel');
+$email = get__theme_option('email');
+$address = get__theme_option('address');
 ?>
 
 <footer>
@@ -16,21 +19,21 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-6 location">
 				<h3 class="mt-lg-0 mt-sm-3">Contact Details</h4>
-				<p>Bedfont<sup>®</sup> Scientific Ltd<br>
-				Station Road, Harrietsham, Maidstone<br>
-				Kent, ME17 1JA, England</p>
-				<p>
-					<strong>Tel:</strong> +44(0)1622 851122<br>
-					<strong>Email:</strong> ask@bedfont.com
-				</p>
+					<p>Bedfont<sup>®</sup> Scientific Ltd<br>
+						Station Road, Harrietsham, Maidstone<br>
+						Kent, ME17 1JA, England</p>
+					<p>
+						<strong>Tel:</strong> <?= $tel ?><br>
+						<strong>Email:</strong> ask@bedfont.com
+					</p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
 				<h3 class="mt-lg-0 mt-sm-3">Products</h4>
-				<p><a href="https://www.nobreathfeno.com" target="_blank" title="Click here for the NObreath website">NObreath<sup>®</sup></a></p>
-				<p><a href="/smokerlyzer">Smokerlyzer<sup>®</sup></a></p>
-				<p><a href="https://www.gastrolyzer.com" target="_blank" title="Click here for the Gastrolyzer website">Gastrolyzer<sup>®</sup></a></p>
-				<p><a href="https://www.toxco.co.uk" target="_blank" title="Click here for the ToxCO website">ToxCO<sup>®</sup></a></p>
-				<p><a href="/medi-gas-check">Medi-Gas Check</a></p>
+					<p><a href="https://www.nobreathfeno.com" target="_blank" title="Click here for the NObreath website">NObreath<sup>®</sup></a></p>
+					<p><a href="/smokerlyzer">Smokerlyzer<sup>®</sup></a></p>
+					<p><a href="https://www.gastrolyzer.com" target="_blank" title="Click here for the Gastrolyzer website">Gastrolyzer<sup>®</sup></a></p>
+					<p><a href="https://www.toxco.co.uk" target="_blank" title="Click here for the ToxCO website">ToxCO<sup>®</sup></a></p>
+					<p><a href="/medi-gas-check">Medi-Gas Check</a></p>
 			</div>
 			<div class="col-lg-3 col-md-6 links">
 				<h3 class="mt-lg-0 mt-sm-4">Accreditations</h3>
@@ -47,7 +50,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4 col-md-6 hr-space"><hr></div>
+			<div class="col-lg-4 col-md-6 hr-space">
+				<hr>
+			</div>
 			<div class="col-lg-4 col-md-12 icons-space text-center icons px-0">
 				<a target="_blank" href="https://www.facebook.com/Bedfontltd/"><i class="fa fa-facebook-f"></i></a>
 				<a target="_blank" href="https://twitter.com/BedfontLtd"><i class="fa-brands fa-x-twitter"></i></a>
@@ -55,11 +60,13 @@
 				<a target="_blank" href="https://www.linkedin.com/company/bedfont-scientific-ltd"><i class="fa fa-linkedin"></i></a>
 				<a target="_blank" href="https://www.youtube.com/user/BedfontScientificLtd"><i class="fa fa-youtube"></i></a>
 			</div>
-			<div class="col-lg-4 col-md-6 hr-space"><hr></div>
+			<div class="col-lg-4 col-md-6 hr-space">
+				<hr>
+			</div>
 			<div class="col-12 text-center mt-50">
 				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/bedfont-text-logo-white.png" class="footer-logo mx-auto" alt="White Bedfont text logo" />
 				<p><small class="text-white-50">© 1976-<?php echo date("Y"); ?> Bedfont® Scientific Ltd., all rights reserved | Incorporated in England and Wales under registered number: 1289798</small></p>
-				<p class="footer-link-color"><a href="/terms-and-conditions" title="Click here for our terms and conditions page">Legal Stuff</a>  |  <a href="/privacy-notice" title="Click here for our privacy notice page">Privacy Notice</a>  |  <a href="https://support.bedfont.com/en/knowledge" target="_blank" title="Click here for the support page">Help Centre</a></p>
+				<p class="footer-link-color"><a href="/terms-and-conditions" title="Click here for our terms and conditions page">Legal Stuff</a> | <a href="/privacy-notice" title="Click here for our privacy notice page">Privacy Notice</a> | <a href="https://support.bedfont.com/en/knowledge" target="_blank" title="Click here for the support page">Help Centre</a></p>
 			</div>
 		</div>
 	</div>
@@ -113,7 +120,12 @@
 <!-- Animate CDN -->
 <script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/float-panel.js"></script>
 
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+	try {
+		Typekit.load();
+	} catch (e) {}
+</script>
 
 </body>
+
 </html>
