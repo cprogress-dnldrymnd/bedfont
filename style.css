@@ -944,6 +944,8 @@ footer .footer-bottom .menu {
     color: #fff !important;
     font-size: 85%; }
   footer .footer-bottom .menu li:not(:last-child):after {
-    content: " | "; }
+    content: "|";
+    margin-left: 5px;
+    margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */
