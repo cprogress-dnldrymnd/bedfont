@@ -155,7 +155,7 @@ function _hero_style_2($module)
         'button_text'       => $module['button_text'],
         'button_url'        => isset($module['button_url']) ? $module['button_url'][0] : false,
         'button_custom_url' => $module['button_custom_url'],
-        'button_style'      => $module['button_style'],
+        'button_style'      => $module['button_style'] . ' button-box-shadow',
         'button_target'     => $module['button_target'],
     ));
 
