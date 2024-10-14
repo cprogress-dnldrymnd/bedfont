@@ -41,71 +41,71 @@ function modules($id)
             case 'hero':
                 $style = $module['style'];
                 if ($style == 'style-1') {
-                    $html .= _hero_style_1($module);
+                    $html .= _hero_style_1($module, $section_id);
                 } else if ($style == 'style-2' || $style == 'style-2-image') {
                     $html .= _hero_style_2($module);
                 } else if ($style == 'style-3') {
-                    $html .= _hero_style_3($module);
+                    $html .= _hero_style_3($module, $section_id);
                 } else {
-                    $html .= _hero_style_4($module);
+                    $html .= _hero_style_4($module, $section_id);
                 }
                 break;
             case 'two_column_image_text':
                 $style = $module['style'];
                 if ($style == 'style-4') {
-                    $html .= _two_column_image_text_style_4($module);
+                    $html .= _two_column_image_text_style_4($module, $section_id);
                 } else if ($style == 'style-5') {
-                    $html .= _two_column_image_text_style_5($module);
+                    $html .= _two_column_image_text_style_5($module, $section_id);
                 } else if ($style == 'style-6') {
-                    $html .= _two_column_image_text_style_6($module);
+                    $html .= _two_column_image_text_style_6($module, $section_id);
                 } else if ($style == 'style-7') {
-                    $html .= _two_column_image_text_style_7($module);
+                    $html .= _two_column_image_text_style_7($module, $section_id);
                 } else {
-                    $html .= _two_column_image_text($module);
+                    $html .= _two_column_image_text($module, $section_id);
                 }
 
                 break;
             case 'text':
-                $html .= _text($module);
+                $html .= _text($module, $section_id);
                 break;
             case 'two_column_text':
-                $html .= _two_column_text($module);
+                $html .= _two_column_text($module, $section_id);
                 break;
             case 'row_animation':
-                $html .= _row_animation($module);
+                $html .= _row_animation($module, $section_id);
                 break;
             case 'blogs':
-                $html .= _blogs($module);
+                $html .= _blogs($module, $section_id);
                 break;
             case 'slider':
-                $html .= _slider($module);
+                $html .= _slider($module, $section_id);
                 break;
             case 'text_over_curve_shape':
-                $html .= _text_over_curve_shape($module);
+                $html .= _text_over_curve_shape($module, $section_id);
                 break;
             case 'image_grid':
-                $html .= _image_grid($module);
+                $html .= _image_grid($module, $section_id);
                 break;
             case 'icon_box':
-                $html .= _icon_box($module);
+                $html .= _icon_box($module, $section_id);
                 break;
             case 'instagram_feed':
-                $html .= _instagram_feed($module);
+                $html .= _instagram_feed($module, $section_id);
                 break;
             case 'logo_slider':
-                $html .= _logo_slider($module);
+                $html .= _logo_slider($module, $section_id);
                 break;
             case 'careers':
-                $html .= _careers($module);
+                $html .= _careers($module, $section_id);
                 break;
             case 'accordion':
-                $html .= _accordion($module);
+                $html .= _accordion($module, $section_id);
                 break;
             case 'form':
-                $html .= _form($module);
+                $html .= _form($module, $section_id);
                 break;
             case 'map':
-                $html .= _map($module);
+                $html .= _map($module, $section_id);
                 break;
         }
     }
@@ -113,7 +113,7 @@ function modules($id)
 }
 
 
-function _hero_style_1($module)
+function _hero_style_1($module, $section_id)
 {
 
     $heading = $module['heading'];
@@ -125,7 +125,7 @@ function _hero_style_1($module)
         $style = "style='background-image: $bg'";
     }
 
-    return "<section id='home_bg' class='hero-style-1' $style>
+    return "<section id='home_bg' class='hero-style-1' id='$section_id' $style>
     <div class='container '>
         <div class='row'>
             <div class='col-12 col-lg-6 my-auto d-block order-2 order-lg-1'>
@@ -219,7 +219,7 @@ function _hero_style_3($module)
 		</div>
 	</section>";
 }
-function _hero_style_4($module)
+function _hero_style_4($module, $section_id)
 {
     $bg_image = $module['bg_image'];
     $heading = $module['heading'];
@@ -227,7 +227,7 @@ function _hero_style_4($module)
     $image = wp_get_attachment_image($bg_image, 'ful;', false, array(
         'class' => 'w-100'
     ));
-    return "<section class='hero-style-4 p-0 position-relative'>
+    return "<section class='hero-style-4 p-0 position-relative' id='$section_id'>
 		<div class='container-fluid overlay-img-holder'>
 			$image
 			<div class='overlay'>
@@ -239,7 +239,7 @@ function _hero_style_4($module)
 		</div>
 	</section>";
 }
-function _two_column_image_text($module)
+function _two_column_image_text($module, $section_id)
 {
     $heading = $module['heading'];
     $style = $module['style'];
@@ -279,7 +279,7 @@ function _two_column_image_text($module)
 
     $button = "[button args='$button_args']";
 
-    return "<section class='two-column-image-text $style'>
+    return "<section class='two-column-image-text $style' id='$section_id'>
 	<div class='container'>
 		<div class='row $image_position'>
 			<div class='$col_1_class' $style_inline>
@@ -300,7 +300,7 @@ function _two_column_image_text($module)
 </section>";
 }
 
-function _two_column_image_text_style_4($module)
+function _two_column_image_text_style_4($module, $section_id)
 {
     $heading = $module['heading'];
     $color = $module['color'];
@@ -318,7 +318,7 @@ function _two_column_image_text_style_4($module)
     }
 
 
-    return "<section class='two-column-style-4 p-0 mab' $style_inline>
+    return "<section class='two-column-style-4 p-0 mab' id='$section_id' $style_inline>
 		<div class='container-fluid m-0 p-0'>
 			<div class='row m-0 $image_position'>
 				<div class='col-12 col-lg-7 my-auto img-div-content text-white'>
@@ -372,7 +372,7 @@ function _two_column_image_text_style_5($module)
 		</div>
 	</section>";
 }
-function _two_column_image_text_style_6($module)
+function _two_column_image_text_style_6($module, $section_id)
 {
     $heading = $module['heading'];
     $color = $module['color'];
@@ -396,7 +396,7 @@ function _two_column_image_text_style_6($module)
     $button = "[button args='$button_args']";
 
 
-    return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color'>
+    return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color' id='$section_id'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
@@ -415,7 +415,7 @@ function _two_column_image_text_style_6($module)
 		</div>
 	</section>";
 }
-function _two_column_image_text_style_7($module)
+function _two_column_image_text_style_7($module, $section_id)
 {
     $heading_main = $module['heading'];
     $color = $module['color'];
@@ -455,7 +455,7 @@ function _two_column_image_text_style_7($module)
 
 
 
-    return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color'>
+    return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color' id='$section_id'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
@@ -477,7 +477,7 @@ function _two_column_image_text_style_7($module)
 		</div>
 	</section>";
 }
-function _text($module)
+function _text($module, $section_id)
 {
     $text_align = $module['text_align'] ?  $module['text_align'] : 'text-center';
     $color = $module['color'];
@@ -488,7 +488,7 @@ function _text($module)
         $style_inline = "style='--color: var(--$color)'";
     }
 
-    return "<section class='text-section $text_align' $style_inline>
+    return "<section class='text-section $text_align' id='$section_id' $style_inline>
 	<div class='container'>
 	<h2 class='text-center'>$heading</span></h2>
 				$description
@@ -518,8 +518,9 @@ function _two_column_text($module)
 
     return $html;
 }
-function _row_animation($module, $html = "<section class='row-animation'>")
+function _row_animation($module, $section_id)
 {
+    $html = "<section class='row-animation' id='$section_id'>";
     $items = $module['items'];
     $html .= "<div class='container'>";
     foreach ($items as $item) {
@@ -595,12 +596,12 @@ $button
     return $html;
 }
 
-function _blogs($module)
+function _blogs($module, $section_id)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
-    $html  = "<section class='blogs grey_bg'>";
+    $html  = "<section class='blogs grey_bg' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<div class='text-center'>";
     $html .= "<h2>$heading</h2>
@@ -618,13 +619,13 @@ function _blogs($module)
     return $html;
 }
 
-function _slider($module)
+function _slider($module, $section_id)
 {
     $heading = $module['heading'];
     $items = $module['items'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $glide_slider = __glide_slider($items);
-    return "<section class='slider overflow-hidden'>
+    return "<section class='slider overflow-hidden' id='$section_id'>
 	<div class='container'>
 	<h2 class='text-left'>$heading</span></h2>
 				$description
@@ -633,11 +634,11 @@ function _slider($module)
 </section>";
 }
 
-function _text_over_curve_shape($module)
+function _text_over_curve_shape($module, $section_id)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='slideanim rounded_top text-white mt-5 slide'>
+    $html = "<section class='slideanim rounded_top text-white mt-5 slide' id='$section_id'>
 	<div class='container'>
 		<div class='col-12'> ";
 
@@ -653,10 +654,10 @@ function _text_over_curve_shape($module)
     return $html;
 }
 
-function _image_grid($module)
+function _image_grid($module, $section_id)
 {
     $items = $module['items'];
-    $html = "<section class='py-0 image-grid'>
+    $html = "<section class='py-0 image-grid' id='$section_id'>
 	<div class='container-fluid px-0'>
 		<div class='row gx-0'>";
 
@@ -697,7 +698,7 @@ function _image_grid($module)
     return $html;
 }
 
-function _icon_box($module)
+function _icon_box($module, $section_id)
 {
     $heading = $module['heading'];
     $items = $module['items'];
@@ -705,7 +706,7 @@ function _icon_box($module)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
 
-    $html = "<section class='icon-boxes $style'>
+    $html = "<section class='icon-boxes $style' id='$section_id'>
 	<div class='container'>
     <h2 class='mb-3'>$heading</h2>";
     if ($description) {
@@ -778,13 +779,13 @@ function _icon_box($module)
     return $html;
 }
 
-function _instagram_feed($module)
+function _instagram_feed($module, $section_id)
 {
     $heading = $module['heading'];
     $shortcode = $module['shortcode'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
-    return "<section class='instagram-feed pb-0'>
+    return "<section class='instagram-feed pb-0' id='$section_id'>
     <div class='container-fluid px-0'>
         <div class='row mx-0'>
             <div class='col-12'>
@@ -800,12 +801,12 @@ function _instagram_feed($module)
     return $html;
 }
 
-function _logo_slider($module)
+function _logo_slider($module, $section_id)
 {
     $images = $module['images'];
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='logo-slider'>";
+    $html = "<section class='logo-slider' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-left'>$heading</h2>";
 
@@ -843,14 +844,14 @@ function _logo_slider($module)
 }
 
 
-function _careers($module)
+function _careers($module, $section_id)
 {
     $heading = $module['heading'];
     $subheading = $module['subheading'];
 
 
 
-    $html = "<section class='two-column-text '>";
+    $html = "<section class='two-column-text' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= "<h3 class='pink'>$subheading</h3>";
@@ -862,7 +863,7 @@ function _careers($module)
 
     return $html;
 }
-function _accordion($module)
+function _accordion($module, $section_id)
 {
     $heading = $module['heading'];
     $items = $module['items'];
@@ -905,7 +906,7 @@ function _accordion($module)
 
     $accordion .= "</div>";
 
-    return "<section class='two-column-image-text style-3 accordion-module'>
+    return "<section class='two-column-image-text style-3 accordion-module' id='$section_id'>
 	<div class='container'>
 		<div class='row '>
 			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col'>
@@ -927,7 +928,7 @@ function _accordion($module)
     return $html;
 }
 
-function _form($module)
+function _form($module, $section_id)
 {
     $heading = $module['heading'];
     $style = $module['style'];
@@ -941,7 +942,7 @@ function _form($module)
     }
 
 
-    $html = "<section class='form $class $style'>";
+    $html = "<section class='form $class $style' id='$section_id'>";
     $html .= "<div class='container'>";
     if ($style == 'style-2') {
         $html .= "<div class='row g-5'>";
@@ -976,10 +977,10 @@ function _form($module)
     return $html;
 }
 
-function _map($module)
+function _map($module, $section_id)
 {
     $map_src = $module['map_src'];
-    $html = "<section class='map'>";
+    $html = "<section class='map' id='$section_id'>";
     $html .= "<div class='container-fluid p-0'>";
     $html .= "<iframe src='$map_src' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy'></iframe>";
     $html .= "</div>";
