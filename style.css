@@ -692,8 +692,7 @@ section.row-animation img {
     z-index: 9;
     left: -100vw; }
   .awards-slider .glide__slide {
-    overflow: hidden;
-    height: auto; }
+    overflow: hidden; }
     .awards-slider .glide__slide img {
       border-radius: 16px 16px 0 0;
       width: 100%;
