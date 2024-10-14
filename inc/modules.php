@@ -723,11 +723,11 @@ function _icon_box($module, $section_id, $section_classes)
     }
     if ($style == 'style-1') {
         $inner_class = "inner";
-        $row_class = "row values g-3 d-none d-md-flex";
+        $row_class = "row values g-3";
         $class = 'col-6 col-lg-2';
     } else if ($style == 'style-2') {
         $inner_class = "inner";
-        $row_class = "row values g-3 d-none d-md-flex";
+        $row_class = "row values g-3";
         $class = 'col col-md-4 col-sm-3';
     } else {
         $inner_class = "row g-3";
