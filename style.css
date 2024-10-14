@@ -782,6 +782,9 @@ section.icon-boxes.style-3 .icon-box {
     width: 180px;
     height: 180px;
     object-fit: contain; }
+  @media (max-width: 991px) {
+    section.icon-boxes.style-3 .icon-box {
+      margin-bottom: 3rem; } }
 section.icon-boxes.style-3 h3 {
   color: var(--blue);
   text-align: left;

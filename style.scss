@@ -979,6 +979,9 @@ section.icon-boxes {
                 height: 180px;
                 object-fit: contain;
             }
+            @media(max-width: 991px) {
+                margin-bottom: 3rem;
+            }
         }
         h3 {
             color: var(--blue);
