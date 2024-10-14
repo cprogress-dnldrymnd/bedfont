@@ -849,8 +849,6 @@ function _logo_slider($module, $section_id, $section_classes)
 
     $html .= "</div>";
 
-
-    $html .= "</div>";
     $html .= $description;
     $html .= "</div>";
     $html .= "</section>";
