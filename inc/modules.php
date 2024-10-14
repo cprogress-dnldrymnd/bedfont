@@ -895,7 +895,7 @@ function _accordion($module, $section_id, $section_classes)
         $title = $item['title'];
         $contents = $item['contents'];
         $aria_expanded = $key == 0 ? 'true' : 'false';
-        $btn_class = $key == 0 ? 'collapse' : '';
+        $btn_class = $key == 0 ? '' : 'collapse';
         $class = $key == 0 ? 'show' : '';
 
         $accordion .= "<div class='accordion-item'>";
