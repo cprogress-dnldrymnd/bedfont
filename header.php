@@ -89,9 +89,14 @@
 					?>
 					<ul class="navbar-nav d-none d-lg-block">
 
+						<?php
+						// will return the post ID in the current language for post ID 1
+						$id =  apply_filters('wpml_object_id', 778, 'post');
 
+
+						?>
 						<li id="menu-item-904" class="request-a-quote menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-904">
-							<a href="<?= get_the_permalink(778) ?>" class="nav-link">
+							<a href="<?= get_the_permalink($id) ?>" class="nav-link">
 								<?= __('Request a Quote', 'bedfont') ?>
 							</a>
 						</li>
