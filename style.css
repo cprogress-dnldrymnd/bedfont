@@ -994,5 +994,7 @@ img.subtle-bg.subtle-bg {
 
   .swap-row-mobile .row {
     flex-direction: column-reverse !important; } }
+.heading-margin h1, .heading-margin h2, .heading-margin h3, .heading-margin h4, .heading-margin h5, .heading-margin h6 {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=style.css.map */
