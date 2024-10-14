@@ -1144,6 +1144,13 @@ section.text-section {
         grid-row-gap: 2rem;
         flex: none;
     }
+    .carousel-logo-slider {
+        text-align: center;
+        img {
+            height: 90px;
+            width: auto;
+        }
+    }
 }
 @keyframes scrolling {
     0% {

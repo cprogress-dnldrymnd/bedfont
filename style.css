@@ -897,6 +897,11 @@ section.text-section {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     flex: none; }
+  .logo-slider .carousel-logo-slider {
+    text-align: center; }
+    .logo-slider .carousel-logo-slider img {
+      height: 90px;
+      width: auto; }
 
 @keyframes scrolling {
   0% {
