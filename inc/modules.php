@@ -775,8 +775,12 @@ function _icon_box($module, $section_id, $section_classes)
         $html .= "</div>";
     }
 
+    $html .= "</div>";
     if ($style == 'style-2') {
         $html .= "</div>";
+    }
+    if ($style == 'style-2') {
+        $html .= "<div class='row-holder'>";
     }
     if ($bottom_text) {
         $html .= "<div class='desc text-center mt-4'>";
