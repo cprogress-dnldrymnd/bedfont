@@ -939,6 +939,12 @@ section.icon-boxes {
                 @media (min-width: 992px) {
                     width: 20%;
                 }
+                @media(max-width: 991px) {
+                    width: 50%;
+                }
+                @media(max-width: 575px) {
+                    width: 100%;
+                }
             }
         }
     }

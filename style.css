@@ -754,6 +754,12 @@ section.icon-boxes.style-2 .row .col .inner {
 @media (min-width: 992px) {
   section.icon-boxes.style-2 .row .col {
     width: 20%; } }
+@media (max-width: 991px) {
+  section.icon-boxes.style-2 .row .col {
+    width: 50%; } }
+@media (max-width: 575px) {
+  section.icon-boxes.style-2 .row .col {
+    width: 100%; } }
 section.icon-boxes.style-3 > .container > .row-holder {
   max-width: 1090px;
   margin-left: auto;
