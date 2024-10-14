@@ -720,11 +720,7 @@ template {
     height: 100%;
     object-fit: cover;
 }
-p {
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
+
 :root {
     --pink: #e5147d;
     --brown: #956e41;
@@ -1052,6 +1048,12 @@ section.two-column-image-text {
         }
         .inner {
             padding: 48px;
+            @media(max-width: 991px) {
+                text-align: center;
+                h2 {
+                    text-align: center !important;
+                }
+            }
         }
         .text-col {
             padding: 0 !important;

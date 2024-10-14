@@ -611,9 +611,6 @@ template {
   height: 100%;
   object-fit: cover; }
 
-p:last-child {
-  margin-bottom: 0; }
-
 :root {
   --pink: #e5147d;
   --brown: #956e41;
@@ -828,6 +825,11 @@ section.two-column-image-text.style-3 {
       object-fit: cover; }
   section.two-column-image-text.style-3 .inner {
     padding: 48px; }
+    @media (max-width: 991px) {
+      section.two-column-image-text.style-3 .inner {
+        text-align: center; }
+        section.two-column-image-text.style-3 .inner h2 {
+          text-align: center !important; } }
   section.two-column-image-text.style-3 .text-col {
     padding: 0 !important; }
 
