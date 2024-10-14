@@ -830,7 +830,7 @@ section.row-animation {
     img {
         max-height: 460px;
         width: auto;
-        @media(max-width: 991px) {
+        @media (max-width: 991px) {
             margin-bottom: 3rem;
         }
     }
@@ -1241,4 +1241,10 @@ footer {
             }
         }
     }
+}
+
+img.subtle-bg.subtle-bg {
+    width: auto;
+    height: auto;
+    max-width: max-content;
 }

@@ -953,4 +953,9 @@ footer .footer-bottom .menu {
     margin-left: 5px;
     margin-right: 5px; }
 
+img.subtle-bg.subtle-bg {
+  width: auto;
+  height: auto;
+  max-width: max-content; }
+
 /*# sourceMappingURL=style.css.map */
