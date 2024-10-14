@@ -765,7 +765,7 @@ function _icon_box($module)
 
     $html .= "</div>";
     if ($bottom_text) {
-        $html .= "<div class='desc text-center'>";
+        $html .= "<div class='desc text-center mt-4'>";
         $html .= $bottom_text;
         $html .= "</div>";
     }
