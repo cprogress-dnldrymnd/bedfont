@@ -683,14 +683,15 @@ section.row-animation img {
 
 .awards-slider {
   position: relative;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  padding-left: 3px; }
   .awards-slider .white-space {
     background: #fff;
     width: 100vw;
     height: 100%;
     position: absolute;
     z-index: 9;
-    left: -100vw; }
+    left: calc(-100vw + 3px); }
   .awards-slider .glide__slide {
     overflow: hidden; }
     .awards-slider .glide__slide img {

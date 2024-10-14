@@ -835,13 +835,14 @@ section.row-animation {
 .awards-slider {
     position: relative;
     margin-bottom: 2rem;
+    padding-left: 3px;
     .white-space {
         background: #fff;
         width: 100vw;
         height: 100%;
         position: absolute;
         z-index: 9;
-        left: -100vw;
+        left: calc(-100vw + 3px);
     }
     .glide__slide {
         overflow: hidden;
