@@ -943,19 +943,20 @@ section.icon-boxes {
         }
     }
     &.style-3 {
-        .row-holder {
-            max-width: 1190px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+     
         > .container {
-            > .row {
-                .col-12 {
-                    .row {
-                        background: #ebf4fa;
-                        border-radius: 20px;
-                        padding: 20px;
-                        margin-bottom: 30px;
+            > .row-holder {
+                max-width: 1190px;
+                margin-left: auto;
+                margin-right: auto;
+                > .row {
+                    .col-12 {
+                        .row {
+                            background: #ebf4fa;
+                            border-radius: 20px;
+                            padding: 20px;
+                            margin-bottom: 30px;
+                        }
                     }
                 }
             }
