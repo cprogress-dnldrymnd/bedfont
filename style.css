@@ -965,6 +965,9 @@ img.subtle-bg.subtle-bg {
     padding-top: 0 !important; }
 
   .pt-mobile-48.pt-mobile-48 {
-    padding-top: 48px; } }
+    padding-top: 48px; }
+
+  .swap-row-mobile .row {
+    flex-direction: column-reverse !important; } }
 
 /*# sourceMappingURL=style.css.map */
