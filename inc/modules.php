@@ -495,7 +495,7 @@ function _text($module, $section_id, $section_classes)
         $style_inline = "style='--color: var(--$color)'";
     }
 
-    return "<section class='text-section $text_align' id='$section_id' $style_inline>
+    return "<section class='text-section $text_align $section_classes' id='$section_id' $style_inline>
 	<div class='container'>
 	<h2 class='text-center'>$heading</span></h2>
 				$description
