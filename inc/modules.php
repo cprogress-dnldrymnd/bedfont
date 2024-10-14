@@ -790,7 +790,7 @@ function _instagram_feed($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
     $shortcode = $module['shortcode'];
-    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $description = $module['description'];
 
     return "<section class='instagram-feed pb-0 $section_classes' id='$section_id'>
     <div class='container-fluid px-0'>
