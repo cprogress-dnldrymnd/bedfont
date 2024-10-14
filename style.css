@@ -737,8 +737,7 @@ section.image-grid .grid-box h3 {
 section.icon-boxes.style-1 .icon-box img {
   height: 172px;
   width: 172px;
-  object-fit: cover;
-  position: absolute; }
+  object-fit: cover; }
 section.icon-boxes.style-2 .row .col .icon-box img {
   width: 125px;
   height: 125px;
