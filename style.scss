@@ -939,11 +939,11 @@ section.icon-boxes {
                 @media (min-width: 992px) {
                     width: 20%;
                 }
-                @media(max-width: 991px) {
+                @media (max-width: 991px) {
                     width: 50%;
                     flex: 0 0 50%;
                 }
-                @media(max-width: 575px) {
+                @media (max-width: 575px) {
                     width: 100%;
                     flex: 0 0 100%;
                 }
@@ -979,7 +979,7 @@ section.icon-boxes {
                 height: 180px;
                 object-fit: contain;
             }
-            @media(max-width: 991px) {
+            @media (max-width: 991px) {
                 margin-bottom: 3rem;
             }
         }
@@ -1145,14 +1145,13 @@ section.text-section {
         flex: none;
     }
     .carousel-logo-slider {
-        text-align: center;
         .glide__slides {
+            text-align: center;
             img {
                 height: 90px;
                 width: auto;
             }
         }
-      
     }
 }
 @keyframes scrolling {
@@ -1302,7 +1301,12 @@ img.subtle-bg.subtle-bg {
 }
 
 .heading-margin {
-    h1,h2,h3,h4,h5,h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-top: 30px;
     }
 }
