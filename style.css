@@ -758,11 +758,16 @@ section.icon-boxes.style-3 > .container > .row-holder {
   max-width: 1090px;
   margin-left: auto;
   margin-right: auto; }
-  section.icon-boxes.style-3 > .container > .row-holder > .row .col-12 .row {
-    background: #ebf4fa;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 30px; }
+  section.icon-boxes.style-3 > .container > .row-holder > .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0; }
+    section.icon-boxes.style-3 > .container > .row-holder > .row .col-12 .row {
+      --bs-gutter-x: 0;
+      --bs-gutter-y: 0;
+      background: #ebf4fa;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 30px; }
 section.icon-boxes.style-3 .icon-box {
   text-align: center; }
   section.icon-boxes.style-3 .icon-box img {

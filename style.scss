@@ -943,15 +943,18 @@ section.icon-boxes {
         }
     }
     &.style-3 {
-     
         > .container {
             > .row-holder {
                 max-width: 1090px;
                 margin-left: auto;
                 margin-right: auto;
                 > .row {
+                    --bs-gutter-x: 0;
+                    --bs-gutter-y: 0;
                     .col-12 {
                         .row {
+                            --bs-gutter-x: 0;
+                            --bs-gutter-y: 0;
                             background: #ebf4fa;
                             border-radius: 20px;
                             padding: 20px;
