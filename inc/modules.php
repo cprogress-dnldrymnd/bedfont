@@ -502,13 +502,13 @@ function _text($module, $section_id, $section_classes)
 	</div>
 </section>";
 }
-function _two_column_text($module)
+function _two_column_text($module, $section_id, $section_classes)
 {
     $heading_1 = $module['heading_1'];
     $heading_2 = $module['heading_2'];
     $description_1 = isset($module['description_1']) ? wpautop($module['description_1']) : '';
     $description_2 = isset($module['description_2']) ? wpautop($module['description_2']) : '';
-    $html = "<section class='two-column-text'>";
+    $html = "<section class='two-column-text $section_classes' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<div class='row'>
 				<div class='col-12 col-lg-6 text-center'>
