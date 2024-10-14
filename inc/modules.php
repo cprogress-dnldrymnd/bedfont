@@ -734,6 +734,10 @@ function _icon_box($module, $section_id, $section_classes)
         $row_class = "row g-4";
         $class = 'col-12';
     }
+
+    if ($style == 'style-2') {
+        $html .= "<div class='row-holder'>";
+    }
     $html .= "<div class='$row_class'>";
 
     foreach ($items as $item) {
@@ -771,7 +775,9 @@ function _icon_box($module, $section_id, $section_classes)
         $html .= "</div>";
     }
 
-    $html .= "</div>";
+    if ($style == 'style-2') {
+        $html .= "</div>";
+    }
     if ($bottom_text) {
         $html .= "<div class='desc text-center mt-4'>";
         $html .= $bottom_text;

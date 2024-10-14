@@ -734,22 +734,24 @@ section.image-grid .grid-box h3 {
 section.icon-boxes.style-1 .icon-box img {
   max-height: 172px;
   object-fit: cover; }
-section.icon-boxes.style-2 .row .col .icon-box img {
-  width: 125px;
-  height: 125px;
-  object-fit: contain; }
-section.icon-boxes.style-2 .row .col h3 {
-  margin-bottom: 0;
-  font-size: 16px !important; }
-section.icon-boxes.style-2 .row .col .inner {
-  border: 1px solid rgba(0, 144, 208, 0.1);
-  border-radius: 10px;
-  background: rgba(0, 144, 208, 0.1);
-  height: 100%;
-  padding: 10px; }
-@media (min-width: 992px) {
-  section.icon-boxes.style-2 .row .col {
-    width: 20%; } }
+section.icon-boxes.style-2 .row {
+  max-width: 1100px; }
+  section.icon-boxes.style-2 .row .col .icon-box img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain; }
+  section.icon-boxes.style-2 .row .col h3 {
+    margin-bottom: 0;
+    font-size: 16px !important; }
+  section.icon-boxes.style-2 .row .col .inner {
+    border: 1px solid rgba(0, 144, 208, 0.1);
+    border-radius: 10px;
+    background: rgba(0, 144, 208, 0.1);
+    height: 100%;
+    padding: 10px; }
+  @media (min-width: 992px) {
+    section.icon-boxes.style-2 .row .col {
+      width: 20%; } }
 section.icon-boxes.style-3 > .container > .row .col-12 .row {
   background: #ebf4fa;
   border-radius: 20px;
