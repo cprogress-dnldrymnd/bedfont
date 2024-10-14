@@ -1047,7 +1047,7 @@ section.two-column-image-text {
         }
         .inner {
             padding: 48px;
-            @media(max-width: 991px) {
+            @media (max-width: 991px) {
                 text-align: center;
                 h2 {
                     text-align: center !important;
@@ -1249,9 +1249,12 @@ img.subtle-bg.subtle-bg {
     height: auto;
     max-width: max-content;
 }
-
-.pt-0-mobile.pt-0-mobile {
-    @media(max-width: 767px) {
+@media (max-width: 767px) {
+    .pt-0-mobile.pt-0-mobile {
         padding-top: 0 !important;
+    }
+
+    .pt-mobile-48.pt-mobile-48 {
+        padding-top: 48px;
     }
 }
