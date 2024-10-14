@@ -905,8 +905,7 @@ section.icon-boxes {
     &.style-1 {
         .icon-box {
             img {
-                height: 172px;
-                width: 172px;
+                max-height: 172px;
                 object-fit: cover;
             }
         }
@@ -1249,4 +1248,10 @@ img.subtle-bg.subtle-bg {
     width: auto;
     height: auto;
     max-width: max-content;
+}
+
+.pt-0-mobile.pt-0-mobile {
+    @media(max-width: 767px) {
+        padding-top: 0 !important;
+    }
 }
