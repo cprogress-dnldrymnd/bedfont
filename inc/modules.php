@@ -50,7 +50,7 @@ function modules($id)
                 if ($style == 'style-1') {
                     $html .= _hero_style_1($module, $section_id, $section_classes);
                 } else if ($style == 'style-2' || $style == 'style-2-image') {
-                    $html .= _hero_style_2($module);
+                    $html .= _hero_style_2($module, $section_id, $section_classes);
                 } else if ($style == 'style-3') {
                     $html .= _hero_style_3($module, $section_id, $section_classes);
                 } else {
@@ -146,7 +146,7 @@ function _hero_style_1($module, $section_id, $section_classes)
 </section>";
 }
 
-function _hero_style_2($module)
+function _hero_style_2($module, $section_id, $section_classes)
 {
 
     $youtube_url = $module['youtube_url'];
@@ -168,7 +168,7 @@ function _hero_style_2($module)
 
     $button = "[button args='$button_args']";
 
-    $html = "<section class='subtle-bg'>
+    $html = "<section class='subtle-bg $section_classes' id='$section_id'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
 		<div class='row'>
