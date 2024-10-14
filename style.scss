@@ -941,9 +941,11 @@ section.icon-boxes {
                 }
                 @media(max-width: 991px) {
                     width: 50%;
+                    flex: 0 0 50%;
                 }
                 @media(max-width: 575px) {
                     width: 100%;
+                    flex: 0 0 100%;
                 }
             }
         }
