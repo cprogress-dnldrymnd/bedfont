@@ -912,7 +912,7 @@ section.icon-boxes {
     }
     &.style-2 {
         .row-holder {
-            max-width: 1100px;
+            max-width: 1050px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -943,6 +943,11 @@ section.icon-boxes {
         }
     }
     &.style-3 {
+        .row-holder {
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         > .container {
             > .row {
                 .col-12 {

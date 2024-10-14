@@ -735,7 +735,7 @@ section.icon-boxes.style-1 .icon-box img {
   max-height: 172px;
   object-fit: cover; }
 section.icon-boxes.style-2 .row-holder {
-  max-width: 1100px;
+  max-width: 1050px;
   margin-left: auto;
   margin-right: auto; }
 section.icon-boxes.style-2 .row .col .icon-box img {
@@ -754,6 +754,10 @@ section.icon-boxes.style-2 .row .col .inner {
 @media (min-width: 992px) {
   section.icon-boxes.style-2 .row .col {
     width: 20%; } }
+section.icon-boxes.style-3 .row-holder {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto; }
 section.icon-boxes.style-3 > .container > .row .col-12 .row {
   background: #ebf4fa;
   border-radius: 20px;
