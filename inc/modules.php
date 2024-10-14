@@ -727,7 +727,7 @@ function _icon_box($module, $section_id, $section_classes)
         $class = 'col-6 col-lg-2';
     } else if ($style == 'style-2') {
         $inner_class = "inner";
-        $row_class = "row values g-3";
+        $row_class = "row values g-4";
         $class = 'col col-md-4 col-sm-3';
     } else {
         $inner_class = "row g-3";
