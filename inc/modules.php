@@ -842,6 +842,7 @@ function _logo_slider($module, $section_id, $section_classes)
 
     $html .= "</ul>";
     $html .= "</div>";
+    $html .= "[__glide_arrows]";
     $html .= "</div>";
 
 
