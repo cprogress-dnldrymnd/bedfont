@@ -899,7 +899,7 @@ section.text-section {
     flex: none; }
   .logo-slider .carousel-logo-slider {
     text-align: center; }
-    .logo-slider .carousel-logo-slider img {
+    .logo-slider .carousel-logo-slider .glide__slides img {
       height: 90px;
       width: auto; }
 
