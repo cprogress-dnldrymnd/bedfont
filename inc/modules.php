@@ -27,9 +27,11 @@ add_action('shutdown', 'action_module_content');
 function modules($id)
 {
     $html = '';
+
     $modules = get__post_meta_by_id($id, 'modules');
     foreach ($modules as $key => $module) {
         $type = $module['_type'];
+        $section_id = "module-$id-$type-$key";
         switch ($type) {
             case 'layouts':
                 $layouts = $module['layouts'];

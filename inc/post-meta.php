@@ -32,6 +32,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Layout: <%- title %>')
             ->add_fields('hero', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
@@ -185,6 +187,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Hero: <%- heading %>')
             ->add_fields('two_column_image_text', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'image_position', __('Image Position'))
                     ->set_options(
                         array(
@@ -318,6 +322,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
             ->add_fields('text', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'text_align', __('Text Align'))
                     ->set_options(
                         array(
@@ -345,15 +351,17 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('two_column_text', array(
-
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading_1', __('Heading Col 1'))->set_width(50),
                 Field::make('text', 'heading_2', __('Heading Col 2'))->set_width(50),
                 Field::make('textarea', 'description_1', __('Description Col 1'))->set_width(50),
                 Field::make('textarea', 'description_2', __('Description Col 2'))->set_width(50),
-
             ))
             ->set_header_template('Two Column Text: <%- heading_1 %>')
             ->add_fields('row_animation', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
@@ -432,12 +440,16 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Row Animation: <%- title %>')
             ->add_fields('blogs', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
 
             ))
             ->set_header_template('Blogs: <%- heading %>')
             ->add_fields('logo_slider', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('media_gallery', 'images', __('Image')),
                 Field::make('text', 'description', __('Description')),
@@ -445,6 +457,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Logo Slider: <%- heading %>')
             ->add_fields('slider', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('complex', 'items', 'Items')
@@ -499,13 +513,16 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Slider: <%- heading %>')
             ->add_fields('text_over_curve_shape', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'description', __('Description')),
-
             ))
             ->set_header_template('Text Over Curved Shape: <%- title %>')
             ->add_fields('image_grid', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
                 Field::make('complex', 'items', 'Items')
                     ->set_layout('tabbed-vertical')
@@ -563,6 +580,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Image Grid: <%- title %>')
             ->add_fields('icon_box', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
@@ -585,7 +604,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Icon Box: <%- heading %>')
             ->add_fields('instagram_feed', array(
-
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('text', 'shortcode', __('Shortcode')),
@@ -593,11 +613,15 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Instagram Feed: <%- heading %>')
             ->add_fields('careers', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('text', 'subheading', __('Subheading')),
             ))
             ->set_header_template('Careers: <%- heading %>')
             ->add_fields('accordion', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('image', 'image', __('Image')),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'bottom_text', __('Bottom_text')),
@@ -619,6 +643,8 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Accordion: <%- heading %>')
             ->add_fields('form', array(
+                Field::make('text', 'section_id', __('Section ID'))->set_width(50),
+                Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
                         'style-1' => 'Style 1',
