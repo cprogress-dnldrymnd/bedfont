@@ -819,33 +819,33 @@ function _logo_slider($module, $section_id, $section_classes)
     $images = $module['images'];
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='logo-slider' id='$section_id'>";
+    $html = "<section class='logo-slider $' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-left'>$heading</h2>";
 
 
-    $html .= "<div class='carousel d-flex align-items-center carousel-logo-slider mb-4 $section_classes'>";
-    $html .= "<div class='group d-flex align-items-center'>";
+    $html .= "<div class='carousel-logo-slider mb-4'>";
+
+
+    $html .= "<div class='glide2 position-relative'>";
+    $html .= "<div class='glide__track' data-glide-el='track'>";
+    $html .= "<ul class='glide__slides'>";
     foreach ($images as $image) {
         $image_url = wp_get_attachment_image_url($image, 'large');
-        $html .= "<div class='slide'>";
+        $html .= "<li class='glide__slide'>";
         $html .= "<a href='$image_url' data-fancybox='gallery'>";
         $html .= wp_get_attachment_image($image, 'large');
         $html .= "</a>";
-        $html .= "</div>";
+        $html .= "</li>";
     }
+
+
+    $html .= "</ul>";
+    $html .= "</div>";
     $html .= "</div>";
 
 
-    $html .= "<div class='group d-flex align-items-center'>";
-    foreach ($images as $image) {
-        $image_url = wp_get_attachment_image_url($image, 'large');
-        $html .= "<div class='slide'>";
-        $html .= "<a href='$image_url' data-fancybox='gallery'>";
-        $html .= wp_get_attachment_image($image, 'large');
-        $html .= "</a>";
-        $html .= "</div>";
-    }
+
     $html .= "</div>";
 
 
