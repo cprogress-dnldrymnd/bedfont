@@ -652,6 +652,8 @@ img {
 
 section.row-animation .slideanim {
   text-align: center; }
+  section.row-animation .slideanim:last-child {
+    display: none; }
 section.row-animation .product-bubble-home {
   overflow: hidden;
   position: relative; }
@@ -676,7 +678,11 @@ section.row-animation .brown .product-bubble-home p,
 section.row-animation .brown .product-bubble-home h2 {
   color: var(--white); }
 section.row-animation img {
-  max-width: 460px; }
+  max-height: 460px;
+  width: auto; }
+  @media (max-width: 991px) {
+    section.row-animation img {
+      margin-bottom: 3rem; } }
 
 .awards-slider {
   position: relative;

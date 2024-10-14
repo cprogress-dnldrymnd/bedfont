@@ -790,6 +790,9 @@ img {
 section.row-animation {
     .slideanim {
         text-align: center;
+        &:last-child {
+            display: none;
+        }
     }
     .product-bubble-home {
         overflow: hidden;
@@ -825,7 +828,11 @@ section.row-animation {
         }
     }
     img {
-        max-width: 460px;
+        max-height: 460px;
+        width: auto;
+        @media(max-width: 991px) {
+            margin-bottom: 3rem;
+        }
     }
 }
 
