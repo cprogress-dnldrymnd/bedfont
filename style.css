@@ -628,6 +628,9 @@ p:last-child {
   --yellow: #f7d538;
   --green: #8cc04b; }
 
+img {
+  height: auto; }
+
 .button-box .btn.btn {
   border-radius: 30px;
   padding: 10px 25px;
@@ -672,6 +675,8 @@ section.row-animation .brown .product-bubble-home:before {
 section.row-animation .brown .product-bubble-home p,
 section.row-animation .brown .product-bubble-home h2 {
   color: var(--white); }
+section.row-animation img {
+  max-width: 460px; }
 
 .awards-slider {
   position: relative;

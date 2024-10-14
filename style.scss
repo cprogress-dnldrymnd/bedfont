@@ -739,6 +739,9 @@ p {
     --yellow: #f7d538;
     --green: #8cc04b;
 }
+img {
+    height: auto;
+}
 .button-box {
     .btn.btn {
         border-radius: 30px;
@@ -820,6 +823,9 @@ section.row-animation {
                 color: var(--white);
             }
         }
+    }
+    img {
+        max-width: 460px;
     }
 }
 
