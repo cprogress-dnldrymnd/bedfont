@@ -83,9 +83,9 @@
 							$active_languages = apply_filters('wpml_active_languages', NULL);
 							$language_code = apply_filters('wpml_current_language', null);
 							?>
-							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+							<button class="btn btn-link dropdown-toggle d-flex align-items-center" type="button" data-toggle="dropdown" aria-expanded="false">
 								<div class="d-flex align-items-center">
-									<img src="<?= $active_languages[$language_code]['country_flag_url']; ?>" alt=""><?= $active_languages[$language_code]['native_name']; ?>
+									<img class="me-3" src="<?= $active_languages[$language_code]['country_flag_url']; ?>" alt="<?= $active_languages[$language_code]['native_name']; ?>"><?= $active_languages[$language_code]['native_name']; ?>
 								</div>
 							</button>
 							<div class="dropdown-menu">
