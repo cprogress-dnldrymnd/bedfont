@@ -78,7 +78,7 @@
 
 					<div class="d-block d-lg-none">
 						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 								Dropdown button
 							</button>
 							<div class="dropdown-menu">
