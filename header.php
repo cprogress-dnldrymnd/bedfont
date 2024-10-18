@@ -79,7 +79,7 @@
 					<div class="d-block d-lg-none">
 						<div class="dropdown">
 							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-								Dropdown button
+								<?= apply_filters('wpml_current_language', null); ?>
 							</button>
 							<div class="dropdown-menu">
 								<?= do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=0][/wpml_language_switcher]') ?>
