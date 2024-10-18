@@ -1012,6 +1012,9 @@ img.subtle-bg.subtle-bg {
 
 #masthead .navbar-toggler {
   position: static; }
+#masthead .mobile-switcher a {
+  color: #002b53 !important;
+  text-decoration: none; }
 @media (max-width: 991px) {
   #masthead {
     padding-right: 12px; } }

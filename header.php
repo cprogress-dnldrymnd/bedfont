@@ -76,7 +76,7 @@
 					</button>
 					<a href="/" title="Click to go to the home page" id="logo_holder"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" class="img-fluid logo" alt="Logo"></a>
 
-					<div class="d-block d-lg-none">
+					<div class="d-block d-lg-none mobile-switcher">
 						<div class="dropdown">
 							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 								<?= apply_filters('wpml_current_language', null); ?>

@@ -1322,6 +1322,10 @@ img.subtle-bg.subtle-bg {
     .navbar-toggler {
         position: static;
     }
+    .mobile-switcher a{
+        color: #002b53 !important;
+        text-decoration: none;
+    }
     @media(max-width: 991px) {
         padding-right: 12px;
     }
