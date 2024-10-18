@@ -84,7 +84,9 @@
 							$language_code = apply_filters('wpml_current_language', null);
 							?>
 							<button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-								<?= $active_languages[$language_code]['native_name']; ?>
+								<div class="d-flex align-items-center">
+									<img src="<?= $active_languages[$language_code]['country_flag_url']; ?>" alt=""><?= $active_languages[$language_code]['native_name']; ?>
+								</div>
 							</button>
 							<div class="dropdown-menu">
 								<?= do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=0][/wpml_language_switcher]') ?>
