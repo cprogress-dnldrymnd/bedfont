@@ -1012,7 +1012,7 @@ img.subtle-bg.subtle-bg {
 
 #masthead .navbar-toggler {
   position: static; }
-#masthead .mobile-switcher a {
+#masthead .mobile-switcher a, #masthead .btn-link {
   color: #002b53 !important;
   text-decoration: none; }
 #masthead .dropdown-menu {
