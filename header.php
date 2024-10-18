@@ -76,6 +76,10 @@
 					</button>
 					<a href="/" title="Click to go to the home page" id="logo_holder"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" class="img-fluid logo" alt="Logo"></a>
 
+					<div class="d-block d-lg-none">
+						<?php dynamic_sidebar('header_right_mobile') ?>
+					</div>
+
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'main-menu',
