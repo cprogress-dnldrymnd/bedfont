@@ -56,5 +56,15 @@ function action_widgets_init()
             'after_title'   => '</h3>',
         )
     );
+    register_sidebar(
+        array(
+            'name'          => 'Header Right Mobile',
+            'id'            => 'header_right_mobile',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title mt-lg-0 mt-sm-3">',
+            'after_title'   => '</h3>',
+        )
+    );
 }
 add_action('widgets_init', 'action_widgets_init');
