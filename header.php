@@ -82,7 +82,7 @@
 								Dropdown button
 							</button>
 							<div class="dropdown-menu">
-								<?= do_shortcode('[wpml_language_switcher type="custom" flags=1 native=0 translated=0][/wpml_language_switcher]') ?>
+								<?= do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=0][/wpml_language_switcher]') ?>
 							</div>
 						</div>
 
