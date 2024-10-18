@@ -823,11 +823,14 @@ section.row-animation {
             }
         }
     }
-    img {
-        max-height: 460px;
-        width: auto;
-        @media (max-width: 991px) {
-            margin-bottom: 3rem;
+   
+    .slideanim:not(.product-break) {
+        img {
+            max-height: 460px;
+            width: auto;
+            @media (max-width: 991px) {
+                margin-bottom: 3rem;
+            }
         }
     }
 }

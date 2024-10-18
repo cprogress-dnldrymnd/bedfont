@@ -674,11 +674,11 @@ section.row-animation .brown .product-bubble-home:before {
 section.row-animation .brown .product-bubble-home p,
 section.row-animation .brown .product-bubble-home h2 {
   color: var(--white); }
-section.row-animation img {
+section.row-animation .slideanim:not(.product-break) img {
   max-height: 460px;
   width: auto; }
   @media (max-width: 991px) {
-    section.row-animation img {
+    section.row-animation .slideanim:not(.product-break) img {
       margin-bottom: 3rem; } }
 
 .awards-slider {
