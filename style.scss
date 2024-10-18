@@ -1319,6 +1319,11 @@ img.subtle-bg.subtle-bg {
 }
 
 #masthead {
+    @media (max-width: 991px) {
+        #navbarSupportedContent .wpml-ls-item {
+            display: none;
+        }
+    }
     .navbar-toggler {
         position: static;
     }

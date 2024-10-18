@@ -1010,6 +1010,9 @@ img.subtle-bg.subtle-bg {
 .mb-60px {
   margin-bottom: 60px !important; }
 
+@media (max-width: 991px) {
+  #masthead #navbarSupportedContent .wpml-ls-item {
+    display: none; } }
 #masthead .navbar-toggler {
   position: static; }
 #masthead .mobile-switcher a,
