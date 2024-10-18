@@ -85,7 +85,7 @@
 							?>
 							<button class="btn btn-link dropdown-toggle d-flex align-items-center" type="button" data-toggle="dropdown" aria-expanded="false">
 								<div class="d-flex align-items-center">
-									<img class="me-3" src="<?= $active_languages[$language_code]['country_flag_url']; ?>" alt="<?= $active_languages[$language_code]['native_name']; ?>"><?= $active_languages[$language_code]['native_name']; ?>
+									<img class="me-2" src="<?= $active_languages[$language_code]['country_flag_url']; ?>" alt="<?= $active_languages[$language_code]['native_name']; ?>"><?= $active_languages[$language_code]['native_name']; ?>
 								</div>
 							</button>
 							<div class="dropdown-menu">
