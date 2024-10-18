@@ -823,7 +823,7 @@ section.row-animation {
             }
         }
     }
-   
+
     .slideanim:not(.product-break) {
         img {
             max-height: 460px;
@@ -1322,14 +1322,22 @@ img.subtle-bg.subtle-bg {
     .navbar-toggler {
         position: static;
     }
-    .mobile-switcher a, .btn-link{
+    .mobile-switcher a,
+    .btn-link {
         color: #002b53 !important;
         text-decoration: none;
     }
     .dropdown-menu {
         right: 0;
     }
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
         padding-right: 12px;
+    }
+    @media (max-width: 440px) {
+        .btn-link {
+            .lang-name {
+                display: none;
+            }
+        }
     }
 }

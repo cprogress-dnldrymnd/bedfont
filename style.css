@@ -1012,7 +1012,8 @@ img.subtle-bg.subtle-bg {
 
 #masthead .navbar-toggler {
   position: static; }
-#masthead .mobile-switcher a, #masthead .btn-link {
+#masthead .mobile-switcher a,
+#masthead .btn-link {
   color: #002b53 !important;
   text-decoration: none; }
 #masthead .dropdown-menu {
@@ -1020,5 +1021,8 @@ img.subtle-bg.subtle-bg {
 @media (max-width: 991px) {
   #masthead {
     padding-right: 12px; } }
+@media (max-width: 440px) {
+  #masthead .btn-link .lang-name {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
