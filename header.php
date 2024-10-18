@@ -77,7 +77,7 @@
 					<a href="/" title="Click to go to the home page" id="logo_holder"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" class="img-fluid logo" alt="Logo"></a>
 
 					<div class="d-block d-lg-none">
-						<?= do_shortcode('[wpml_language_selector_widget]')?>
+						<?= do_shortcode('[wpml_language_switcher type="custom" flags=1 native=1 translated=1][/wpml_language_switcher]')?>
 					</div>
 
 					<?php
