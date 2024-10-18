@@ -1015,6 +1015,8 @@ img.subtle-bg.subtle-bg {
 #masthead .mobile-switcher a {
   color: #002b53 !important;
   text-decoration: none; }
+#masthead .dropdown-menu {
+  right: 0; }
 @media (max-width: 991px) {
   #masthead {
     padding-right: 12px; } }
