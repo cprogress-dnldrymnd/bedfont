@@ -1332,12 +1332,13 @@ img.subtle-bg.subtle-bg {
         color: #002b53 !important;
         text-decoration: none;
     }
-    .dropdown-menu {
-        right: 0;
-    }
+  
     @media (max-width: 991px) {
         .mobile-switcher {
             padding-right: 12px;
+        }
+        .dropdown-menu {
+            right: 0;
         }
     }
     @media (max-width: 440px) {

@@ -1019,11 +1019,11 @@ img.subtle-bg.subtle-bg {
 #masthead .btn-link {
   color: #002b53 !important;
   text-decoration: none; }
-#masthead .dropdown-menu {
-  right: 0; }
 @media (max-width: 991px) {
   #masthead .mobile-switcher {
-    padding-right: 12px; } }
+    padding-right: 12px; }
+  #masthead .dropdown-menu {
+    right: 0; } }
 @media (max-width: 440px) {
   #masthead .btn-link .lang-name {
     display: none; } }
