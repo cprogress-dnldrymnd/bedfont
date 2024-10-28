@@ -690,7 +690,7 @@ Container::make('theme_options', __('Theme Settings'))
                 Field::make('text', 'url', __('Instagram URL'))->set_classes('inline-field'),
             ))
             ->add_fields('x', array(
-                Field::make('hidden', 'icon')->set_default_value('fa fa-twitter'),
+                Field::make('hidden', 'icon')->set_default_value('fa-brands fa-x-twitter'),
                 Field::make('text', 'url', __('X URL'))->set_classes('inline-field'),
             ))
             ->add_fields('linkedin', array(
