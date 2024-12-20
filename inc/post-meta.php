@@ -43,7 +43,6 @@ Container::make('post_meta', 'Modules')
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
-
                 Field::make('textarea', 'subheading', __('Subheading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image'))

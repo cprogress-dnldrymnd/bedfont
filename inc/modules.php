@@ -46,7 +46,7 @@ function modules($id)
         $section_id_default = "module-$id-$type-$key";
         $section_id = $section_id_val ? $section_id_val : $section_id_default;
         $section_classes = $section_classes_val ? $section_classes_val : '';
-
+        /** Different Section types */
         switch ($type) {
             case 'layouts':
                 $html .= _layouts($module['layouts']);
@@ -132,8 +132,15 @@ function modules($id)
     return $html;
 }
 
-function _layouts($layouts, $html = '')
+/**
+ * Summary of _layouts
+ * @param mixed $layouts
+ * @param mixed $html
+ * @return mixed
+ */
+function _layouts($layouts)
 {
+    $html = '';
     foreach ($layouts as $layout) {
         $layout_id = $layout['id'];
         $html .= "[layouts id='$layout_id']";
