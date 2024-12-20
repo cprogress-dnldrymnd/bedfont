@@ -133,10 +133,11 @@ function modules($id)
 }
 
 /**
- * Summary of _layouts
+ * Function to display selected layouts.
+ * Layouts are those created via layouts post type, which can be used globally in everypage.
+ * Admin Post Type: URL /wp-admin/edit.php?post_type=layouts
  * @param mixed $layouts
- * @param mixed $html
- * @return mixed
+ * @return string
  */
 function _layouts($layouts)
 {
@@ -148,6 +149,13 @@ function _layouts($layouts)
     return $html;
 }
 
+/**
+ * Hero section style number 1
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _hero_style_1($module, $section_id, $section_classes)
 {
 
@@ -174,6 +182,13 @@ function _hero_style_1($module, $section_id, $section_classes)
 </section>";
 }
 
+/**
+ * Hero section style number 2
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _hero_style_2($module, $section_id, $section_classes)
 {
 
@@ -223,6 +238,11 @@ function _hero_style_2($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Hero section style number 3
+ * @param mixed $module
+ * @return string
+ */
 function _hero_style_3($module)
 {
 
@@ -255,6 +275,14 @@ function _hero_style_3($module)
 		</div>
 	</section>";
 }
+
+/**
+ * Hero section style number 4
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _hero_style_4($module, $section_id, $section_classes)
 {
     $bg_image = $module['bg_image'];
@@ -275,6 +303,14 @@ function _hero_style_4($module, $section_id, $section_classes)
 		</div>
 	</section>";
 }
+
+/**
+ * Two column image and text styles number 1 - 3
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_image_text($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -303,8 +339,6 @@ function _two_column_image_text($module, $section_id, $section_classes)
     }
 
     $image = isset($module['image']) ? wp_get_attachment_image($module['image'], $size) : '';
-
-
 
     $button_args = serialize(array(
         'button_type'       => $module['button_type'],
@@ -338,6 +372,13 @@ function _two_column_image_text($module, $section_id, $section_classes)
 </section>";
 }
 
+/**
+ * Two column image and text styles number 4
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_image_text_style_4($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -369,6 +410,13 @@ function _two_column_image_text_style_4($module, $section_id, $section_classes)
 	</section>";
 }
 
+/**
+ * Two column image and text styles number 5
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_image_text_style_5($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -410,6 +458,14 @@ function _two_column_image_text_style_5($module, $section_id, $section_classes)
 		</div>
 	</section>";
 }
+
+/**
+ * Two column image and text styles number 6
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_image_text_style_6($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -453,6 +509,14 @@ function _two_column_image_text_style_6($module, $section_id, $section_classes)
 		</div>
 	</section>";
 }
+
+/**
+ * Two column image and text styles number 7
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_image_text_style_7($module, $section_id, $section_classes)
 {
     $heading_main = $module['heading'];
@@ -515,6 +579,14 @@ function _two_column_image_text_style_7($module, $section_id, $section_classes)
 		</div>
 	</section>";
 }
+
+/**
+ * Text Section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _text($module, $section_id, $section_classes)
 {
     $text_align = $module['text_align'] ? $module['text_align'] : 'text-center';
@@ -533,6 +605,14 @@ function _text($module, $section_id, $section_classes)
 	</div>
 </section>";
 }
+
+/**
+ * Two column text section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _two_column_text($module, $section_id, $section_classes)
 {
     $heading_1 = $module['heading_1'];
@@ -556,6 +636,14 @@ function _two_column_text($module, $section_id, $section_classes)
 
     return $html;
 }
+
+/**
+ * Row with animation section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _row_animation($module, $section_id, $section_classes)
 {
     $html = "<section class='row-animation $section_classes' id='$section_id'>";
@@ -635,6 +723,14 @@ $button
     return $html;
 }
 
+
+/**
+ * Blogs Section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _blogs($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -658,6 +754,13 @@ function _blogs($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Slider Section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _slider($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -673,6 +776,62 @@ function _slider($module, $section_id, $section_classes)
 </section>";
 }
 
+/**
+ * Logo Slider Section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
+function _logo_slider($module, $section_id, $section_classes)
+{
+    $images = $module['images'];
+    $heading = $module['heading'];
+    $description = isset($module['description']) ? wpautop($module['description']) : '';
+    $html = "<section class='logo-slider $' id='$section_id'>";
+    $html .= "<div class='container'>";
+    $html .= "<h2 class='text-left'>$heading</h2>";
+
+
+    $html .= "<div class='carousel-logo-slider mb-4'>";
+
+
+    $html .= "<div class='glide2 position-relative'>";
+    $html .= "<div class='glide__track' data-glide-el='track'>";
+    $html .= "<ul class='glide__slides'>";
+    foreach ($images as $image) {
+        $image_url = wp_get_attachment_image_url($image, 'large');
+        $html .= "<li class='glide__slide'>";
+        $html .= "<a href='$image_url' data-fancybox='gallery'>";
+        $html .= wp_get_attachment_image($image, 'large');
+        $html .= "</a>";
+        $html .= "</li>";
+    }
+
+
+    $html .= "</ul>";
+    $html .= "</div>";
+    $html .= "[__glide_arrows]";
+    $html .= "</div>";
+
+
+
+    $html .= "</div>";
+    $html .= "<div class='below-arrows'>";
+    $html .= $description;
+    $html .= "</div>";
+    $html .= "</div>";
+    $html .= "</section>";
+    return $html;
+}
+
+/**
+ * Text over cuved shape section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _text_over_curve_shape($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -693,6 +852,13 @@ function _text_over_curve_shape($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Image grid section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _image_grid($module, $section_id, $section_classes)
 {
     $items = $module['items'];
@@ -738,6 +904,13 @@ function _image_grid($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Icon box section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _icon_box($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -827,6 +1000,13 @@ function _icon_box($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Instagram feed section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _instagram_feed($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -849,49 +1029,13 @@ function _instagram_feed($module, $section_id, $section_classes)
     return $html;
 }
 
-function _logo_slider($module, $section_id, $section_classes)
-{
-    $images = $module['images'];
-    $heading = $module['heading'];
-    $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='logo-slider $' id='$section_id'>";
-    $html .= "<div class='container'>";
-    $html .= "<h2 class='text-left'>$heading</h2>";
-
-
-    $html .= "<div class='carousel-logo-slider mb-4'>";
-
-
-    $html .= "<div class='glide2 position-relative'>";
-    $html .= "<div class='glide__track' data-glide-el='track'>";
-    $html .= "<ul class='glide__slides'>";
-    foreach ($images as $image) {
-        $image_url = wp_get_attachment_image_url($image, 'large');
-        $html .= "<li class='glide__slide'>";
-        $html .= "<a href='$image_url' data-fancybox='gallery'>";
-        $html .= wp_get_attachment_image($image, 'large');
-        $html .= "</a>";
-        $html .= "</li>";
-    }
-
-
-    $html .= "</ul>";
-    $html .= "</div>";
-    $html .= "[__glide_arrows]";
-    $html .= "</div>";
-
-
-
-    $html .= "</div>";
-    $html .= "<div class='below-arrows'>";
-    $html .= $description;
-    $html .= "</div>";
-    $html .= "</div>";
-    $html .= "</section>";
-    return $html;
-}
-
-
+/**
+ * Careers section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _careers($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -911,6 +1055,14 @@ function _careers($module, $section_id, $section_classes)
 
     return $html;
 }
+
+/**
+ * Accordion Section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _accordion($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -977,6 +1129,13 @@ function _accordion($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Form section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _form($module, $section_id, $section_classes)
 {
     $heading = $module['heading'];
@@ -1028,6 +1187,13 @@ function _form($module, $section_id, $section_classes)
     return $html;
 }
 
+/**
+ * Map section
+ * @param mixed $module
+ * @param mixed $section_id
+ * @param mixed $section_classes
+ * @return string
+ */
 function _map($module, $section_id, $section_classes)
 {
     $map_src = $module['map_src'];
@@ -1039,6 +1205,12 @@ function _map($module, $section_id, $section_classes)
 
     return $html;
 }
+
+/**
+ * Button function to display button dynamically
+ * @param mixed $data
+ * @return mixed
+ */
 function ___button($data)
 {
     $button_type = isset($data['button_type']) ? $data['button_type'] : false;
@@ -1086,6 +1258,11 @@ function ___button($data)
     }
 }
 
+/**
+ * Function to display the glide slider items
+ * @param mixed $items
+ * @return string
+ */
 function __glide_slider($items)
 {
 
@@ -1147,7 +1324,10 @@ function __glide_slider($items)
     return $html;
 }
 
-
+/**
+ * Admin side functions
+ * @return void
+ */
 function action_admin_head()
 {
     $template = get_page_template_slug();

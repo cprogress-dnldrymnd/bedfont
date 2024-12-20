@@ -17,6 +17,7 @@ Container::make('post_meta', 'Modules')
                     'singular_name' => 'Module',
                 )
             )
+            //_layouts();
             ->add_fields('layouts', array(
                 Field::make('text', 'title', 'Title'),
                 Field::make('association', 'layouts', 'Select Layouts')
@@ -30,6 +31,11 @@ Container::make('post_meta', 'Modules')
                     )
             ))
             ->set_header_template('Layout: <%- title %>')
+
+            //__hero_style_1();
+            //__hero_style_2();
+            //__hero_style_3();
+            //__hero_style_4();
             ->add_fields('hero', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -184,6 +190,12 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Hero: <%- heading %>')
+
+            //_two_column_image_text();
+            //_two_column_image_text_4();
+            //_two_column_image_text_5();
+            //_two_column_image_text_6();
+            //_two_column_image_text_7();
             ->add_fields('two_column_image_text', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -347,6 +359,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'description', __('Description')),
 
             ))
+
+            //_text();
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('two_column_text', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
@@ -356,7 +370,11 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'description_1', __('Description Col 1'))->set_width(50),
                 Field::make('textarea', 'description_2', __('Description Col 2'))->set_width(50),
             ))
+
+            //_two_column_text();
             ->set_header_template('Two Column Text: <%- heading_1 %>')
+
+            //_row_animation();
             ->add_fields('row_animation', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -437,6 +455,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Row Animation: <%- title %>')
+
+            //_blogs();
             ->add_fields('blogs', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -445,6 +465,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Blogs: <%- heading %>')
+
+            //_logo_slider();
             ->add_fields('logo_slider', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -454,6 +476,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Logo Slider: <%- heading %>')
+
+            //_slider();
             ->add_fields('slider', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -510,6 +534,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Slider: <%- heading %>')
+
+            //_text_over_curve_shape();
             ->add_fields('text_over_curve_shape', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -518,6 +544,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'description', __('Description')),
             ))
             ->set_header_template('Text Over Curved Shape: <%- title %>')
+
+            //_image_grid();
             ->add_fields('image_grid', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -577,6 +605,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Image Grid: <%- title %>')
+
+            //_icon_box();
             ->add_fields('icon_box', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -601,6 +631,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Icon Box: <%- heading %>')
+
+            //_instagram_feed();
             ->add_fields('instagram_feed', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -610,6 +642,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Instagram Feed: <%- heading %>')
+
+            //_careers();
             ->add_fields('careers', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -617,6 +651,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'subheading', __('Subheading')),
             ))
             ->set_header_template('Careers: <%- heading %>')
+
+            //_accordion();
             ->add_fields('accordion', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -640,6 +676,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Accordion: <%- heading %>')
+
+            //_form();
             ->add_fields('form', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -653,16 +691,17 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'form_script', __('Form Script')),
             ))
             ->set_header_template('Form: <%- heading %>')
+
+            //_map();
             ->add_fields('map', array(
                 Field::make('text', 'title', __('Title')),
                 Field::make('textarea', 'map_src', __('MAP SRC')),
             ))
             ->set_header_template('Map: <%- title %>')
 
-
     ));
 
-
+/**Careers Post Type Custom Fields */
 Container::make('post_meta', 'Career Settings')
     ->or_where('post_type', '=', 'careers')
     ->add_fields(array(
@@ -670,7 +709,10 @@ Container::make('post_meta', 'Career Settings')
         Field::make('file', 'job_spec', __('Job Spec')),
     ));
 
-
+/**Theme Options
+ * Admin Post Type: URL /wp-admin/admin.php?page=crb_carbon_fields_container_theme_settings.php
+ * 
+ */
 Container::make('theme_options', __('Theme Settings'))
     ->add_tab('General Settings', array(
         Field::make('text', 'tel', __('Telephone')),
