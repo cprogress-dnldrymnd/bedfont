@@ -1,10 +1,12 @@
 <?php
+/**Carbonfields Documentation: https://docs.carbonfields.net/ */
 use Carbon_Fields\Block;
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
 
 /**Modules Template */
+//_modules();
 Container::make('post_meta', 'Modules')
     ->where('post_template', '=', 'templates/page-modules.php')
     ->or_where('post_type', '=', 'layouts')

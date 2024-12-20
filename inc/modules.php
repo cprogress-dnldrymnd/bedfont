@@ -29,7 +29,7 @@ function action_module_content()
 add_action('shutdown', 'action_module_content');
 
 /**
- * Modules function to display the dynamic content from custom fields on post-meta.php starting on line 8
+ * Modules function to display the dynamic content from custom fields on post-meta.php starting on line 10
  * @param mixed $id - post_id
  * @return string [html markup]
  * return value is the html markup.
