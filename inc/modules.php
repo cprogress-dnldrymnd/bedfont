@@ -30,8 +30,8 @@ add_action('shutdown', 'action_module_content');
 
 /**
  * Modules function to display the dynamic content from custom fields on post-meta.php starting on line 8
- * @param mixed $id
- * @return string
+ * @param mixed $id - post_id
+ * @return string [html markup]
  * return value is the html markup.
  */
 function modules($id)
@@ -137,7 +137,7 @@ function modules($id)
  * Layouts are those created via layouts post type, which can be used globally in everypage.
  * Admin Post Type: URL /wp-admin/edit.php?post_type=layouts
  * @param mixed $layouts
- * @return string
+ * @return string [html markup]
  */
 function _layouts($layouts)
 {
@@ -151,10 +151,10 @@ function _layouts($layouts)
 
 /**
  * Hero section style number 1
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _hero_style_1($module, $section_id, $section_classes)
 {
@@ -184,10 +184,10 @@ function _hero_style_1($module, $section_id, $section_classes)
 
 /**
  * Hero section style number 2
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _hero_style_2($module, $section_id, $section_classes)
 {
@@ -240,8 +240,8 @@ function _hero_style_2($module, $section_id, $section_classes)
 
 /**
  * Hero section style number 3
- * @param mixed $module
- * @return string
+ * @param mixed $module [data]
+ * @return string [html markup]
  */
 function _hero_style_3($module)
 {
@@ -278,10 +278,10 @@ function _hero_style_3($module)
 
 /**
  * Hero section style number 4
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _hero_style_4($module, $section_id, $section_classes)
 {
@@ -306,10 +306,10 @@ function _hero_style_4($module, $section_id, $section_classes)
 
 /**
  * Two column image and text styles number 1 - 3
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_image_text($module, $section_id, $section_classes)
 {
@@ -374,10 +374,10 @@ function _two_column_image_text($module, $section_id, $section_classes)
 
 /**
  * Two column image and text styles number 4
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_image_text_style_4($module, $section_id, $section_classes)
 {
@@ -412,10 +412,10 @@ function _two_column_image_text_style_4($module, $section_id, $section_classes)
 
 /**
  * Two column image and text styles number 5
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_image_text_style_5($module, $section_id, $section_classes)
 {
@@ -461,10 +461,10 @@ function _two_column_image_text_style_5($module, $section_id, $section_classes)
 
 /**
  * Two column image and text styles number 6
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_image_text_style_6($module, $section_id, $section_classes)
 {
@@ -512,10 +512,10 @@ function _two_column_image_text_style_6($module, $section_id, $section_classes)
 
 /**
  * Two column image and text styles number 7
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_image_text_style_7($module, $section_id, $section_classes)
 {
@@ -582,10 +582,10 @@ function _two_column_image_text_style_7($module, $section_id, $section_classes)
 
 /**
  * Text Section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _text($module, $section_id, $section_classes)
 {
@@ -608,10 +608,10 @@ function _text($module, $section_id, $section_classes)
 
 /**
  * Two column text section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _two_column_text($module, $section_id, $section_classes)
 {
@@ -639,10 +639,10 @@ function _two_column_text($module, $section_id, $section_classes)
 
 /**
  * Row with animation section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _row_animation($module, $section_id, $section_classes)
 {
@@ -726,10 +726,10 @@ $button
 
 /**
  * Blogs Section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _blogs($module, $section_id, $section_classes)
 {
@@ -756,10 +756,10 @@ function _blogs($module, $section_id, $section_classes)
 
 /**
  * Slider Section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _slider($module, $section_id, $section_classes)
 {
@@ -778,10 +778,10 @@ function _slider($module, $section_id, $section_classes)
 
 /**
  * Logo Slider Section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _logo_slider($module, $section_id, $section_classes)
 {
@@ -827,10 +827,10 @@ function _logo_slider($module, $section_id, $section_classes)
 
 /**
  * Text over cuved shape section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _text_over_curve_shape($module, $section_id, $section_classes)
 {
@@ -854,10 +854,10 @@ function _text_over_curve_shape($module, $section_id, $section_classes)
 
 /**
  * Image grid section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _image_grid($module, $section_id, $section_classes)
 {
@@ -906,10 +906,10 @@ function _image_grid($module, $section_id, $section_classes)
 
 /**
  * Icon box section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _icon_box($module, $section_id, $section_classes)
 {
@@ -1002,10 +1002,10 @@ function _icon_box($module, $section_id, $section_classes)
 
 /**
  * Instagram feed section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _instagram_feed($module, $section_id, $section_classes)
 {
@@ -1031,10 +1031,10 @@ function _instagram_feed($module, $section_id, $section_classes)
 
 /**
  * Careers section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _careers($module, $section_id, $section_classes)
 {
@@ -1058,10 +1058,10 @@ function _careers($module, $section_id, $section_classes)
 
 /**
  * Accordion Section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _accordion($module, $section_id, $section_classes)
 {
@@ -1131,10 +1131,10 @@ function _accordion($module, $section_id, $section_classes)
 
 /**
  * Form section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _form($module, $section_id, $section_classes)
 {
@@ -1189,10 +1189,10 @@ function _form($module, $section_id, $section_classes)
 
 /**
  * Map section
- * @param mixed $module
- * @param mixed $section_id
- * @param mixed $section_classes
- * @return string
+ * @param mixed $module [data]
+ * @param mixed $section_id [the section html id]
+ * @param mixed $section_classes [the section html classes]
+ * @return string [html markup]
  */
 function _map($module, $section_id, $section_classes)
 {
@@ -1261,7 +1261,7 @@ function ___button($data)
 /**
  * Function to display the glide slider items
  * @param mixed $items
- * @return string
+ * @return string [html markup]
  */
 function __glide_slider($items)
 {
