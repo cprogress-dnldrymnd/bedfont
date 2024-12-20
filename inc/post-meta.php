@@ -1,11 +1,10 @@
 <?php
-
 use Carbon_Fields\Block;
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
 
-
+/**Modules Template */
 Container::make('post_meta', 'Modules')
     ->where('post_template', '=', 'templates/page-modules.php')
     ->or_where('post_type', '=', 'layouts')
@@ -36,11 +35,11 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
-                        'style-1' => 'Style 1',
-                        'style-2' => 'Style 2[Youtube]',
+                        'style-1'       => 'Style 1',
+                        'style-2'       => 'Style 2[Youtube]',
                         'style-2-image' => 'Style 2[Image]',
-                        'style-3' => 'Style 3',
-                        'style-4' => 'Style 4',
+                        'style-3'       => 'Style 3',
+                        'style-4'       => 'Style 4',
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
@@ -52,12 +51,12 @@ Container::make('post_meta', 'Modules')
                         array(
                             'relation' => 'OR',
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-3',
+                                'field' => 'style',
+                                'value' => 'style-3',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2-image',
+                                'field' => 'style',
+                                'value' => 'style-2-image',
                             )
                         )
                     ),
@@ -65,8 +64,8 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -90,34 +89,34 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
                         array(
-                            'internal-url'        => 'Internal',
-                            'custom'      => 'Custom',
+                            'internal-url' => 'Internal',
+                            'custom'       => 'Custom',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
                 Field::make('select', 'button_style', __('Button Style'))
                     ->set_options(
                         array(
-                            'button-pink'        => 'Button Pink',
-                            'button-purple'      => 'Button Purple',
-                            'button-brown'      => 'Button Purple',
-                            'button-orange'      => 'Button Orange',
-                            'button-blue'      => 'Button BLue',
-                            'button-red'      => 'Button Red',
+                            'button-pink'   => 'Button Pink',
+                            'button-purple' => 'Button Purple',
+                            'button-brown'  => 'Button Purple',
+                            'button-orange' => 'Button Orange',
+                            'button-blue'   => 'Button BLue',
+                            'button-red'    => 'Button Red',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -125,8 +124,8 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
 
                         )
@@ -153,8 +152,8 @@ Container::make('post_meta', 'Modules')
                                 'compare' => '!='
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -178,8 +177,8 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     )
@@ -192,8 +191,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'image_position', __('Image Position'))
                     ->set_options(
                         array(
-                            ''      => 'Image on Right',
-                            'flex-row-reverse'      => 'Image on Left',
+                            ''                 => 'Image on Right',
+                            'flex-row-reverse' => 'Image on Left',
                         )
                     ),
                 Field::make('select', 'style', __('Style'))
@@ -209,37 +208,37 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
                         array(
-                            'purple'      => 'Style Purple',
+                            'purple'    => 'Style Purple',
                             'blue'      => 'Style Blue',
                             'pink'      => 'Style Pink',
-                            'red'      => 'Style Red',
-                            'orange'      => 'Style Orange',
-                            'brown'      => 'Style Brown Gradient',
-                            'dark-blue'      => 'Style Dark Blue',
+                            'red'       => 'Style Red',
+                            'orange'    => 'Style Orange',
+                            'brown'     => 'Style Brown Gradient',
+                            'dark-blue' => 'Style Dark Blue',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             'relation' => 'OR',
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-4',
+                                'field' => 'style',
+                                'value' => 'style-4',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-5',
+                                'field' => 'style',
+                                'value' => 'style-5',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-6',
+                                'field' => 'style',
+                                'value' => 'style-6',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-7',
+                                'field' => 'style',
+                                'value' => 'style-7',
                             )
                         )
                     ),
@@ -265,19 +264,19 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
                         array(
-                            'internal-url'        => 'Internal',
-                            'custom'      => 'Custom',
+                            'internal-url' => 'Internal',
+                            'custom'       => 'Custom',
                         )
                     ),
                 Field::make('select', 'button_style', __('Button Style'))
                     ->set_options(
                         array(
-                            'button-pink'        => 'Button Pink',
-                            'button-purple'      => 'Button Purple',
-                            'button-brown'      => 'Button Purple',
-                            'button-orange'      => 'Button Orange',
-                            'button-blue'      => 'Button BLue',
-                            'button-red'      => 'Button Red',
+                            'button-pink'   => 'Button Pink',
+                            'button-purple' => 'Button Purple',
+                            'button-brown'  => 'Button Purple',
+                            'button-orange' => 'Button Orange',
+                            'button-blue'   => 'Button BLue',
+                            'button-red'    => 'Button Red',
                         )
                     ),
                 Field::make('text', 'button_text', __('Button Text')),
@@ -327,22 +326,22 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'text_align', __('Text Align'))
                     ->set_options(
                         array(
-                            'text-center'      => 'Default/Center',
-                            'text-left'      => 'Left',
-                            'text-right'      => 'Right',
+                            'text-center' => 'Default/Center',
+                            'text-left'   => 'Left',
+                            'text-right'  => 'Right',
                         )
                     ),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
                         array(
-                            ''      => 'Default',
-                            'purple'      => 'Style Purple',
-                            'blue'      => 'Style Blue',
-                            'pink'      => 'Style Pink',
-                            'red'      => 'Style Red',
-                            'orange'      => 'Style Orange',
-                            'brown'      => 'Style Brown Gradient',
-                            'green'      => 'Style Green',
+                            ''       => 'Default',
+                            'purple' => 'Style Purple',
+                            'blue'   => 'Style Blue',
+                            'pink'   => 'Style Pink',
+                            'red'    => 'Style Red',
+                            'orange' => 'Style Orange',
+                            'brown'  => 'Style Brown Gradient',
+                            'green'  => 'Style Green',
                         )
                     ),
                 Field::make('text', 'heading', __('Heading')),
@@ -369,19 +368,19 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
-                                    'purple'      => 'Style Purple',
-                                    'blue'      => 'Style Blue',
-                                    'pink'      => 'Style Pink',
-                                    'red'      => 'Style Red',
-                                    'orange'      => 'Style Orange',
-                                    'brown'      => 'Style Brown Gradient',
+                                    'purple' => 'Style Purple',
+                                    'blue'   => 'Style Blue',
+                                    'pink'   => 'Style Pink',
+                                    'red'    => 'Style Red',
+                                    'orange' => 'Style Orange',
+                                    'brown'  => 'Style Brown Gradient',
                                 )
                             ),
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
-                                    ''      => 'Image on Right',
-                                    'flex-row-reverse'      => 'Image on Left',
+                                    ''                 => 'Image on Right',
+                                    'flex-row-reverse' => 'Image on Left',
                                 )
                             ),
                         Field::make('text', 'heading', __('Heading')),
@@ -391,8 +390,8 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'button_type', __('Button Type'))
                             ->set_options(
                                 array(
-                                    'internal-url'        => 'Internal',
-                                    'custom'      => 'Custom',
+                                    'internal-url' => 'Internal',
+                                    'custom'       => 'Custom',
                                 )
                             ),
                         Field::make('text', 'button_text', __('Button Text')),
@@ -467,31 +466,31 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
-                                    'style-1'      => 'Style 1',
-                                    'style-2'      => 'Style 2',
+                                    'style-1' => 'Style 1',
+                                    'style-2' => 'Style 2',
                                 )
                             ),
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
-                                    ''      => 'Default',
-                                    'purple'      => 'Style Purple',
-                                    'blue'      => 'Style Blue',
-                                    'pink'      => 'Style Pink',
-                                    'red'      => 'Style Red',
-                                    'orange'      => 'Style Orange',
+                                    ''           => 'Default',
+                                    'purple'     => 'Style Purple',
+                                    'blue'       => 'Style Blue',
+                                    'pink'       => 'Style Pink',
+                                    'red'        => 'Style Red',
+                                    'orange'     => 'Style Orange',
                                     'brown'      => 'Style Brown Gradient',
-                                    'dark-blue'      => 'Style Dark Blue',
-                                    'dark-green'      => 'Style Dark Green',
+                                    'dark-blue'  => 'Style Dark Blue',
+                                    'dark-green' => 'Style Dark Green',
                                     'green'      => 'Style Green',
-                                    'yellow'      => 'Style Yellow',
+                                    'yellow'     => 'Style Yellow',
                                 )
                             )
                             ->set_conditional_logic(
                                 array(
                                     array(
-                                        'field'   => 'style',
-                                        'value'   => 'style-2',
+                                        'field' => 'style',
+                                        'value' => 'style-2',
                                     )
                                 )
                             ),
@@ -531,8 +530,8 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'button_type', __('Button Type'))
                             ->set_options(
                                 array(
-                                    'internal-url'        => 'Internal',
-                                    'custom'      => 'Custom',
+                                    'internal-url' => 'Internal',
+                                    'custom'       => 'Custom',
                                 )
                             ),
                         Field::make('text', 'button_text', __('Button Text')),
