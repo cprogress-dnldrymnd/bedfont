@@ -214,6 +214,19 @@ Container::make('post_meta', 'Modules')
             //_two_column_image_text_6();
             //_two_column_image_text_7();
             ->add_fields('two_column_image_text', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'image_position', __('Image Position'))
@@ -349,6 +362,19 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Two Column Image and Text: <%- heading %>')
             ->add_fields('text', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'text_align', __('Text Align'))
@@ -380,6 +406,19 @@ Container::make('post_meta', 'Modules')
             //_text();
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('two_column_text', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading_1', __('Heading Col 1'))->set_width(50),
@@ -393,6 +432,19 @@ Container::make('post_meta', 'Modules')
 
             //_row_animation();
             ->add_fields('row_animation', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
@@ -475,6 +527,19 @@ Container::make('post_meta', 'Modules')
 
             //_blogs();
             ->add_fields('blogs', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
@@ -485,6 +550,19 @@ Container::make('post_meta', 'Modules')
 
             //_logo_slider();
             ->add_fields('logo_slider', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
@@ -496,6 +574,19 @@ Container::make('post_meta', 'Modules')
 
             //_slider();
             ->add_fields('slider', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
@@ -554,6 +645,19 @@ Container::make('post_meta', 'Modules')
 
             //_text_over_curve_shape();
             ->add_fields('text_over_curve_shape', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
@@ -564,6 +668,19 @@ Container::make('post_meta', 'Modules')
 
             //_image_grid();
             ->add_fields('image_grid', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'title', __('Title')),
@@ -625,6 +742,19 @@ Container::make('post_meta', 'Modules')
 
             //_icon_box();
             ->add_fields('icon_box', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
@@ -651,6 +781,19 @@ Container::make('post_meta', 'Modules')
 
             //_instagram_feed();
             ->add_fields('instagram_feed', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
@@ -662,6 +805,19 @@ Container::make('post_meta', 'Modules')
 
             //_careers();
             ->add_fields('careers', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('text', 'heading', __('Heading')),
@@ -671,6 +827,19 @@ Container::make('post_meta', 'Modules')
 
             //_accordion();
             ->add_fields('accordion', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('image', 'image', __('Image')),
@@ -696,6 +865,19 @@ Container::make('post_meta', 'Modules')
 
             //_form();
             ->add_fields('form', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
@@ -711,6 +893,19 @@ Container::make('post_meta', 'Modules')
 
             //_map();
             ->add_fields('map', array(
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(15),
+                        Field::make('complex', 'css_properties', __('Properties'))->set_width(85)
+                            ->add_fields(array(
+                                Field::make('text', 'css_property', __('Property'))->set_width(33),
+                                Field::make('text', 'css_value', __('Value'))->set_width(33),
+                            ))
+                            ->set_collapsed(true)
+                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                    ))
+                    ->set_header_template('<%- css_selector %>')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'title', __('Title')),
                 Field::make('textarea', 'map_src', __('MAP SRC')),
             ))
