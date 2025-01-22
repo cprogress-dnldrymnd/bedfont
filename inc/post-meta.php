@@ -43,9 +43,9 @@ Container::make('post_meta', 'Modules')
             ->add_fields('hero', array(
                 Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
                     ->add_fields(array(
-                        Field::make('text', 'selector', __('Selector')),
-                        Field::make('text', 'property', __('Property')),
-                        Field::make('text', 'value', __('Value')),
+                        Field::make('text', 'css_selector', __('Selector')),
+                        Field::make('text', 'css_property', __('Property')),
+                        Field::make('text', 'css_value', __('Value')),
                     )),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
