@@ -1,5 +1,7 @@
 <?php
+
 /**Carbonfields Documentation: https://docs.carbonfields.net/ */
+
 use Carbon_Fields\Block;
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
@@ -39,7 +41,12 @@ Container::make('post_meta', 'Modules')
             //__hero_style_3();
             //__hero_style_4();
             ->add_fields('hero', array(
-                Field::make('textarea', 'custom_css', __('Section Custom CSS'))->set_width(100),
+                Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
+                    ->add_fields(array(
+                        Field::make('text', 'selector', __('Selector')),
+                        Field::make('text', 'property', __('Property')),
+                        Field::make('text', 'value', __('Value')),
+                    )),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
