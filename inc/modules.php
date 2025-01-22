@@ -52,8 +52,8 @@ function action_modules_custom_css()
             echo "$section_id_default $css_selector {";
             if ($css_selector) {
                 foreach ($css_properties as $css_prop) {
-                    $css_property = $css['css_property'];
-                    $css_value = $css['css_value'];
+                    $css_property = $css_prop['css_property'];
+                    $css_value = $css_prop['css_value'];
                     if ($css_property && $css_value) {
                         echo "$css_property : $css_value };";
                     }
