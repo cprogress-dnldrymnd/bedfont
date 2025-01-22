@@ -55,7 +55,7 @@ function action_modules_custom_css()
                     $css_property = $css_prop['css_property'];
                     $css_value = $css_prop['css_value'];
                     if ($css_property && $css_value) {
-                        echo "$css_property : $css_value };";
+                        echo "$css_property : $css_value ;";
                     }
                 }
             }
