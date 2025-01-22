@@ -35,12 +35,10 @@ add_action('shutdown', 'action_module_content');
  * @return string [html markup]
  * return value is the html markup.
  */
-function action_modules_custom_css()
+function get_custom_css($id = false)
 {
-    $id = get_the_ID();
+    $id = ($id != false) ? $id : get_the_ID();
     $modules = get__post_meta_by_id($id, 'modules');
-
-    echo '<style id="custom-css">';
     foreach ($modules as $key => $module) {
         $type = $module['_type'];
         $custom_css = $module['custom_css'];
@@ -49,21 +47,28 @@ function action_modules_custom_css()
             $css_selector = $css['css_selector'];
             $css_properties = $css['css_properties'];
 
-            echo "$section_id_default $css_selector {";
+            $html =  "$section_id_default $css_selector {";
             if ($css_selector) {
                 foreach ($css_properties as $css_prop) {
                     $css_property = $css_prop['css_property'];
                     $css_value = $css_prop['css_value'];
                     if ($css_property && $css_value) {
-                        echo "$css_property : $css_value ;";
+                        $html .=  "$css_property : $css_value ;";
                     }
                 }
             }
-            echo "}";
+            $html .= "}";
         }
     }
-    echo '</style>';
+}
 
+function action_modules_custom_css()
+{
+
+
+    echo '<style id="custom-css">';
+    echo get_custom_css();
+    echo '</style>';
 
 ?>
     <?php
