@@ -49,7 +49,7 @@ Container::make('post_meta', 'Modules')
                                 Field::make('text', 'css_property', __('Property'))->set_width(33),
                                 Field::make('text', 'css_value', __('Value'))->set_width(33),
                             ))
-                            ->set_header_template('<%- css_property %> : <%- css_value %>'),
+                            ->set_header_template('<%- parent.css_selector %> { <%- css_property %> : <%- css_value %> }'),
                     ))
                     ->set_header_template('<%- css_selector %>')
                     ->set_layout('tabbed-vertical'),
