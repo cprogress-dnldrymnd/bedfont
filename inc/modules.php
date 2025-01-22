@@ -168,7 +168,7 @@ function _hero_style_1($module, $section_id, $section_classes)
         $style = "style='background-image: $bg'";
     }
 
-    return "<section id='home_bg' class='hero-style-1 $section_classes' id='$section_id' $style>
+    return "<section id='home_bg' class='hero-style-1 $section_classes $section_id' $style>
     <div class='container '>
         <div class='row'>
             <div class='col-12 col-lg-6 my-auto d-block order-2 order-lg-1'>
