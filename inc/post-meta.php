@@ -1,11 +1,12 @@
 <?php
-
+/**Carbonfields Documentation: https://docs.carbonfields.net/ */
 use Carbon_Fields\Block;
 use Carbon_Fields\Container;
 use Carbon_Fields\Complex_Container;
 use Carbon_Fields\Field;
 
-
+/**Modules Template */
+//_modules();
 Container::make('post_meta', 'Modules')
     ->where('post_template', '=', 'templates/page-modules.php')
     ->or_where('post_type', '=', 'layouts')
@@ -18,6 +19,7 @@ Container::make('post_meta', 'Modules')
                     'singular_name' => 'Module',
                 )
             )
+            //_layouts();
             ->add_fields('layouts', array(
                 Field::make('text', 'title', 'Title'),
                 Field::make('association', 'layouts', 'Select Layouts')
@@ -31,21 +33,25 @@ Container::make('post_meta', 'Modules')
                     )
             ))
             ->set_header_template('Layout: <%- title %>')
+
+            //__hero_style_1();
+            //__hero_style_2();
+            //__hero_style_3();
+            //__hero_style_4();
             ->add_fields('hero', array(
                 Field::make('textarea', 'custom_css', __('Section Custom CSS'))->set_width(100),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
                     ->set_options(array(
-                        'style-1' => 'Style 1',
-                        'style-2' => 'Style 2[Youtube]',
+                        'style-1'       => 'Style 1',
+                        'style-2'       => 'Style 2[Youtube]',
                         'style-2-image' => 'Style 2[Image]',
-                        'style-3' => 'Style 3',
-                        'style-4' => 'Style 4',
+                        'style-3'       => 'Style 3',
+                        'style-4'       => 'Style 4',
                     )),
 
                 Field::make('text', 'heading', __('Heading')),
-
                 Field::make('textarea', 'subheading', __('Subheading')),
                 Field::make('textarea', 'description', __('Description')),
                 Field::make('image', 'image', __('Image'))
@@ -53,12 +59,12 @@ Container::make('post_meta', 'Modules')
                         array(
                             'relation' => 'OR',
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-3',
+                                'field' => 'style',
+                                'value' => 'style-3',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2-image',
+                                'field' => 'style',
+                                'value' => 'style-2-image',
                             )
                         )
                     ),
@@ -66,8 +72,8 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -91,34 +97,34 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
                         array(
-                            'internal-url'        => 'Internal',
-                            'custom'      => 'Custom',
+                            'internal-url' => 'Internal',
+                            'custom'       => 'Custom',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
                 Field::make('select', 'button_style', __('Button Style'))
                     ->set_options(
                         array(
-                            'button-pink'        => 'Button Pink',
-                            'button-purple'      => 'Button Purple',
-                            'button-brown'      => 'Button Purple',
-                            'button-orange'      => 'Button Orange',
-                            'button-blue'      => 'Button BLue',
-                            'button-red'      => 'Button Red',
+                            'button-pink'   => 'Button Pink',
+                            'button-purple' => 'Button Purple',
+                            'button-brown'  => 'Button Purple',
+                            'button-orange' => 'Button Orange',
+                            'button-blue'   => 'Button BLue',
+                            'button-red'    => 'Button Red',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -126,8 +132,8 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
 
                         )
@@ -154,8 +160,8 @@ Container::make('post_meta', 'Modules')
                                 'compare' => '!='
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     ),
@@ -179,22 +185,28 @@ Container::make('post_meta', 'Modules')
                     ->set_conditional_logic(
                         array(
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             )
                         )
                     )
 
             ))
             ->set_header_template('Hero: <%- heading %>')
+
+            //_two_column_image_text();
+            //_two_column_image_text_4();
+            //_two_column_image_text_5();
+            //_two_column_image_text_6();
+            //_two_column_image_text_7();
             ->add_fields('two_column_image_text', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'image_position', __('Image Position'))
                     ->set_options(
                         array(
-                            ''      => 'Image on Right',
-                            'flex-row-reverse'      => 'Image on Left',
+                            ''                 => 'Image on Right',
+                            'flex-row-reverse' => 'Image on Left',
                         )
                     ),
                 Field::make('select', 'style', __('Style'))
@@ -210,37 +222,37 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
                         array(
-                            'purple'      => 'Style Purple',
+                            'purple'    => 'Style Purple',
                             'blue'      => 'Style Blue',
                             'pink'      => 'Style Pink',
-                            'red'      => 'Style Red',
-                            'orange'      => 'Style Orange',
-                            'brown'      => 'Style Brown Gradient',
-                            'dark-blue'      => 'Style Dark Blue',
+                            'red'       => 'Style Red',
+                            'orange'    => 'Style Orange',
+                            'brown'     => 'Style Brown Gradient',
+                            'dark-blue' => 'Style Dark Blue',
                         )
                     )
                     ->set_conditional_logic(
                         array(
                             'relation' => 'OR',
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-2',
+                                'field' => 'style',
+                                'value' => 'style-2',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-4',
+                                'field' => 'style',
+                                'value' => 'style-4',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-5',
+                                'field' => 'style',
+                                'value' => 'style-5',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-6',
+                                'field' => 'style',
+                                'value' => 'style-6',
                             ),
                             array(
-                                'field'   => 'style',
-                                'value'   => 'style-7',
+                                'field' => 'style',
+                                'value' => 'style-7',
                             )
                         )
                     ),
@@ -266,19 +278,19 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'button_type', __('Button Type'))
                     ->set_options(
                         array(
-                            'internal-url'        => 'Internal',
-                            'custom'      => 'Custom',
+                            'internal-url' => 'Internal',
+                            'custom'       => 'Custom',
                         )
                     ),
                 Field::make('select', 'button_style', __('Button Style'))
                     ->set_options(
                         array(
-                            'button-pink'        => 'Button Pink',
-                            'button-purple'      => 'Button Purple',
-                            'button-brown'      => 'Button Purple',
-                            'button-orange'      => 'Button Orange',
-                            'button-blue'      => 'Button BLue',
-                            'button-red'      => 'Button Red',
+                            'button-pink'   => 'Button Pink',
+                            'button-purple' => 'Button Purple',
+                            'button-brown'  => 'Button Purple',
+                            'button-orange' => 'Button Orange',
+                            'button-blue'   => 'Button BLue',
+                            'button-red'    => 'Button Red',
                         )
                     ),
                 Field::make('text', 'button_text', __('Button Text')),
@@ -328,28 +340,30 @@ Container::make('post_meta', 'Modules')
                 Field::make('select', 'text_align', __('Text Align'))
                     ->set_options(
                         array(
-                            'text-center'      => 'Default/Center',
-                            'text-left'      => 'Left',
-                            'text-right'      => 'Right',
+                            'text-center' => 'Default/Center',
+                            'text-left'   => 'Left',
+                            'text-right'  => 'Right',
                         )
                     ),
                 Field::make('select', 'color', __('Color'))
                     ->set_options(
                         array(
-                            ''      => 'Default',
-                            'purple'      => 'Style Purple',
-                            'blue'      => 'Style Blue',
-                            'pink'      => 'Style Pink',
-                            'red'      => 'Style Red',
-                            'orange'      => 'Style Orange',
-                            'brown'      => 'Style Brown Gradient',
-                            'green'      => 'Style Green',
+                            ''       => 'Default',
+                            'purple' => 'Style Purple',
+                            'blue'   => 'Style Blue',
+                            'pink'   => 'Style Pink',
+                            'red'    => 'Style Red',
+                            'orange' => 'Style Orange',
+                            'brown'  => 'Style Brown Gradient',
+                            'green'  => 'Style Green',
                         )
                     ),
                 Field::make('text', 'heading', __('Heading')),
                 Field::make('textarea', 'description', __('Description')),
 
             ))
+
+            //_text();
             ->set_header_template('Text: <%- heading %>')
             ->add_fields('two_column_text', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
@@ -359,7 +373,11 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'description_1', __('Description Col 1'))->set_width(50),
                 Field::make('textarea', 'description_2', __('Description Col 2'))->set_width(50),
             ))
+
+            //_two_column_text();
             ->set_header_template('Two Column Text: <%- heading_1 %>')
+
+            //_row_animation();
             ->add_fields('row_animation', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -370,19 +388,19 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
-                                    'purple'      => 'Style Purple',
-                                    'blue'      => 'Style Blue',
-                                    'pink'      => 'Style Pink',
-                                    'red'      => 'Style Red',
-                                    'orange'      => 'Style Orange',
-                                    'brown'      => 'Style Brown Gradient',
+                                    'purple' => 'Style Purple',
+                                    'blue'   => 'Style Blue',
+                                    'pink'   => 'Style Pink',
+                                    'red'    => 'Style Red',
+                                    'orange' => 'Style Orange',
+                                    'brown'  => 'Style Brown Gradient',
                                 )
                             ),
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
-                                    ''      => 'Image on Right',
-                                    'flex-row-reverse'      => 'Image on Left',
+                                    ''                 => 'Image on Right',
+                                    'flex-row-reverse' => 'Image on Left',
                                 )
                             ),
                         Field::make('text', 'heading', __('Heading')),
@@ -392,8 +410,8 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'button_type', __('Button Type'))
                             ->set_options(
                                 array(
-                                    'internal-url'        => 'Internal',
-                                    'custom'      => 'Custom',
+                                    'internal-url' => 'Internal',
+                                    'custom'       => 'Custom',
                                 )
                             ),
                         Field::make('text', 'button_text', __('Button Text')),
@@ -440,6 +458,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Row Animation: <%- title %>')
+
+            //_blogs();
             ->add_fields('blogs', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -448,6 +468,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Blogs: <%- heading %>')
+
+            //_logo_slider();
             ->add_fields('logo_slider', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -457,6 +479,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Logo Slider: <%- heading %>')
+
+            //_slider();
             ->add_fields('slider', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -468,31 +492,31 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'style', __('Style'))
                             ->set_options(
                                 array(
-                                    'style-1'      => 'Style 1',
-                                    'style-2'      => 'Style 2',
+                                    'style-1' => 'Style 1',
+                                    'style-2' => 'Style 2',
                                 )
                             ),
                         Field::make('select', 'color', __('Color'))
                             ->set_options(
                                 array(
-                                    ''      => 'Default',
-                                    'purple'      => 'Style Purple',
-                                    'blue'      => 'Style Blue',
-                                    'pink'      => 'Style Pink',
-                                    'red'      => 'Style Red',
-                                    'orange'      => 'Style Orange',
+                                    ''           => 'Default',
+                                    'purple'     => 'Style Purple',
+                                    'blue'       => 'Style Blue',
+                                    'pink'       => 'Style Pink',
+                                    'red'        => 'Style Red',
+                                    'orange'     => 'Style Orange',
                                     'brown'      => 'Style Brown Gradient',
-                                    'dark-blue'      => 'Style Dark Blue',
-                                    'dark-green'      => 'Style Dark Green',
+                                    'dark-blue'  => 'Style Dark Blue',
+                                    'dark-green' => 'Style Dark Green',
                                     'green'      => 'Style Green',
-                                    'yellow'      => 'Style Yellow',
+                                    'yellow'     => 'Style Yellow',
                                 )
                             )
                             ->set_conditional_logic(
                                 array(
                                     array(
-                                        'field'   => 'style',
-                                        'value'   => 'style-2',
+                                        'field' => 'style',
+                                        'value' => 'style-2',
                                     )
                                 )
                             ),
@@ -513,6 +537,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Slider: <%- heading %>')
+
+            //_text_over_curve_shape();
             ->add_fields('text_over_curve_shape', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -521,6 +547,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'description', __('Description')),
             ))
             ->set_header_template('Text Over Curved Shape: <%- title %>')
+
+            //_image_grid();
             ->add_fields('image_grid', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -532,8 +560,8 @@ Container::make('post_meta', 'Modules')
                         Field::make('select', 'button_type', __('Button Type'))
                             ->set_options(
                                 array(
-                                    'internal-url'        => 'Internal',
-                                    'custom'      => 'Custom',
+                                    'internal-url' => 'Internal',
+                                    'custom'       => 'Custom',
                                 )
                             ),
                         Field::make('text', 'button_text', __('Button Text')),
@@ -580,6 +608,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Image Grid: <%- title %>')
+
+            //_icon_box();
             ->add_fields('icon_box', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -604,6 +634,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Icon Box: <%- heading %>')
+
+            //_instagram_feed();
             ->add_fields('instagram_feed', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -613,6 +645,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Instagram Feed: <%- heading %>')
+
+            //_careers();
             ->add_fields('careers', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -620,6 +654,8 @@ Container::make('post_meta', 'Modules')
                 Field::make('text', 'subheading', __('Subheading')),
             ))
             ->set_header_template('Careers: <%- heading %>')
+
+            //_accordion();
             ->add_fields('accordion', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -643,6 +679,8 @@ Container::make('post_meta', 'Modules')
 
             ))
             ->set_header_template('Accordion: <%- heading %>')
+
+            //_form();
             ->add_fields('form', array(
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
@@ -656,16 +694,17 @@ Container::make('post_meta', 'Modules')
                 Field::make('textarea', 'form_script', __('Form Script')),
             ))
             ->set_header_template('Form: <%- heading %>')
+
+            //_map();
             ->add_fields('map', array(
                 Field::make('text', 'title', __('Title')),
                 Field::make('textarea', 'map_src', __('MAP SRC')),
             ))
             ->set_header_template('Map: <%- title %>')
 
-
     ));
 
-
+/**Careers Post Type Custom Fields */
 Container::make('post_meta', 'Career Settings')
     ->or_where('post_type', '=', 'careers')
     ->add_fields(array(
@@ -673,7 +712,10 @@ Container::make('post_meta', 'Career Settings')
         Field::make('file', 'job_spec', __('Job Spec')),
     ));
 
-
+/**Theme Options
+ * Admin Post Type: URL /wp-admin/admin.php?page=crb_carbon_fields_container_theme_settings.php
+ * 
+ */
 Container::make('theme_options', __('Theme Settings'))
     ->add_tab('General Settings', array(
         Field::make('text', 'tel', __('Telephone')),

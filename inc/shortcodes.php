@@ -1,4 +1,9 @@
 <?php
+/**
+ * Get url of post by id
+ * @param mixed $atts
+ * @return mixed
+ */
 function permalink($atts)
 {
     extract(
@@ -12,18 +17,25 @@ function permalink($atts)
     $lang_id = apply_filters('wpml_object_id', $id, 'post');
     if ($lang_id) {
         $final_id = $lang_id;
-    } else {
+    }
+    else {
         $final_id = $id;
     }
     return get_the_permalink($final_id);
 }
 add_shortcode('permalink', 'permalink');
+
+/**
+ * Blogs shortcode
+ * @param mixed $atts
+ * @return string
+ */
 function blogs($atts)
 {
     extract(
         shortcode_atts(
             array(
-                'source' => '',
+                'source'      => '',
                 'numberposts' => 3,
             ),
             $atts
@@ -45,15 +57,20 @@ function blogs($atts)
     foreach ($posts as $post) {
         $html .= _post_grid($post);
     }
-    $html  .= "</ul>";
-    $html  .= "<div>";
-    $html  .= "<div>";
+    $html .= "</ul>";
+    $html .= "<div>";
+    $html .= "<div>";
 
     return $html;
 }
 
 add_shortcode('blogs', 'blogs');
 
+/**
+ * Post Grid Function to display each blog item
+ * @param mixed $post
+ * @return mixed
+ */
 function _post_grid($post)
 {
     $post_id = $post->ID;
@@ -78,6 +95,12 @@ function _post_grid($post)
     return do_shortcode($html);
 }
 
+/**
+ * Layouts shortcode which can be use globally to display across the website
+ * Admin Post Type: URL /wp-admin/edit.php?post_type=layouts
+ * @param mixed $atts
+ * @return mixed
+ */
 function layouts($atts)
 {
     extract(
@@ -91,18 +114,23 @@ function layouts($atts)
     $lang_id = apply_filters('wpml_object_id', $id, 'post');
     if ($lang_id) {
         $final_id = $lang_id;
-    } else {
+    }
+    else {
         $final_id = $id;
     }
     return do_shortcode(get_the_content(NULL, false, $final_id));
 }
 add_shortcode('layouts', 'layouts');
 
+/**
+ * Careers shortcode to display them in accordion
+ * @return string
+ */
 function careers()
 {
     $jobs = get_posts(array(
-        'post_type' => 'careers',
-        'numberposts' => -1,
+        'post_type'        => 'careers',
+        'numberposts'      => -1,
         'suppress_filters' => false
     ));
     $html = "<div class='job-holder'>";
@@ -151,6 +179,13 @@ function careers()
 add_shortcode('careers', 'careers');
 
 
+/**
+ * Contact details shortcodes which data is from the custom field theme_options
+ * Admin Post Type: URL /wp-admin/admin.php?page=crb_carbon_fields_container_theme_settings.php
+ * 
+ * @param mixed $atts
+ * @return string
+ */
 function contact_details($atts)
 {
     extract(
@@ -176,7 +211,8 @@ function contact_details($atts)
         if ($email) {
             $html .= "<p><strong>Email: </strong>$email</p>";
         }
-    } else {
+    }
+    else {
         if ($tel) {
             $html .= "<p class='mt-5'><strong>Tel: </strong>$tel</p>";
         }
@@ -195,12 +231,19 @@ function contact_details($atts)
 
 add_shortcode('contact_details', 'contact_details');
 
+/**
+ * Socials shortcode which data is from the custom field theme_options
+ * Admin Post Type: URL /wp-admin/admin.php?page=crb_carbon_fields_container_theme_settings.php
+ * 
+ * @param mixed $atts
+ * @return string
+ */
 function socials($atts)
 {
     extract(
         shortcode_atts(
             array(
-                'class' => 'socials d-inline-block mt-5',
+                'class'      => 'socials d-inline-block mt-5',
                 'item_class' => 'nav-social-icon'
             ),
             $atts
@@ -225,6 +268,11 @@ function socials($atts)
 }
 add_shortcode('socials', 'socials');
 
+/**
+ * Button shortcode to display a button dynamically
+ * @param mixed $atts
+ * @return mixed
+ */
 function button($atts)
 {
     extract(
