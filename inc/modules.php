@@ -60,6 +60,7 @@ function get_custom_css($id = false)
             $html .= "}";
         }
     }
+    return $html;
 }
 
 function action_modules_custom_css()
