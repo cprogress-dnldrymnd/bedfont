@@ -32,6 +32,7 @@ Container::make('post_meta', 'Modules')
             ))
             ->set_header_template('Layout: <%- title %>')
             ->add_fields('hero', array(
+                Field::make('textarea', 'custom_css', __('Section Custom CSS'))->set_width(100),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
