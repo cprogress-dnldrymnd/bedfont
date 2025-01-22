@@ -35,7 +35,7 @@ add_action('shutdown', 'action_module_content');
  * @return string [html markup]
  * return value is the html markup.
  */
-function get_custom_css($id = false)
+function get_custom_css($id = false, $css = '')
 {
     $id = ($id != false) ? $id : get_the_ID();
     $modules = get__post_meta_by_id($id, 'modules');
@@ -47,20 +47,20 @@ function get_custom_css($id = false)
             $css_selector = $css['css_selector'];
             $css_properties = $css['css_properties'];
 
-            $html =  "$section_id_default $css_selector {";
+            $css .=  "$section_id_default $css_selector {";
             if ($css_selector) {
                 foreach ($css_properties as $css_prop) {
                     $css_property = $css_prop['css_property'];
                     $css_value = $css_prop['css_value'];
                     if ($css_property && $css_value) {
-                        $html .=  "$css_property : $css_value ;";
+                        $css .=  "$css_property : $css_value ;";
                     }
                 }
             }
-            $html .= "}";
+            $css .= "}";
         }
     }
-    return $html;
+    return $css;
 }
 
 function action_modules_custom_css()
