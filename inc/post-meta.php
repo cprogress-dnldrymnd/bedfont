@@ -43,7 +43,7 @@ Container::make('post_meta', 'Modules')
             ->add_fields('hero', array(
                 Field::make('complex', 'custom_css', __('Section Custom CSS'))->set_width(100)
                     ->add_fields(array(
-                        Field::make('text', 'css_selector', __('Selector'))->set_width(33),
+                        Field::make('text', 'css_selector', __('Selector'))->set_width(100),
                         Field::make('complex', 'css_properties', __('Properties'))->set_width(100)
                             ->add_fields(array(
                                 Field::make('text', 'css_property', __('Property'))->set_width(33),
@@ -51,7 +51,8 @@ Container::make('post_meta', 'Modules')
                             ))
                             ->set_header_template('<%- css_selector %> { <%- css_property %> : <%- css_value %> }'),
                     ))
-                    ->set_header_template('<%- css_selector %> { <%- css_property %> : <%- css_value %> }'),
+                    ->set_header_template('<%- css_selector %> { <%- css_property %> : <%- css_value %> }')
+                    ->set_layout('tabbed-vertical'),
                 Field::make('text', 'section_id', __('Section ID'))->set_width(50),
                 Field::make('text', 'section_classes', __('Section Classes'))->set_width(50),
                 Field::make('select', 'style', __('Style'))
