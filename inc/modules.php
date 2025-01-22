@@ -47,11 +47,19 @@ function action_modules_custom_css()
         $section_id_default = ".module-$id-$type-$key";
         foreach ($custom_css as $css) {
             $css_selector = $css['css_selector'];
-            $css_property = $css['css_property'];
-            $css_value = $css['css_value'];
-            if ($css_selector && $css_property && $css_value) {
-                echo "$section_id_default $css_selector { $css_property : $css_value }";
+            $css_properties = $css['css_properties'];
+
+            echo "$section_id_default $css_selector {";
+            if ($css_selector) {
+                foreach ($css_properties as $css_prop) {
+                    $css_property = $css['css_property'];
+                    $css_value = $css['css_value'];
+                    if ($css_property && $css_value) {
+                        echo "$css_property : $css_value };";
+                    }
+                }
             }
+            echo "}";
         }
     }
     echo '</style>';
