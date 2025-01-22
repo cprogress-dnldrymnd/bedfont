@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Update the_content of the page created via Modules Template
  * @return void
@@ -54,78 +55,71 @@ function modules($id)
             case 'hero':
                 $style = $module['style'];
                 if ($style == 'style-1') {
-                    $html .= _hero_style_1($module, $section_id, $section_classes);
-                }
-                else if ($style == 'style-2' || $style == 'style-2-image') {
-                    $html .= _hero_style_2($module, $section_id, $section_classes);
-                }
-                else if ($style == 'style-3') {
-                    $html .= _hero_style_3($module, $section_id, $section_classes);
-                }
-                else {
-                    $html .= _hero_style_4($module, $section_id, $section_classes);
+                    $html .= _hero_style_1($module, $section_id, $section_classes, $section_id_default);
+                } else if ($style == 'style-2' || $style == 'style-2-image') {
+                    $html .= _hero_style_2($module, $section_id, $section_classes, $section_id_default);
+                } else if ($style == 'style-3') {
+                    $html .= _hero_style_3($module, $section_id, $section_classes, $section_id_default);
+                } else {
+                    $html .= _hero_style_4($module, $section_id, $section_classes, $section_id_default);
                 }
                 break;
             case 'two_column_image_text':
                 $style = $module['style'];
                 if ($style == 'style-4') {
-                    $html .= _two_column_image_text_style_4($module, $section_id, $section_classes);
-                }
-                else if ($style == 'style-5') {
-                    $html .= _two_column_image_text_style_5($module, $section_id, $section_classes);
-                }
-                else if ($style == 'style-6') {
-                    $html .= _two_column_image_text_style_6($module, $section_id, $section_classes);
-                }
-                else if ($style == 'style-7') {
-                    $html .= _two_column_image_text_style_7($module, $section_id, $section_classes);
-                }
-                else {
-                    $html .= _two_column_image_text($module, $section_id, $section_classes);
+                    $html .= _two_column_image_text_style_4($module, $section_id, $section_classes, $section_id_default);
+                } else if ($style == 'style-5') {
+                    $html .= _two_column_image_text_style_5($module, $section_id, $section_classes, $section_id_default);
+                } else if ($style == 'style-6') {
+                    $html .= _two_column_image_text_style_6($module, $section_id, $section_classes, $section_id_default);
+                } else if ($style == 'style-7') {
+                    $html .= _two_column_image_text_style_7($module, $section_id, $section_classes, $section_id_default);
+                } else {
+                    $html .= _two_column_image_text($module, $section_id, $section_classes, $section_id_default);
                 }
 
                 break;
             case 'text':
-                $html .= _text($module, $section_id, $section_classes);
+                $html .= _text($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'two_column_text':
-                $html .= _two_column_text($module, $section_id, $section_classes);
+                $html .= _two_column_text($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'row_animation':
-                $html .= _row_animation($module, $section_id, $section_classes);
+                $html .= _row_animation($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'blogs':
-                $html .= _blogs($module, $section_id, $section_classes);
+                $html .= _blogs($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'slider':
-                $html .= _slider($module, $section_id, $section_classes);
+                $html .= _slider($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'text_over_curve_shape':
-                $html .= _text_over_curve_shape($module, $section_id, $section_classes);
+                $html .= _text_over_curve_shape($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'image_grid':
-                $html .= _image_grid($module, $section_id, $section_classes);
+                $html .= _image_grid($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'icon_box':
-                $html .= _icon_box($module, $section_id, $section_classes);
+                $html .= _icon_box($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'instagram_feed':
-                $html .= _instagram_feed($module, $section_id, $section_classes);
+                $html .= _instagram_feed($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'logo_slider':
-                $html .= _logo_slider($module, $section_id, $section_classes);
+                $html .= _logo_slider($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'careers':
-                $html .= _careers($module, $section_id, $section_classes);
+                $html .= _careers($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'accordion':
-                $html .= _accordion($module, $section_id, $section_classes);
+                $html .= _accordion($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'form':
-                $html .= _form($module, $section_id, $section_classes);
+                $html .= _form($module, $section_id, $section_classes, $section_id_default);
                 break;
             case 'map':
-                $html .= _map($module, $section_id, $section_classes);
+                $html .= _map($module, $section_id, $section_classes, $section_id_default);
                 break;
         }
     }
@@ -224,8 +218,7 @@ function _hero_style_2($module, $section_id, $section_classes)
 
     if ($style == 'style-2') {
         $html .= "<iframe width='560' height='315' src='$youtube_url' frameborder='0' allowfullscreen='' illow-src='$youtube_url' class='w-100 br-30'></iframe>";
-    }
-    else {
+    } else {
         $html .= wp_get_attachment_image($image, 'large;', false, array(
             'class' => 'img-fluid br-30'
         ));
@@ -323,16 +316,14 @@ function _two_column_image_text($module, $section_id, $section_classes)
         $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col';
         $col_2_class = 'col-12 col-lg-6';
         $size = 'large';
-    }
-    else if ($style == 'style-2') {
+    } else if ($style == 'style-2') {
         $col_1_class = 'col-12 col-lg-7 my-auto order-2 order-lg-1';
         $col_2_class = 'col-12 col-lg-5 order-1 order-lg-2 d-none d-md-block';
         $size = 'large';
         if ($color) {
             $style_inline = "style='--color: var(--$color)'";
         }
-    }
-    else if ($style == 'style-3') {
+    } else if ($style == 'style-3') {
         $col_1_class = 'col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col';
         $col_2_class = 'col-12 col-lg-6';
         $size = 'full';
@@ -674,8 +665,7 @@ function _row_animation($module, $section_id, $section_classes)
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0];
             $permalink = '[permalink id="' . $url . '"]';
-        }
-        else {
+        } else {
             $permalink = $item['button_custom_url'];
         }
 
@@ -871,8 +861,7 @@ function _image_grid($module, $section_id, $section_classes)
         if ($item['button_type'] == 'internal-url') {
             $url = $item['button_url'][0]['id'];
             $permalink = "[permalink id=$url]";
-        }
-        else {
+        } else {
             $permalink = $item['button_custom_url'];
         }
         $button_args = serialize(array(
@@ -931,13 +920,11 @@ function _icon_box($module, $section_id, $section_classes)
         $inner_class = "inner";
         $row_class = "row values g-3";
         $class = 'col-6 col-lg-2';
-    }
-    else if ($style == 'style-2') {
+    } else if ($style == 'style-2') {
         $inner_class = "inner";
         $row_class = "row values g-4";
         $class = 'col col-md-4 col-sm-3';
-    }
-    else {
+    } else {
         $inner_class = "row g-3";
         $row_class = "row g-4";
         $class = 'col-12';
@@ -1145,8 +1132,7 @@ function _form($module, $section_id, $section_classes)
 
     if ($style == 'style-2') {
         $class = 'text-left';
-    }
-    else {
+    } else {
         $class = 'text-center';
     }
 
@@ -1157,8 +1143,7 @@ function _form($module, $section_id, $section_classes)
         $html .= "<div class='row g-5'>";
         $html .= "<div class='col-lg-5'>";
         $html .= "<h1 class='$class'>$heading</h1>";
-    }
-    else {
+    } else {
         $html .= "<h2 class='$class'>$heading</h2>";
     }
     $html .= $description;
@@ -1236,8 +1221,7 @@ function ___button($data)
         if ($post_status != 'publish') {
             $display = false;
         }
-    }
-    else if ($button_type == 'custom') {
+    } else if ($button_type == 'custom') {
         $button_url = $button_custom_url;
         $tag = 'a';
         $link = "href='$button_custom_url'";
@@ -1333,13 +1317,13 @@ function action_admin_head()
     $template = get_page_template_slug();
 
     if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
-        ?>
+?>
         <style>
             .is-root-container {
                 display: none !important;
             }
         </style>
-        <?php
+<?php
     }
 }
 
