@@ -64,7 +64,6 @@ function get_custom_css($id = false, $css_val = '')
             $layouts = $module['layouts'];
             foreach ($layouts as $layout) {
                 $css_val .= get_custom_css($layout['id']);
-                $css_val .= $layout['id'] . "dddd{display: none}";
             }
         }
     }
