@@ -35,6 +35,33 @@ add_action('shutdown', 'action_module_content');
  * @return string [html markup]
  * return value is the html markup.
  */
+function action_modules_custom_css()
+{
+    $id = get_the_ID();
+    $modules = get__post_meta_by_id($id, 'modules');
+
+    echo '<style id="custom-css">';
+    foreach ($modules as $key => $module) {
+        $type = $module['_type'];
+        $custom_css = $module['custom_css'];
+        $section_id_default = ".module-$id-$type-$key";
+        foreach ($custom_css as $css) {
+            $css_selector = $css['css_selector'];
+            $css_property = $css['css_property'];
+            $css_value = $css['css_value'];
+            if ($css_selector && $css_property && $css_value) {
+                echo "$section_id_default { $css_property : $css_value }";
+            }
+        }
+    }
+    echo '</style>';
+
+
+?>
+    <?php
+}
+add_action('wp_head', 'action_modules_custom_css');
+
 function modules($id)
 {
     $html = '';
@@ -1317,7 +1344,7 @@ function action_admin_head()
     $template = get_page_template_slug();
 
     if ($template == 'templates/page-modules.php' || get_post_type() == 'layouts') {
-?>
+    ?>
         <style>
             .is-root-container {
                 display: none !important;
