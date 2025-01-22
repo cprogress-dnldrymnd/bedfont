@@ -41,23 +41,30 @@ function get_custom_css($id = false, $css_val = '')
     $modules = get__post_meta_by_id($id, 'modules');
     foreach ($modules as $key => $module) {
         $type = $module['_type'];
-        $custom_css = $module['custom_css'];
-        $section_id_default = ".module-$id-$type-$key";
-        foreach ($custom_css as $css) {
-            $css_selector = $css['css_selector'];
-            $css_properties = $css['css_properties'];
+        if ($type != 'layouts') {
+            $custom_css = $module['custom_css'];
+            $section_id_default = ".module-$id-$type-$key";
+            foreach ($custom_css as $css) {
+                $css_selector = $css['css_selector'];
+                $css_properties = $css['css_properties'];
 
-            $css_val .=  "$section_id_default $css_selector {";
-            if ($css_selector) {
-                foreach ($css_properties as $css_prop) {
-                    $css_property = $css_prop['css_property'];
-                    $css_value = $css_prop['css_value'];
-                    if ($css_property && $css_value) {
-                        $css_val .=  "$css_property : $css_value ;";
+                $css_val .=  "$section_id_default $css_selector {";
+                if ($css_selector) {
+                    foreach ($css_properties as $css_prop) {
+                        $css_property = $css_prop['css_property'];
+                        $css_value = $css_prop['css_value'];
+                        if ($css_property && $css_value) {
+                            $css_val .=  "$css_property : $css_value ;";
+                        }
                     }
                 }
+                $css_val .= "}";
             }
-            $css_val .= "}";
+        } else {
+            $layouts = $module['layouts'];
+            foreach ($layouts as $layout) {
+                $css_val .= get_custom_css($layout['id']);
+            }
         }
     }
     return $css_val;
