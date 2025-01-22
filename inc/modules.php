@@ -50,7 +50,7 @@ function action_modules_custom_css()
             $css_property = $css['css_property'];
             $css_value = $css['css_value'];
             if ($css_selector && $css_property && $css_value) {
-                echo "$section_id_default $css_selector { $css_property : $css_value }";
+                echo "$section_id_default $css_selector { $css_property : $css_value };";
             }
         }
     }
