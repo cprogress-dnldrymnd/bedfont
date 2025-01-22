@@ -224,7 +224,7 @@ function _hero_style_1($module, $section_id, $section_classes, $section_id_defau
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _hero_style_2($module, $section_id, $section_classes)
+function _hero_style_2($module, $section_id, $section_classes, $section_id_default)
 {
 
     $youtube_url = $module['youtube_url'];
@@ -246,7 +246,7 @@ function _hero_style_2($module, $section_id, $section_classes)
 
     $button = "[button args='$button_args']";
 
-    $html = "<section class='subtle-bg $section_classes' id='$section_id'>
+    $html = "<section class='subtle-bg $section_classes $section_id_default' id='$section_id'>
 	<img decoding='async' src='https://bedfont.theprogressteam.com/wp-content/themes/bedfont/assets/img/subtle-bg.jpg' class='subtle-bg' alt='Image of subtle website background'>
 	<div class='container'>
 		<div class='row'>
@@ -277,7 +277,7 @@ function _hero_style_2($module, $section_id, $section_classes)
  * @param mixed $module [data]
  * @return string [html markup]
  */
-function _hero_style_3($module)
+function _hero_style_3($module, $section_id, $section_classes, $section_id_default)
 {
 
     $heading = $module['heading'];
@@ -296,7 +296,7 @@ function _hero_style_3($module)
 
     $button = "[button args='$button_args']";
 
-    return "<section id='eco-section'>
+    return "<section id='eco-section' class='$section_classes $section_id_default'>
 		<img src='$image_url' id='eco-planet'>
 	 	<div class='container'>
 			<div class='row'>
@@ -317,7 +317,7 @@ function _hero_style_3($module)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _hero_style_4($module, $section_id, $section_classes)
+function _hero_style_4($module, $section_id, $section_classes, $section_id_default)
 {
     $bg_image = $module['bg_image'];
     $heading = $module['heading'];
@@ -325,7 +325,7 @@ function _hero_style_4($module, $section_id, $section_classes)
     $image = wp_get_attachment_image($bg_image, 'ful;', false, array(
         'class' => 'w-100'
     ));
-    return "<section class='hero-style-4 p-0 position-relative $section_classes' id='$section_id'>
+    return "<section class='hero-style-4 p-0 position-relative $section_classes $section_id_default' id='$section_id'>
 		<div class='container-fluid overlay-img-holder'>
 			$image
 			<div class='overlay'>
@@ -345,7 +345,7 @@ function _hero_style_4($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_image_text($module, $section_id, $section_classes)
+function _two_column_image_text($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $style = $module['style'];
@@ -383,7 +383,7 @@ function _two_column_image_text($module, $section_id, $section_classes)
 
     $button = "[button args='$button_args']";
 
-    return "<section class='two-column-image-text $style $section_classes' id='$section_id'>
+    return "<section class='two-column-image-text $style $section_classes $section_id_default' id='$section_id'>
 	<div class='container'>
 		<div class='row $image_position'>
 			<div class='$col_1_class' $style_inline>
@@ -411,7 +411,7 @@ function _two_column_image_text($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_image_text_style_4($module, $section_id, $section_classes)
+function _two_column_image_text_style_4($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $color = $module['color'];
@@ -429,7 +429,7 @@ function _two_column_image_text_style_4($module, $section_id, $section_classes)
     }
 
 
-    return "<section class='two-column-style-4 p-0 mab $section_classes' id='$section_id' $style_inline>
+    return "<section class='two-column-style-4 p-0 mab $section_classes $section_id_default' id='$section_id' $style_inline>
 		<div class='container-fluid m-0 p-0'>
 			<div class='row m-0 $image_position'>
 				<div class='col-12 col-lg-7 my-auto img-div-content text-white'>
@@ -449,7 +449,7 @@ function _two_column_image_text_style_4($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_image_text_style_5($module, $section_id, $section_classes)
+function _two_column_image_text_style_5($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $color = $module['color'];
@@ -474,7 +474,7 @@ function _two_column_image_text_style_5($module, $section_id, $section_classes)
     $button = "[button args='$button_args']";
 
 
-    return "<section class='two-column-style-5 bg-gradient-$color $section_classes' id='$section_id'>
+    return "<section class='two-column-style-5 bg-gradient-$color $section_classes $section_id_default' id='$section_id'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 				<div class='col-12 col-lg-5'>
@@ -498,7 +498,7 @@ function _two_column_image_text_style_5($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_image_text_style_6($module, $section_id, $section_classes)
+function _two_column_image_text_style_6($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $color = $module['color'];
@@ -522,7 +522,7 @@ function _two_column_image_text_style_6($module, $section_id, $section_classes)
     $button = "[button args='$button_args']";
 
 
-    return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color $section_classes' id='$section_id'>
+    return "<section class='two-column-style-5 two-column-style-6 bg-gradient-$color $section_classes $section_id_default' id='$section_id'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
@@ -549,7 +549,7 @@ function _two_column_image_text_style_6($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_image_text_style_7($module, $section_id, $section_classes)
+function _two_column_image_text_style_7($module, $section_id, $section_classes, $section_id_default)
 {
     $heading_main = $module['heading'];
     $color = $module['color'];
@@ -589,7 +589,7 @@ function _two_column_image_text_style_7($module, $section_id, $section_classes)
 
 
 
-    return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color $section_classes' id='$section_id'>
+    return "<section class='two-column-style-5 two-column-style-7 bg-gradient-$color $section_classes $section_id_default' id='$section_id'>
 	 	<div class='container'>
 			<div class='row $image_position'>
 					<div class='col-12 col-lg-7 my-auto'>
@@ -619,7 +619,7 @@ function _two_column_image_text_style_7($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _text($module, $section_id, $section_classes)
+function _text($module, $section_id, $section_classes, $section_id_default)
 {
     $text_align = $module['text_align'] ? $module['text_align'] : 'text-center';
     $color = $module['color'];
@@ -630,7 +630,7 @@ function _text($module, $section_id, $section_classes)
         $style_inline = "style='--color: var(--$color)'";
     }
 
-    return "<section class='text-section $text_align $section_classes' id='$section_id' $style_inline>
+    return "<section class='text-section $text_align $section_classes $section_id_default' id='$section_id' $style_inline>
 	<div class='container'>
 	<h2 class='text-center'>$heading</span></h2>
 				$description
@@ -645,13 +645,13 @@ function _text($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _two_column_text($module, $section_id, $section_classes)
+function _two_column_text($module, $section_id, $section_classes, $section_id_default)
 {
     $heading_1 = $module['heading_1'];
     $heading_2 = $module['heading_2'];
     $description_1 = isset($module['description_1']) ? wpautop($module['description_1']) : '';
     $description_2 = isset($module['description_2']) ? wpautop($module['description_2']) : '';
-    $html = "<section class='two-column-text $section_classes' id='$section_id'>";
+    $html = "<section class='two-column-text $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<div class='row'>
 				<div class='col-12 col-lg-6 text-center'>
@@ -676,9 +676,9 @@ function _two_column_text($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _row_animation($module, $section_id, $section_classes)
+function _row_animation($module, $section_id, $section_classes, $section_id_default)
 {
-    $html = "<section class='row-animation $section_classes' id='$section_id'>";
+    $html = "<section class='row-animation $section_classes $section_id_default' id='$section_id'>";
     $items = $module['items'];
     $html .= "<div class='container'>";
     foreach ($items as $item) {
@@ -762,12 +762,12 @@ $button
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _blogs($module, $section_id, $section_classes)
+function _blogs($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
 
-    $html = "<section class='blogs grey_bg $section_classes' id='$section_id'>";
+    $html = "<section class='blogs grey_bg $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<div class='text-center'>";
     $html .= "<h2>$heading</h2>
@@ -792,13 +792,13 @@ function _blogs($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _slider($module, $section_id, $section_classes)
+function _slider($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $items = $module['items'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $glide_slider = __glide_slider($items);
-    return "<section class='slider overflow-hidden' id='$section_id'>
+    return "<section class='slider overflow-hidden $section_classes $section_id_default' id='$section_id'>
 	<div class='container'>
 	<h2 class='text-left'>$heading</span></h2>
 				$description
@@ -814,12 +814,12 @@ function _slider($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _logo_slider($module, $section_id, $section_classes)
+function _logo_slider($module, $section_id, $section_classes, $section_id_default)
 {
     $images = $module['images'];
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='logo-slider $' id='$section_id'>";
+    $html = "<section class='logo-slider $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-left'>$heading</h2>";
 
@@ -863,11 +863,11 @@ function _logo_slider($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _text_over_curve_shape($module, $section_id, $section_classes)
+function _text_over_curve_shape($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $description = isset($module['description']) ? wpautop($module['description']) : '';
-    $html = "<section class='slideanim rounded_top text-white mt-5 slide' id='$section_id'>
+    $html = "<section class='slideanim rounded_top text-white mt-5 slide $section_classes $section_id_default' id='$section_id'>
 	<div class='container'>
 		<div class='col-12'> ";
 
@@ -890,10 +890,10 @@ function _text_over_curve_shape($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _image_grid($module, $section_id, $section_classes)
+function _image_grid($module, $section_id, $section_classes, $section_id_default)
 {
     $items = $module['items'];
-    $html = "<section class='py-0 image-grid $section_classes' id='$section_id'>
+    $html = "<section class='py-0 image-grid $section_classes $section_id_default' id='$section_id'>
 	<div class='container-fluid px-0'>
 		<div class='row gx-0'>";
 
@@ -941,7 +941,7 @@ function _image_grid($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _icon_box($module, $section_id, $section_classes)
+function _icon_box($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $items = $module['items'];
@@ -949,7 +949,7 @@ function _icon_box($module, $section_id, $section_classes)
     $description = isset($module['description']) ? wpautop($module['description']) : '';
     $bottom_text = isset($module['bottom_text']) ? wpautop($module['bottom_text']) : '';
 
-    $html = "<section class='icon-boxes $style $section_classes' id='$section_id'>
+    $html = "<section class='icon-boxes $style $section_classes $section_id_default' id='$section_id'>
 	<div class='container'>
     <h2 class='mb-3'>$heading</h2>";
     if ($description) {
@@ -1035,13 +1035,13 @@ function _icon_box($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _instagram_feed($module, $section_id, $section_classes)
+function _instagram_feed($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $shortcode = $module['shortcode'];
     $description = $module['description'];
 
-    return "<section class='instagram-feed pb-0 $section_classes' id='$section_id'>
+    return "<section class='instagram-feed pb-0 $section_classes $section_id_default' id='$section_id'>
     <div class='container-fluid px-0'>
         <div class='row mx-0'>
             <div class='col-12'>
@@ -1064,14 +1064,14 @@ function _instagram_feed($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _careers($module, $section_id, $section_classes)
+function _careers($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $subheading = $module['subheading'];
 
 
 
-    $html = "<section class='two-column-text $section_classes' id='$section_id'>";
+    $html = "<section class='two-column-text $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container'>";
     $html .= "<h2 class='text-center'>$heading</h2>";
     $html .= "<h3 class='pink'>$subheading</h3>";
@@ -1091,7 +1091,7 @@ function _careers($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _accordion($module, $section_id, $section_classes)
+function _accordion($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $items = $module['items'];
@@ -1135,7 +1135,7 @@ function _accordion($module, $section_id, $section_classes)
 
     $accordion .= "</div>";
 
-    return "<section class='two-column-image-text style-3 accordion-module $section_classes' id='$section_id'>
+    return "<section class='two-column-image-text style-3 accordion-module $section_classes $section_id_default' id='$section_id'>
 	<div class='container'>
 		<div class='row '>
 			<div class='col-12 col-lg-6 ps-md-5 who-we-are-home my-auto text-col'>
@@ -1164,7 +1164,7 @@ function _accordion($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _form($module, $section_id, $section_classes)
+function _form($module, $section_id, $section_classes, $section_id_default)
 {
     $heading = $module['heading'];
     $style = $module['style'];
@@ -1178,7 +1178,7 @@ function _form($module, $section_id, $section_classes)
     }
 
 
-    $html = "<section class='form $class $style $section_classes' id='$section_id'>";
+    $html = "<section class='form $class $style $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container'>";
     if ($style == 'style-2') {
         $html .= "<div class='row g-5'>";
@@ -1220,10 +1220,10 @@ function _form($module, $section_id, $section_classes)
  * @param mixed $section_classes [the section html classes]
  * @return string [html markup]
  */
-function _map($module, $section_id, $section_classes)
+function _map($module, $section_id, $section_classes, $section_id_default)
 {
     $map_src = $module['map_src'];
-    $html = "<section class='map $section_classes' id='$section_id'>";
+    $html = "<section class='map $section_classes $section_id_default' id='$section_id'>";
     $html .= "<div class='container-fluid p-0'>";
     $html .= "<iframe src='$map_src' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy'></iframe>";
     $html .= "</div>";
